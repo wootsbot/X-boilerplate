@@ -1,5 +1,4 @@
 import { assign } from "@xstate/immer";
-
 import { ContextFrom, EventFrom } from "xstate";
 import { createModel } from "xstate/lib/model";
 
@@ -47,7 +46,7 @@ export const catsStateMachine = catsModel.createMachine(
           start: {},
           loading: {
             invoke: {
-              id: "get-cats--machine-invoke",
+              id: "get-cats-machine-invoke",
               src: "getCatsService",
               onDone: {
                 target: "loaded",

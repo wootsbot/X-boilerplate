@@ -1,10 +1,9 @@
+import { useInterpret } from "@xstate/react";
 import * as React from "react";
 
-import { useInterpret } from "@xstate/react";
-
 import {
-  CatsStateProvider,
   catsStateMachine,
+  CatsStateProvider,
 } from "@/machines/cats/cats.machine";
 
 type PropsProvider = {

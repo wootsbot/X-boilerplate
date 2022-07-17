@@ -1,12 +1,10 @@
-import * as React from "react";
-
 import type { NextPage } from "next";
+import * as React from "react";
 
 import {
   useCatsStateService,
   useSelectedCatsState,
 } from "@/machines/cats/cats.machine";
-
 import { selectorGetCats } from "@/machines/cats/cats.selectors";
 
 const Home: NextPage = () => {

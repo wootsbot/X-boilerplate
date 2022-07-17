@@ -8,6 +8,7 @@ specifiers:
   '@xstate/react': ^3.0.0
   eslint: 8.19.0
   eslint-config-next: 12.2.2
+  eslint-plugin-simple-import-sort: ^7.0.0
   immer: ^9.0.15
   msw: ^0.44.1
   next: 12.2.2
@@ -31,6 +32,7 @@ devDependencies:
   '@types/react-dom': 18.0.6
   eslint: 8.19.0
   eslint-config-next: 12.2.2_4x5o4skxv6sl53vpwefgt23khm
+  eslint-plugin-simple-import-sort: 7.0.0_eslint@8.19.0
   msw: 0.44.1_typescript@4.7.4
   typescript: 4.7.4
 
@@ -1005,6 +1007,14 @@ packages:
       resolve: 2.0.0-next.4
       semver: 6.3.0
       string.prototype.matchall: 4.0.7
+    dev: true
+
+  /eslint-plugin-simple-import-sort/7.0.0_eslint@8.19.0:
+    resolution: {integrity: sha512-U3vEDB5zhYPNfxT5TYR7u01dboFZp+HNpnGhkDB2g/2E4wZ/g1Q9Ton8UwCLfRV9yAKyYqDh62oHOamvkFxsvw==}
+    peerDependencies:
+      eslint: '>=5.0.0'
+    dependencies:
+      eslint: 8.19.0
     dev: true
 
   /eslint-scope/7.1.1:

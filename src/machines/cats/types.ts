@@ -1,4 +1,5 @@
-import { ErrorMessage } from "src/machines/types";
+import { ErrorMessage } from "@/machines/types";
+
 import { Nullable } from "@/utils/types";
 
 export interface Cat {
