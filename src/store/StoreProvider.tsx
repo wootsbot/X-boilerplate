@@ -1,5 +1,6 @@
-import { useInterpret } from "@xstate/react";
 import * as React from "react";
+
+import { useInterpret } from "@xstate/react";
 
 import {
   catsStateMachine,

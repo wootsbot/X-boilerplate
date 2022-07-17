@@ -1,5 +1,6 @@
-import { useSelector } from "@xstate/react";
 import { createContext, useContext as useReactContext } from "react";
+
+import { useSelector } from "@xstate/react";
 import { InterpreterFrom, StateFrom, StateMachine } from "xstate";
 
 /**
