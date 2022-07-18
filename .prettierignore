@@ -1,0 +1,12 @@
+docs/
+public/
+.next/
+node_modules/
+yarn.lock
+package.json
+tsconfig.json
+lerna.json
+package-lock.json
+
+mocks/
+next.config.js

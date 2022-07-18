@@ -1,6 +1,6 @@
-import { ErrorMessage } from "@/machines/types";
+import { ErrorMessage } from '@/machines/types';
 
-import { Nullable } from "@/utils/types";
+import { Nullable } from '@/utils/types';
 
 export interface Cat {
   name: Nullable<string>;

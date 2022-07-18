@@ -1,7 +1,9 @@
-import { createContext, useContext as useReactContext } from "react";
+// use lib of Matt Pocock  https://github.com/mattpocock/xstate-next-boilerplate/blob/main/src/lib/createXStateContext.ts
 
-import { useSelector } from "@xstate/react";
-import { InterpreterFrom, StateFrom, StateMachine } from "xstate";
+import { createContext, useContext as useReactContext } from 'react';
+
+import { useSelector } from '@xstate/react';
+import { InterpreterFrom, StateFrom, StateMachine } from 'xstate';
 
 /**
  * Creates a global state wrapper you can use
@@ -16,9 +18,9 @@ import { InterpreterFrom, StateFrom, StateMachine } from "xstate";
  * @param {TMachine} machine
  * @return [Provider, useContext, useSelectedContext, createSelector]
  */
-export function createXStateContext<
-  TMachine extends StateMachine<any, any, any, any, any, any, any>
->(machine: TMachine) {
+export function createXStateContext<TMachine extends StateMachine<any, any, any, any, any, any, any>>(
+  machine: TMachine,
+) {
   /**
    * Creates a React context containing an ActorRef
    */
@@ -36,9 +38,7 @@ export function createXStateContext<
   const useContext = () => {
     const ctx = useReactContext(context);
     if (!ctx) {
-      throw new Error(
-        `use${machine.id}Context must be used inside ${machine.id}Provider`
-      );
+      throw new Error(`use${machine.id}Context must be used inside ${machine.id}Provider`);
     }
     return ctx;
   };
@@ -49,9 +49,7 @@ export function createXStateContext<
    *
    * https://xstate.js.org/docs/packages/xstate-react/#useselector-actor-selector-compare-getsnapshot
    */
-  const useSelectedContext = <T>(
-    selector: (state: StateFrom<TMachine>) => T
-  ): T => {
+  const useSelectedContext = <T>(selector: (state: StateFrom<TMachine>) => T): T => {
     const service = useContext();
     return useSelector(service, selector);
   };
@@ -69,10 +67,5 @@ export function createXStateContext<
    * Returns a tuple of the items above so you can freely
    * name them based on context
    */
-  return [
-    context.Provider,
-    useContext,
-    useSelectedContext,
-    createSelector,
-  ] as const;
+  return [context.Provider, useContext, useSelectedContext, createSelector] as const;
 }

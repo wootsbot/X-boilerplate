@@ -1,6 +1,6 @@
 export async function getCatsRequest() {
   try {
-    const response = await fetch("https://store.cats/cats");
+    const response = await fetch('https://store.cats/cats');
 
     const { cats } = await response.json();
 
