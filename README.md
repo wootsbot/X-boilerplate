@@ -1,17 +1,13 @@
+# WIP
+
 <p align='center'>
   <img src='https://github.com/react-next-boilerplate/X-boilerplate/blob/main/docs/images/preview.png' alt='X-boilerplate a starting point with configuration and best practices for your Next.js projects, so you can only focus on developing your solutions.' width='600'/>
 </p>
 
-# WIP
-
-<div align="center">
-  We spend time using good community practices to make your project scalable.
-</div>
-
 <br />
 
 <div align="center">
-  <sub> 🪂 X-boilerplate a starting point with configuration and best practices for your <strong>Next.js</Strong> projects, so you can only focus on developing your solutions.</sub>
+  <sub> We spend time using good community practices to make your project scalable.</sub>
 </div>
 
 ## Features
