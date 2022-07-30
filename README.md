@@ -7,7 +7,7 @@
 <br />
 
 <div align="center">
-  <sub> 🪂 A starting point with configuration and best practices for your <strong>Next.js</Strong> projects, so you can only focus on developing your solutions.</sub>
+  <sub> 🪂 X-boilerplate a starting point with configuration and best practices for your <strong>Next.js</Strong> projects, so you can only focus on developing your solutions.</sub>
 </div>
 
 ## Features
