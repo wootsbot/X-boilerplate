@@ -22,6 +22,10 @@
 
 - 📑 [Finite state machines](./src/machines)
 
+- 📄 Performant, flexible and extensible forms with easy-to-use validation via [react-hook-form](https://react-hook-form.com/)
+
+- 💣 Dead simple Object schema validation via [yup](https://github.com/jquense/yup)
+
 - 💅 Code formatter with [prettier](https://prettier.io/) and Find and fix problems via [eslint](https://eslint.org/)
 
 - ❤️ Lint commit messages via [commitlint](https://commitlint.js.org/#/)
