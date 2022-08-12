@@ -22,7 +22,7 @@
 
 - 📄 [react-hook-form](https://react-hook-form.com/)
 
-- 💣 [yup](https://github.com/jquense/yup)
+- 💎 [Zod](https://github.com/colinhacks/zod) - Schema validation.
 
 - 💅 Code formatter with [prettier](https://prettier.io/) and Find and fix problems via [eslint](https://eslint.org/)
 
