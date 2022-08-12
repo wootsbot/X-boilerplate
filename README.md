@@ -20,7 +20,7 @@
 
 - 📑 [Finite state machines](./src/machines)
 
-- 📄 [react-hook-form](https://react-hook-form.com/)
+- 📄 [react-hook-form](https://react-hook-form.com/) - Forms with easy-to-use validation
 
 - 💎 [Zod](https://github.com/colinhacks/zod) - Schema validation.
 
