@@ -5,13 +5,9 @@ import InputField from '@design-system/InputField';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
-import styles from './HelloForm.module.css';
+import { FormValues, HelloFormProps } from './HelloForm.type';
 
 import Container from '@/components/Container';
-
-type FormValues = {
-  nameField: string;
-};
 
 const schema = yup
   .object({
@@ -19,7 +15,7 @@ const schema = yup
   })
   .required();
 
-function HelloForm({ onSubmit }) {
+function HelloForm({ onSubmit }: HelloFormProps) {
   const {
     register,
     handleSubmit,
