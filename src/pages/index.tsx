@@ -1,31 +1,37 @@
-import type { NextPage } from "next";
-import * as React from "react";
+import { useRouter } from 'next/router';
+import * as React from 'react';
 
-import {
-  useCatsStateService,
-  useSelectedCatsState,
-} from "@/machines/cats/cats.machine";
-import { selectorGetCats } from "@/machines/cats/cats.selectors";
+import Typography from '@design-system/Typography';
 
-const Home: NextPage = () => {
-  const catsStateService = useCatsStateService();
+import { NextPageLayout } from '@/utils/types';
 
-  const cats = useSelectedCatsState(selectorGetCats);
+import HelloForm from '@/components/HelloForm';
+import XBoilerplate from '@/components/XBoilerplate';
+import MainLayout from '@/layouts/MainLayout';
 
-  console.log("cats", cats);
+const HomePage: NextPageLayout = () => {
+  const router = useRouter();
 
-  React.useEffect(() => {
-    catsStateService.send({ type: "GET_CATS_FETCH" });
-  }, [catsStateService]);
+  function handleGoToRouteHello(data: { name: string }) {
+    router.push(`/hello/${data?.name}`);
+  }
 
   return (
-    <div>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum nisi eaque
-      assumenda, aspernatur itaque ratione vel consequuntur natus nobis
-      voluptate veniam vitae voluptas voluptatibus perferendis. Expedita id vel
-      quidem reprehenderit.
-    </div>
+    <>
+      <XBoilerplate size={100} />
+      <Typography as="h2" size="s">
+        <em>A starting boilerplate with configuration and best practices for your Nextjs projects</em>
+      </Typography>
+
+      <Typography size="s">So you can only focus on developing your solutions.</Typography>
+
+      <HelloForm onSubmit={handleGoToRouteHello} />
+    </>
   );
 };
 
-export default Home;
+HomePage.getLayout = function getLayout(page: React.ReactElement) {
+  return <MainLayout>{page}</MainLayout>;
+};
+
+export default HomePage;

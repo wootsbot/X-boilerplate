@@ -13,14 +13,17 @@
     "prettier": "prettier --config .prettierrc \"./**/*.+(js|ts)\" --check"
   },
   "dependencies": {
-    "@xstate/immer": "^0.3.1",
-    "@xstate/react": "^3.0.0",
-    "immer": "^9.0.15",
+    "@hookform/resolvers": "^2.9.7",
+    "@icons-pack/react-simple-icons": "^5.4.0",
+    "@xstate/immer": "0.3.1",
+    "@xstate/react": "3.0.0",
+    "immer": "9.0.15",
     "next": "12.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "xstate": "^4.32.1",
-    "zod": "^3.18.0"
+    "react-hook-form": "7.34.2",
+    "xstate": "4.32.1",
+    "yup": "^0.32.11"
   },
   "lint-staged": {
     "*.{ts,js,json}": [
@@ -28,20 +31,20 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.3",
-    "@commitlint/config-conventional": "^17.0.3",
+    "@commitlint/cli": "17.0.3",
+    "@commitlint/config-conventional": "17.0.3",
     "@types/node": "18.0.5",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.2",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "msw": "^0.44.1",
-    "prettier": "^2.7.1",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-simple-import-sort": "7.0.0",
+    "husky": "8.0.1",
+    "lint-staged": "13.0.3",
+    "msw": "0.44.1",
+    "prettier": "2.7.1",
     "typescript": "4.7.4"
   },
   "msw": {
