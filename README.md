@@ -45,10 +45,10 @@
 ### Dev tools
 
 - [TypeScript](https://www.typescriptlang.org/)
-- [pnpm](https://pnpm.io/)- fast, disk space efficient package manager
-- [msw](https://mswjs.io/) - API mocking of the next generation via
-- [commitlint](https://commitlint.js.org/#/) - Lint commit messages
-- [husky](https://typicode.github.io/husky/#/) - Husky improves your commits and more 🐶 woof!
+- [pnpm](https://pnpm.io/)- fast, disk space efficient package manager.
+- [msw](https://mswjs.io/) - API mocking of the next generation.
+- [commitlint](https://commitlint.js.org/#/) - Lint commit messages.
+- [husky](https://typicode.github.io/husky/#/) - Husky improves your commits and more 🐶 woof!.
 
 - [VS Code Extensions](./.vscode/extensions.json)
   - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Code formatter using prettier.
