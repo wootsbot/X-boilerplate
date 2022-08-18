@@ -40,6 +40,10 @@
 
 - 🦾 TypeScript, of course
 
+- 💄 Unstyled - The frontend contains minimal css styling just to show the demo.
+
+- ⚙️ Adjustable to your preferences - Designed to be modular so you can fine-tune it to your preferences
+
 <br>
 
 ### Dev tools
