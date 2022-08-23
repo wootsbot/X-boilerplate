@@ -38,7 +38,7 @@
 
 - 🔥 Mocking via [msw](https://mswjs.io/)
 
-- ✨ Authentication for Next.js [NextAuth](https://next-auth.js.org/)
+- 🛡️ Authentication for Next.js [NextAuth](https://next-auth.js.org/)
 
 - 📑 [Finite state machines](./src/machines)
 
