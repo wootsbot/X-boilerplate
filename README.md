@@ -16,25 +16,13 @@
 
 <br>
 
-## Features
+## Core Features
 
 - ⚡️ [React 18](https://reactjs.org/), [Next 12](https://nextjs.org/), [pnpm](https://pnpm.io/) - born with fastness
 
-- 🍍 [State Management x-state](https://xstate.js.org/)
-
-- 🔥 Mocking via [msw](https://mswjs.io/)
-
 - 🗂 [Structure with paths and alias](./tsconfig.json)
 
-- 📑 [Finite state machines](./src/machines)
-
-- 📄 [react-hook-form](https://react-hook-form.com/) - Forms with easy-to-use validation
-
-- 💎 [Yup](https://github.com/jquense/yup) - Schema validation.
-
 - 💅 Code formatter with [prettier](https://prettier.io/) and Find and fix problems via [eslint](https://eslint.org/)
-
-- ❤️ Lint commit messages via [commitlint](https://commitlint.js.org/#/)
 
 - 🪝 [husky](https://commitlint.js.org/#/)
 
@@ -43,6 +31,22 @@
 - 💄 Unstyled - The frontend contains minimal css styling just to show the demo.
 
 - ⚙️ Adjustable to your preferences - Designed to be modular so you can fine-tune it to your preferences
+
+## Optional Features
+
+- 🍍 [State Management x-state](https://xstate.js.org/)
+
+- 🔥 Mocking via [msw](https://mswjs.io/)
+
+- ✨ Authentication for Next.js [NextAuth](https://next-auth.js.org/)
+
+- 📑 [Finite state machines](./src/machines)
+
+- 📄 [react-hook-form](https://react-hook-form.com/) - Forms with easy-to-use validation
+
+- 💎 [Yup](https://github.com/jquense/yup) - Schema validation.
+
+- ❤️ Lint commit messages via [commitlint](https://commitlint.js.org/#/)
 
 <br>
 
