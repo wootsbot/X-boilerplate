@@ -2,18 +2,16 @@ import { useForm } from 'react-hook-form';
 
 import Button from '@design-system/Button';
 import InputField from '@design-system/InputField';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
 
 import { FormValues, HelloFormProps } from './HelloForm.type';
 
 import Container from '@/components/Container';
 
-const schema = yup
-  .object({
-    nameField: yup.string().required('Name is field required'),
-  })
-  .required();
+const schema = z.object({
+  nameField: z.string().min(1),
+});
 
 function HelloForm({ onSubmit }: HelloFormProps) {
   const {
@@ -21,7 +19,7 @@ function HelloForm({ onSubmit }: HelloFormProps) {
     handleSubmit,
     formState: { errors },
   } = useForm<FormValues>({
-    resolver: yupResolver(schema),
+    resolver: zodResolver(schema),
   });
 
   function handleSubmitValues(data: FormValues) {

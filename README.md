@@ -44,7 +44,7 @@
 
 - 📄 [react-hook-form](https://react-hook-form.com/) - Forms with easy-to-use validation
 
-- 💎 [Yup](https://github.com/jquense/yup) - Schema validation.
+- 💎 [Zod](https://zod.dev/) - TypeScript-first schema validation with static type inference.
 
 - ❤️ Lint commit messages via [commitlint](https://commitlint.js.org/#/)
 
