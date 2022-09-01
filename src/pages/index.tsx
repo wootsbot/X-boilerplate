@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router';
+import { signIn, signOut, useSession } from 'next-auth/react';
 import * as React from 'react';
 
+import Button from '@design-system/Button';
 import Typography from '@design-system/Typography';
 
 import { NextPageLayout } from '@/utils/types';
@@ -26,6 +28,8 @@ const HomePage: NextPageLayout = () => {
       <Typography size="s">So you can only focus on developing your solutions.</Typography>
 
       <HelloForm onSubmit={handleGoToRouteHello} />
+
+      <Button onClick={() => signIn()}>Sign in</Button>
     </>
   );
 };
