@@ -13,7 +13,7 @@ const HelloNamePage: NextPageLayout = () => {
   const { name } = router.query;
 
   function handleGoBack() {
-    router.push('/');
+    router.push('/react-hook-form');
   }
 
   return (

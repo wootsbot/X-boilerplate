@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { SessionProvider } from 'next-auth/react';
+import { SessionProvider, useSession } from 'next-auth/react';
 
 import { NextPageLayout } from '@/utils/types';
 
@@ -25,9 +25,26 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppPropsLayo
         <title>X Boilerplate</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <StoreProvider>{getLayout(<Component {...pageProps} />)}</StoreProvider>
+      <StoreProvider>
+        {Component.auth ? (
+          <Auth>{getLayout(<Component {...pageProps} />)}</Auth>
+        ) : (
+          getLayout(<Component {...pageProps} />)
+        )}
+      </StoreProvider>
     </SessionProvider>
   );
+}
+
+function Auth({ children }: { children: React.ReactNode }) {
+  // if `{ required: true }` is supplied, `status` can only be "loading" or "authenticated"
+  const { status } = useSession({ required: true });
+
+  if (status === 'loading') {
+    return <div>Loading...</div>;
+  }
+
+  return <>{children}</>;
 }
 
 export default MyApp;

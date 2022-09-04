@@ -1,5 +1,5 @@
 .root {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 100ch;
 }
