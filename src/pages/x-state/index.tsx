@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import * as React from 'react';
 
 import Button from '@design-system/Button';
+import ButtonGoBack from '@design-system/ButtonGoBack';
 import ArrowLeftLine from '@design-system/icons/ArrowLeftLine';
 import Typography from '@design-system/Typography';
 
@@ -11,6 +12,7 @@ import { selectorGetDog, selectorGetDogLoading } from '@/machines/dog/dog.select
 
 import { NextPageLayout } from '@/utils/types';
 
+import Header from '@/components/Header';
 import MainLayout from '@/layouts/MainLayout';
 
 const XstatePage: NextPageLayout = () => {
@@ -45,13 +47,7 @@ const XstatePage: NextPageLayout = () => {
         alignItems: 'center',
       }}
     >
-      <h1>🐶</h1>
-
-      <Typography as="h2" size="s">
-        Hi {` `} X-State
-      </Typography>
-
-      <Typography size="s">Promise canine example.</Typography>
+      <Header title="🍍" subTitle="Hi" name="X-State" message="Promise canine example." onGoBack={handleGoBack} />
 
       <div
         style={{
@@ -62,9 +58,6 @@ const XstatePage: NextPageLayout = () => {
           marginBottom: 24,
         }}
       >
-        <Button style={{ marginRight: 8 }} onClick={handleGoBack}>
-          <ArrowLeftLine color="#fff" style={{ marginRight: 8 }} /> Go back
-        </Button>
         <Button style={{ marginRight: 8 }} onClick={handleGetDog}>
           {getDogLoading ? 'Loading...' : 'Get Dog data'}
         </Button>
@@ -76,9 +69,7 @@ const XstatePage: NextPageLayout = () => {
           Retry Dog data
         </Button>
       </div>
-
       {getDogLoading && <div>Loading Image...</div>}
-
       {dog && (
         <Image style={{ borderRadius: 8 }} width={400} height={350} src={dog?.message as string} alt="Dog" priority />
       )}

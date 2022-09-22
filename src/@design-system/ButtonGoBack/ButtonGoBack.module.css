@@ -1,0 +1,31 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  outline: 0px;
+  border: 0px;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  background-color: transparent;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #c7c7c7;
+  align-items: center;
+  height: 45px;
+  width: 45px;
+  border-radius: 45px;
+  margin-right: 8px;
+}

@@ -10,8 +10,8 @@ import { Xstate } from '@icons-pack/react-simple-icons';
 
 import { NextPageLayout } from '@/utils/types';
 
-import Container from '@/components/Container';
 import FeatureCard from '@/components/FeatureCard';
+import Header from '@/components/Header';
 import HelloForm from '@/components/HelloForm';
 import XBoilerplate from '@/components/XBoilerplate';
 import MainLayout from '@/layouts/MainLayout';
@@ -23,8 +23,20 @@ const XstatePage: NextPageLayout = () => {
     router.push(`/react-hook-form/hello/${data?.name}`);
   }
 
+  function handleGoBack() {
+    router.push('/');
+  }
+
   return (
     <>
+      <Header
+        title="📄"
+        subTitle="Hi "
+        name="React-Hook-Form and Zod"
+        message="An example with form validation and strict before going to the hello route."
+        onGoBack={handleGoBack}
+      />
+
       <div
         style={{
           display: 'flex',

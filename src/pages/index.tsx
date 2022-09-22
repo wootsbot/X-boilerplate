@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useRouter } from 'next/router';
-import { signIn } from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
 import * as React from 'react';
 
 import Typography from '@design-system/Typography';
@@ -12,6 +12,7 @@ import XBoilerplate from '@/components/XBoilerplate';
 import MainLayout from '@/layouts/MainLayout';
 
 const HomePage: NextPageLayout = () => {
+  const { data: session, status } = useSession();
   const router = useRouter();
 
   return (
@@ -50,6 +51,20 @@ const HomePage: NextPageLayout = () => {
           <Typography size="s">
             NextAuth.js is a complete open-source authentication solution for Next.js applications.
           </Typography>
+
+          {status === 'authenticated' && (
+            <div style={{ marginTop: 10, display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+              <Typography size="s">Already Authenticated</Typography>
+              <div style={{ backgroundColor: '#46a758', width: 12, height: 12, borderRadius: 18, marginLeft: 8 }} />
+            </div>
+          )}
+
+          {status === 'unauthenticated' && (
+            <div style={{ marginTop: 10, display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+              <Typography size="s">Unauthenticated</Typography>
+              <div style={{ backgroundColor: '#e5484d', width: 12, height: 12, borderRadius: 18, marginLeft: 8 }} />
+            </div>
+          )}
         </FeatureCard>
 
         <FeatureCard onClick={() => router.push('/react-hook-form')}>
