@@ -16,19 +16,20 @@
     "@hookform/resolvers": "^2.9.7",
     "@icons-pack/react-simple-icons": "^5.4.0",
     "@xstate/immer": "0.3.1",
-    "@xstate/react": "3.0.0",
+    "@xstate/react": "3.0.1",
     "immer": "9.0.15",
-    "next": "12.2.2",
+    "next": "v12.3.1",
     "next-auth": "4.10.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "7.34.2",
-    "xstate": "4.32.1",
-    "zod": "^3.18.0"
+    "react-hook-form": "7.36.0",
+    "xstate": "4.33.6",
+    "zod": "3.19.1"
   },
   "lint-staged": {
     "*.{ts,js,json}": [
-      "prettier --write"
+      "pnpm run lint",
+      "pnpm run prettier"
     ]
   },
   "devDependencies": {
@@ -44,7 +45,7 @@
     "eslint-plugin-simple-import-sort": "7.0.0",
     "husky": "8.0.1",
     "lint-staged": "13.0.3",
-    "msw": "0.44.1",
+    "msw": "0.47.3",
     "prettier": "2.7.1",
     "typescript": "4.7.4"
   },

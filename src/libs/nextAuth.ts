@@ -9,6 +9,8 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
 
+  secret: process.env.SECRET,
+
   pages: {
     signIn: '/auth/signin',
   },

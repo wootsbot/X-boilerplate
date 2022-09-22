@@ -1,11 +1,9 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { useInterpret } from "@xstate/react";
+import { useInterpret } from '@xstate/react';
 
-import {
-  catsStateMachine,
-  CatsStateProvider,
-} from "@/machines/cats/cats.machine";
+import { catsStateMachine, CatsStateProvider } from '@/machines/cats/cats.machine';
+import { dogStateMachine, DogStateProvider } from '@/machines/dog/dog.machine';
 
 type PropsProvider = {
   children: React.ReactNode;
@@ -13,10 +11,11 @@ type PropsProvider = {
 
 const StoreProvider = ({ children }: PropsProvider) => {
   const catsStateService = useInterpret(catsStateMachine);
+  const dogStateService = useInterpret(dogStateMachine);
 
   return (
     <CatsStateProvider value={catsStateService}>
-      {React.Children.only(children)}
+      <DogStateProvider value={dogStateService}>{React.Children.only(children)}</DogStateProvider>
     </CatsStateProvider>
   );
 };
