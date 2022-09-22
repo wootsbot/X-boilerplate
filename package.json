@@ -28,7 +28,6 @@
   },
   "lint-staged": {
     "*.{ts,js,json}": [
-      "pnpm run lint",
       "pnpm run prettier"
     ]
   },

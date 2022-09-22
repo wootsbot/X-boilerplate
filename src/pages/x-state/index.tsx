@@ -4,6 +4,7 @@ import * as React from 'react';
 
 import Button from '@design-system/Button';
 import ArrowLeftLine from '@design-system/icons/ArrowLeftLine';
+import Typography from '@design-system/Typography';
 
 import { useDogStateService, useSelectedDogState } from '@/machines/dog/dog.machine';
 import { selectorGetDog, selectorGetDogLoading } from '@/machines/dog/dog.selectors';
@@ -44,8 +45,17 @@ const XstatePage: NextPageLayout = () => {
         alignItems: 'center',
       }}
     >
+      <h1>🐶</h1>
+
+      <Typography as="h2" size="s">
+        Hi {` `} X-State
+      </Typography>
+
+      <Typography size="s">Promise canine example.</Typography>
+
       <div
         style={{
+          marginTop: 24,
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
