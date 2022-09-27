@@ -12,7 +12,7 @@ import XBoilerplate from '@/components/XBoilerplate';
 import MainLayout from '@/layouts/MainLayout';
 
 const HomePage: NextPageLayout = () => {
-  const { data: session, status } = useSession();
+  const { status } = useSession();
   const router = useRouter();
 
   return (
@@ -75,12 +75,12 @@ const HomePage: NextPageLayout = () => {
           </Typography>
         </FeatureCard>
 
-        <FeatureCard>
+        {/* <FeatureCard>
           <Typography as="h2">🔥 Mocking via msw</Typography>
           <Typography size="s">
             API mocking of the next generation. Mock by intercepting requests on the network level.
           </Typography>
-        </FeatureCard>
+        </FeatureCard> */}
       </div>
     </>
   );

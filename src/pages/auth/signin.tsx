@@ -1,7 +1,7 @@
 import type { GetServerSidePropsContext } from 'next';
 import { useRouter } from 'next/router';
 import { unstable_getServerSession } from 'next-auth/next';
-import { getProviders, SessionProvider, signIn } from 'next-auth/react';
+import { getProviders, signIn } from 'next-auth/react';
 
 import Button from '@design-system/Button';
 
@@ -10,13 +10,20 @@ import { authOptions } from '@/libs/nextAuth';
 import Header from '@/components/Header';
 import MainLayout from '@/layouts/MainLayout';
 
-function SignIn({ providers }) {
+type Providers = {
+  name: string;
+};
+
+type SignInProps = {
+  providers: Array<Providers>;
+};
+function SignIn({ providers }: SignInProps) {
   const router = useRouter();
-  console.log('providers', providers);
 
   function handleGoBack() {
     router.push('/');
   }
+
   return (
     <div>
       <Header
