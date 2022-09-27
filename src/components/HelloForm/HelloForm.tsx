@@ -28,7 +28,7 @@ function HelloForm({ onSubmit }: HelloFormProps) {
 
   return (
     <form style={{ marginTop: '16px' }} onSubmit={handleSubmit(handleSubmitValues)}>
-      <Container>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <InputField
           placeholder="Hello what's your name"
           isError={Boolean(errors?.nameField)}
@@ -39,7 +39,7 @@ function HelloForm({ onSubmit }: HelloFormProps) {
         <Button style={{ marginTop: '8px' }} type="submit">
           Go to route
         </Button>
-      </Container>
+      </div>
     </form>
   );
 }
