@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { Session } from 'next-auth';
 import { SessionProvider, useSession } from 'next-auth/react';
 
 import { NextPageLayout } from '@/utils/types';
@@ -11,9 +12,12 @@ if (process.env.NEXT_PUBLIC_MSW_MOCKING === 'enabled') {
   require('../../mocks/msw-config');
 }
 
-type AppPropsLayout = AppProps & {
+interface AppPropsLayout extends AppProps {
   Component: NextPageLayout;
-};
+  pageProps: {
+    session: Session;
+  };
+}
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppPropsLayout) {
   // propagation and hydration is more beneficial if we mount the layout at this cycle
