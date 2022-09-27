@@ -11,6 +11,7 @@ import Header from '@/components/Header';
 import MainLayout from '@/layouts/MainLayout';
 
 type Providers = {
+  id: string;
   name: string;
 };
 
