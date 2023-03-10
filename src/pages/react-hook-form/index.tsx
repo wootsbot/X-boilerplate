@@ -1,19 +1,10 @@
-/* eslint-disable react/no-unescaped-entities */
-import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { signIn, signOut, useSession } from 'next-auth/react';
 import * as React from 'react';
-
-import Button from '@design-system/Button';
-import Typography from '@design-system/Typography';
-import { Xstate } from '@icons-pack/react-simple-icons';
 
 import { NextPageLayout } from '@/utils/types';
 
-import FeatureCard from '@/components/FeatureCard';
 import Header from '@/components/Header';
 import HelloForm from '@/components/HelloForm';
-import XBoilerplate from '@/components/XBoilerplate';
 import MainLayout from '@/layouts/MainLayout';
 
 const XstatePage: NextPageLayout = () => {

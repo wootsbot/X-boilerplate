@@ -1,6 +1,6 @@
-import type { GetServerSidePropsContext } from 'next';
+import type { GetServerSidePropsContext } from "next"
 import { useRouter } from 'next/router';
-import { unstable_getServerSession } from 'next-auth/next';
+import { getServerSession } from "next-auth/next"
 import { getProviders, signIn } from 'next-auth/react';
 
 import Button from '@design-system/Button';
@@ -49,7 +49,7 @@ SignIn.getLayout = function getLayout(page: React.ReactElement) {
 };
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const session = await unstable_getServerSession(context.req, context.res, authOptions);
+  const session = await getServerSession(context.req, context.res, authOptions)
   const providers = await getProviders();
 
   if (session?.user) {

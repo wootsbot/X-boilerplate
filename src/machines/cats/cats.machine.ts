@@ -37,6 +37,7 @@ export const catsStateMachine = catsModel.createMachine(
   {
     id: 'get-cats-machine',
     context: catsModel.initialContext,
+    predictableActionArguments: true,
     initial: 'start',
     states: {
       start: {},

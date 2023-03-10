@@ -33,6 +33,7 @@ export const dogStateMachine = dogModel.createMachine(
   {
     id: 'get-dog-machine',
     context: dogModel.initialContext,
+    predictableActionArguments: true,
     initial: 'idle',
     states: {
       idle: {},
