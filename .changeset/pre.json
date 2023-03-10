@@ -4,5 +4,7 @@
   "initialVersions": {
     "x-boilerplate": "0.1.0"
   },
-  "changesets": []
+  "changesets": [
+    "angry-pandas-exist"
+  ]
 }
