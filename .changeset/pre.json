@@ -1,0 +1,8 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "x-boilerplate": "0.1.0"
+  },
+  "changesets": []
+}

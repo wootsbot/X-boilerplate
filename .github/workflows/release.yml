@@ -1,0 +1,70 @@
+name: Release Boilerplate
+
+on:
+  push:
+    branches:
+      - main
+      - next
+
+env:
+  PNPM_VERSION: 7.29.1
+
+jobs:
+  stats:
+    name: Version Boilerplate
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      # # We use week in the turbo cache key to keep the cache from infinitely growing
+      # - id: get-week
+      #   run: echo name=WEEK::$(date +%U) >> $GITHUB_OUTPUT
+
+      # - name: Turbo Cache
+      #   id: turbo-cache
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: .turbo
+      #     key: turbo-${{ github.job }}-${{ github.ref_name }}-${{ steps.get-week.outputs.WEEK }}-${{ github.sha }}
+      #     restore-keys: |
+      #       turbo-${{ github.job }}-${{ github.ref_name }}-${{ steps.get-week.outputs.WEEK }}-
+      #       turbo-${{ github.job }}-canary-${{ steps.get-week.outputs.WEEK }}-
+      - name: 🔥 Setup pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@${PNPM_VERSION} --activate
+      - name: 📦 Install Dependencies
+        run: |
+          pnpm install --no-frozen-lockfile
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 💣 build
+        run: pnpm build
+
+      - name: 💅 Prettier
+        run: pnpm prettier
+
+      # - name: 💎 lint:types
+      #   run: pnpm turbo run lint:types --cache-dir=".turbo"
+
+      - name: Create Release Pull Request or Publish Design Blocks
+        id: changesets
+        uses: changesets/action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          publish: pnpm release
+          commit: 'ci(release): version packages'
+          title: 'ci(release): version packages'
