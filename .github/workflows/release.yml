@@ -66,5 +66,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           publish: pnpm release
-          commit: 'ci(release): version packages'
-          title: 'ci(release): version packages'
+          commit: 'ci(release): Version packages'
+          title: 'ci(release): Version packages'
