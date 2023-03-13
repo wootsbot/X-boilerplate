@@ -1,3 +1,5 @@
+'use client';
+
 import { SiGithub } from '@icons-pack/react-simple-icons';
 
 import styles from './SocialContainer.module.css';

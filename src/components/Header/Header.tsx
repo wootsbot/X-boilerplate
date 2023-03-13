@@ -1,8 +1,8 @@
+'use client';
+
 import * as React from 'react';
 
-import Button from '@design-system/Button';
 import ButtonGoBack from '@design-system/ButtonGoBack';
-import ArrowLeftLine from '@design-system/icons/ArrowLeftLine';
 import Typography from '@design-system/Typography';
 
 import styles from './Header.module.css';

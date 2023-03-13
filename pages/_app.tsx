@@ -9,7 +9,7 @@ import StoreProvider from '@/store/StoreProvider';
 
 // Config mocks servers and browser with msw
 if (process.env.NEXT_PUBLIC_MSW_MOCKING === 'enabled') {
-  require('../../mocks/msw-config');
+  require('../mocks/msw-config');
 }
 
 interface AppPropsLayout extends AppProps {

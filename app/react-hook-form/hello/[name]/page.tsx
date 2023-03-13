@@ -1,4 +1,6 @@
-import { useRouter } from 'next/router';
+'use client';
+
+import { useRouter } from 'next/navigation';
 import * as React from 'react';
 
 import { NextPageLayout } from '@/utils/types';
@@ -6,9 +8,10 @@ import { NextPageLayout } from '@/utils/types';
 import Header from '@/components/Header';
 import MainLayout from '@/layouts/MainLayout';
 
-const HelloNamePage: NextPageLayout = () => {
+const HelloNamePage: NextPageLayout = ({ params }) => {
   const router = useRouter();
-  const { name } = router.query;
+
+  const { name } = params;
 
   function handleGoBack() {
     router.push('/react-hook-form');

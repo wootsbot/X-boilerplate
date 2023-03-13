@@ -1,3 +1,5 @@
+'use client';
+
 import { useForm } from 'react-hook-form';
 
 import Button from '@design-system/Button';
@@ -5,13 +7,11 @@ import InputField from '@design-system/InputField';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 
-import { FormValues, HelloFormProps } from './HelloForm.type';
+import { helloFormSchema } from '@/libs/validations/hello-form';
 
-import Container from '@/components/Container';
+import { HelloFormProps } from './HelloForm.type';
 
-const schema = z.object({
-  nameField: z.string().min(1),
-});
+type FormValues = z.infer<typeof helloFormSchema>;
 
 function HelloForm({ onSubmit }: HelloFormProps) {
   const {
@@ -19,7 +19,7 @@ function HelloForm({ onSubmit }: HelloFormProps) {
     handleSubmit,
     formState: { errors },
   } = useForm<FormValues>({
-    resolver: zodResolver(schema),
+    resolver: zodResolver(helloFormSchema),
   });
 
   function handleSubmitValues(data: FormValues) {
