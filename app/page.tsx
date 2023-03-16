@@ -31,31 +31,28 @@ async function HomePage() {
       </div>
 
       <div style={{ display: 'grid', gridGap: '24px', gridTemplateColumns: '1fr 1fr 1fr' }}>
-        <FeatureCard to="/x-state">
-          <Typography as="h2">🍍 State Management X-state</Typography>
-          <Typography size="s">
-            JavaScript and TypeScript finite state machines and statecharts for the modern web.
-          </Typography>
-        </FeatureCard>
+        <FeatureCard
+          to="/x-state"
+          title="🍍 State Management X-state"
+          description="JavaScript and TypeScript finite state machines and statecharts for the modern web."
+        />
 
-        <FeatureCard to="/next-auth">
-          <Typography as="h2">🛡️ Authentication with NextAuth.js</Typography>
-          <Typography size="s">
-            NextAuth.js is a complete open-source authentication solution for Next.js applications.
-          </Typography>
-
+        <FeatureCard
+          to="/next-auth"
+          title="🛡️ Authentication with NextAuth.js"
+          description="NextAuth.js is a complete open-source authentication solution for Next.js applications."
+        >
           {/*https://beta.nextjs.org/docs/data-fetching/fetching#asyncawait-in-server-components */}
           {/* @ts-expect-error Async Server Component */}
           <SessionStatus />
         </FeatureCard>
 
-        <FeatureCard to="/react-hook-form">
-          <Typography as="h2">📄 Forms manager with react-hook-form and Zod</Typography>
-          <Typography size="s">
-            Performant, flexible and extensible forms with easy-to-use validation. and TypeScript-first schema
-            validation with static type inference
-          </Typography>
-        </FeatureCard>
+        <FeatureCard
+          to="/react-hook-form"
+          title="📄 Forms manager with react-hook-form and Zod"
+          description="Performant, flexible and extensible forms with easy-to-use validation. and TypeScript-first schema
+        validation with static type inference"
+        />
 
         {/* <FeatureCard>
           <Typography as="h2">🔥 Mocking via msw</Typography>
