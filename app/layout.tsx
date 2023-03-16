@@ -1,5 +1,3 @@
-'use client';
-
 import type { Metadata } from 'next';
 import * as React from 'react';
 
@@ -63,13 +61,11 @@ function MainLayout({ children }: MainLayoutProps) {
     <html lang="en">
       <body>
         <StoreProvider>
-          <>
-            <main>
-              <Container>{children}</Container>
-            </main>
-            <SocialContainer />
-          </>
+          <main>
+            <Container>{children}</Container>
+          </main>
         </StoreProvider>
+        <SocialContainer />
       </body>
     </html>
   );
