@@ -1,18 +1,15 @@
-'use client';
-
-//import { signIn } from 'next-auth/react';
-//import { useSession } from 'next-auth/react';
 import * as React from 'react';
 
 import Typography from '@design-system/Typography';
 
-import { NextPageLayout } from '@/utils/types';
+import { getServerSession } from "next-auth/next"
+import { authOptions } from '@/libs/nextAuth';
 
 import FeatureCard from '@/components/FeatureCard';
 import XBoilerplate from '@/components/XBoilerplate';
 
-const HomePage: NextPageLayout = () => {
-  //const { status } = useSession();
+async function HomePage() {
+  const session = await getServerSession(authOptions);
 
   return (
     <>
@@ -36,7 +33,6 @@ const HomePage: NextPageLayout = () => {
         <Typography as="h2">Let's try the features live</Typography>
       </div>
 
-      {/* <HelloForm onSubmit={handleGoToRouteHello} /> */}
       <div style={{ display: 'grid', gridGap: '24px', gridTemplateColumns: '1fr 1fr 1fr' }}>
         <FeatureCard to="/x-state">
           <Typography as="h2">🍍 State Management X-state</Typography>
@@ -46,26 +42,26 @@ const HomePage: NextPageLayout = () => {
         </FeatureCard>
 
         <FeatureCard
-        // onClick={() => signIn()}
+          to="/next-auth"
         >
           <Typography as="h2">🛡️ Authentication with NextAuth.js</Typography>
           <Typography size="s">
             NextAuth.js is a complete open-source authentication solution for Next.js applications.
           </Typography>
 
-          {/* {status === 'authenticated' && (
+          {session?.user && (
             <div style={{ marginTop: 10, display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
               <Typography size="s">Already Authenticated</Typography>
               <div style={{ backgroundColor: '#46a758', width: 12, height: 12, borderRadius: 18, marginLeft: 8 }} />
             </div>
           )}
 
-          {status === 'unauthenticated' && (
+          {!session?.user && (
             <div style={{ marginTop: 10, display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
               <Typography size="s">Unauthenticated</Typography>
               <div style={{ backgroundColor: '#e5484d', width: 12, height: 12, borderRadius: 18, marginLeft: 8 }} />
             </div>
-          )} */}
+          )}
         </FeatureCard>
 
         <FeatureCard to="/react-hook-form">

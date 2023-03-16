@@ -12,7 +12,6 @@ import { selectorGetDog, selectorGetDogLoading } from '@/machines/dog/dog.select
 import { NextPageLayout } from '@/utils/types';
 
 import Header from '@/components/Header';
-import MainLayout from '@/layouts/MainLayout';
 
 const XstatePage: NextPageLayout = () => {
   const router = useRouter();
@@ -74,10 +73,6 @@ const XstatePage: NextPageLayout = () => {
       )}
     </div>
   );
-};
-
-XstatePage.getLayout = function getLayout(page: React.ReactElement) {
-  return <MainLayout>{page}</MainLayout>;
 };
 
 export default XstatePage;
