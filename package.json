@@ -1,6 +1,6 @@
 {
-  "name": "next-boilerplate",
-  "version": "0.1.0",
+  "name": "x-boilerplate",
+  "version": "0.2.0-beta.0",
   "private": true,
   "scripts": {
     "prepare": "husky install",
@@ -10,7 +10,10 @@
     "start": "next start",
     "lint": "next lint",
     "prettier:format": "prettier --config .prettierrc \"./**/*.+(js|ts)\" --write",
-    "prettier": "prettier --config .prettierrc \"./**/*.+(js|ts)\" --check"
+    "prettier": "prettier --config .prettierrc \"./**/*.+(js|ts)\" --check",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "changeset publish"
   },
   "dependencies": {
     "@hookform/resolvers": "2.9.11",
@@ -32,6 +35,10 @@
     ]
   },
   "devDependencies": {
+    "@changesets/changelog-github": "0.4.8",
+    "@changesets/cli": "2.26.0",
+    "@changesets/get-release-plan": "3.0.16",
+    "@changesets/types": "5.2.1",
     "@commitlint/cli": "17.4.4",
     "@commitlint/config-conventional": "17.4.4",
     "@types/node": "18.15.0",

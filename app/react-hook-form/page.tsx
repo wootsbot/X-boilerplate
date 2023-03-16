@@ -1,11 +1,12 @@
-import { useRouter } from 'next/router';
+'use client';
+
+import { useRouter } from 'next/navigation';
 import * as React from 'react';
 
 import { NextPageLayout } from '@/utils/types';
 
 import Header from '@/components/Header';
 import HelloForm from '@/components/HelloForm';
-import MainLayout from '@/layouts/MainLayout';
 
 const XstatePage: NextPageLayout = () => {
   const router = useRouter();
@@ -40,10 +41,6 @@ const XstatePage: NextPageLayout = () => {
       </div>
     </>
   );
-};
-
-XstatePage.getLayout = function getLayout(page: React.ReactElement) {
-  return <MainLayout>{page}</MainLayout>;
 };
 
 export default XstatePage;

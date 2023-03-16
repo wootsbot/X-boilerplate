@@ -10,3 +10,6 @@ package-lock.json
 
 mocks/
 next.config.js
+.changeset
+
+.vscode

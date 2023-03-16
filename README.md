@@ -11,7 +11,7 @@
 <br>
 
 <p align='center'>
-  <a href="https://x-boilerplate.netlify.app/">Live Demo</a>
+  <a href="https://beta-x-boilerplate.vercel.app/">Live Demo</a>
 </p>
 
 <br>

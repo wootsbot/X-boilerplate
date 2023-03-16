@@ -4,4 +4,5 @@ export type HeaderProps = {
   name?: string;
   message?: string;
   onGoBack?: () => void;
+  toGoBack?: string;
 };

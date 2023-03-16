@@ -1,0 +1,45 @@
+name: Generate Pull Request Stats
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths-ignore:
+      - '**.md'
+
+env:
+  PNPM_VERSION: 7.29.1
+
+jobs:
+  format:
+    name: PR Stats
+    runs-on: self-hosted-ruby
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: 🔥 Setup pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@${{ env.PNPM_VERSION}} --activate
+
+      - name: 📦 Install Dependencies
+        run: |
+          pnpm install --no-frozen-lockfile
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 💣 build
+        run: pnpm build
+
+      - name: 💅 Prettier
+        run: pnpm prettier
