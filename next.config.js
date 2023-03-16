@@ -4,9 +4,11 @@ const isEnabledMswMocking = process.env.NEXT_PUBLIC_MSW_MOCKING === "enabled";
 
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
    images: {
     domains: ['images.dog.ceo'],
+  },
+  experimental: {
+    appDir: true,
   },
   // async headers() {
   //   return [

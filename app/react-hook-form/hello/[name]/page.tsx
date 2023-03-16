@@ -1,14 +1,20 @@
-import { useRouter } from 'next/router';
+'use client';
+
+import { useRouter } from 'next/navigation';
 import * as React from 'react';
 
-import { NextPageLayout } from '@/utils/types';
-
 import Header from '@/components/Header';
-import MainLayout from '@/layouts/MainLayout';
 
-const HelloNamePage: NextPageLayout = () => {
+type HelloNamePageProps = {
+  params: {
+    name: String;
+  };
+};
+
+function HelloNamePage({ params }: HelloNamePageProps) {
   const router = useRouter();
-  const { name } = router.query;
+
+  const { name } = params;
 
   function handleGoBack() {
     router.push('/react-hook-form');
@@ -23,10 +29,6 @@ const HelloNamePage: NextPageLayout = () => {
       onGoBack={handleGoBack}
     />
   );
-};
-
-HelloNamePage.getLayout = function getLayout(page: React.ReactElement) {
-  return <MainLayout>{page}</MainLayout>;
 };
 
 export default HelloNamePage;

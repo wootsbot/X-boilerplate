@@ -1,19 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useRouter } from 'next/router';
-import { signIn, useSession } from 'next-auth/react';
+import { getServerSession } from 'next-auth/next';
 import * as React from 'react';
 
 import Typography from '@design-system/Typography';
 
-import { NextPageLayout } from '@/utils/types';
+import { authOptions } from '@/libs/nextAuth';
 
 import FeatureCard from '@/components/FeatureCard';
 import XBoilerplate from '@/components/XBoilerplate';
-import MainLayout from '@/layouts/MainLayout';
 
-const HomePage: NextPageLayout = () => {
-  const { status } = useSession();
-  const router = useRouter();
+async function HomePage() {
+  const session = await getServerSession(authOptions);
 
   return (
     <>
@@ -37,29 +34,28 @@ const HomePage: NextPageLayout = () => {
         <Typography as="h2">Let's try the features live</Typography>
       </div>
 
-      {/* <HelloForm onSubmit={handleGoToRouteHello} /> */}
       <div style={{ display: 'grid', gridGap: '24px', gridTemplateColumns: '1fr 1fr 1fr' }}>
-        <FeatureCard onClick={() => router.push('/x-state')}>
+        <FeatureCard to="/x-state">
           <Typography as="h2">🍍 State Management X-state</Typography>
           <Typography size="s">
             JavaScript and TypeScript finite state machines and statecharts for the modern web.
           </Typography>
         </FeatureCard>
 
-        <FeatureCard onClick={() => signIn()}>
+        <FeatureCard to="/next-auth">
           <Typography as="h2">🛡️ Authentication with NextAuth.js</Typography>
           <Typography size="s">
             NextAuth.js is a complete open-source authentication solution for Next.js applications.
           </Typography>
 
-          {status === 'authenticated' && (
+          {session?.user && (
             <div style={{ marginTop: 10, display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
               <Typography size="s">Already Authenticated</Typography>
               <div style={{ backgroundColor: '#46a758', width: 12, height: 12, borderRadius: 18, marginLeft: 8 }} />
             </div>
           )}
 
-          {status === 'unauthenticated' && (
+          {!session?.user && (
             <div style={{ marginTop: 10, display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
               <Typography size="s">Unauthenticated</Typography>
               <div style={{ backgroundColor: '#e5484d', width: 12, height: 12, borderRadius: 18, marginLeft: 8 }} />
@@ -67,7 +63,7 @@ const HomePage: NextPageLayout = () => {
           )}
         </FeatureCard>
 
-        <FeatureCard onClick={() => router.push('/react-hook-form')}>
+        <FeatureCard to="/react-hook-form">
           <Typography as="h2">📄 Forms manager with react-hook-form and Zod</Typography>
           <Typography size="s">
             Performant, flexible and extensible forms with easy-to-use validation. and TypeScript-first schema
@@ -84,10 +80,6 @@ const HomePage: NextPageLayout = () => {
       </div>
     </>
   );
-};
-
-HomePage.getLayout = function getLayout(page: React.ReactElement) {
-  return <MainLayout>{page}</MainLayout>;
-};
+}
 
 export default HomePage;
