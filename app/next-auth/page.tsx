@@ -4,8 +4,10 @@ import { getProviders } from 'next-auth/react';
 import { authOptions } from '@/libs/nextAuth';
 
 import SignInProviderButton from './SignInProviderButton';
+import SignOutButton from './SignOutButton';
 
 import Header from '@/components/Header';
+import SessionStatus from '@/server-components/SessionStatus';
 
 async function NextAuthPage() {
   const session = await getServerSession(authOptions);
@@ -18,11 +20,18 @@ async function NextAuthPage() {
     <div>
       <Header title="🛡️" subTitle="Hi" name="NextAuth.js" message="Authentication for Next.js, Live Demo." />
 
-      {Object.values(providers).map((provider) => (
-        <div key={provider?.name}>
-          <SignInProviderButton provider={provider} />
-        </div>
-      ))}
+      {/*https://beta.nextjs.org/docs/data-fetching/fetching#asyncawait-in-server-components */}
+      {/* @ts-expect-error Async Server Component */}
+      <SessionStatus />
+
+      {session?.user && <SignOutButton />}
+
+      {!session?.user &&
+        Object.values(providers).map((provider) => (
+          <div key={provider?.name}>
+            <SignInProviderButton provider={provider} />
+          </div>
+        ))}
     </div>
   );
 }

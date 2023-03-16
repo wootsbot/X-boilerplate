@@ -26,6 +26,9 @@
             "@/components/*": [
                 "./src/components/*"
             ],
+            "@/server-components/*": [
+                "./src/server-components/*"
+            ],
             "@/utils/*": [
                 "./src/utils/*"
             ],

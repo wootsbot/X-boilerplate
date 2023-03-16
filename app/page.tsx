@@ -1,17 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
-import { getServerSession } from 'next-auth/next';
 import * as React from 'react';
 
 import Typography from '@design-system/Typography';
 
-import { authOptions } from '@/libs/nextAuth';
-
 import FeatureCard from '@/components/FeatureCard';
 import XBoilerplate from '@/components/XBoilerplate';
+import SessionStatus from '@/server-components/SessionStatus';
 
 async function HomePage() {
-  const session = await getServerSession(authOptions);
-
   return (
     <>
       <div
@@ -48,19 +44,9 @@ async function HomePage() {
             NextAuth.js is a complete open-source authentication solution for Next.js applications.
           </Typography>
 
-          {session?.user && (
-            <div style={{ marginTop: 10, display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-              <Typography size="s">Already Authenticated</Typography>
-              <div style={{ backgroundColor: '#46a758', width: 12, height: 12, borderRadius: 18, marginLeft: 8 }} />
-            </div>
-          )}
-
-          {!session?.user && (
-            <div style={{ marginTop: 10, display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-              <Typography size="s">Unauthenticated</Typography>
-              <div style={{ backgroundColor: '#e5484d', width: 12, height: 12, borderRadius: 18, marginLeft: 8 }} />
-            </div>
-          )}
+          {/*https://beta.nextjs.org/docs/data-fetching/fetching#asyncawait-in-server-components */}
+          {/* @ts-expect-error Async Server Component */}
+          <SessionStatus />
         </FeatureCard>
 
         <FeatureCard to="/react-hook-form">
