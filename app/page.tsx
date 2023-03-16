@@ -5,7 +5,7 @@ import Typography from '@design-system/Typography';
 
 import FeatureCard from '@/components/FeatureCard';
 import XBoilerplate from '@/components/XBoilerplate';
-import SessionStatus from '@/server-components/SessionStatus';
+import SessionStatus from '@/server-components/SessionStatus.server';
 
 async function HomePage() {
   return (

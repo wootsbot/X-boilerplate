@@ -7,7 +7,7 @@ import SignInProviderButton from './SignInProviderButton';
 import SignOutButton from './SignOutButton';
 
 import Header from '@/components/Header';
-import SessionStatus from '@/server-components/SessionStatus';
+import SessionStatus from '@/server-components/SessionStatus.server';
 
 async function NextAuthPage() {
   const session = await getServerSession(authOptions);
