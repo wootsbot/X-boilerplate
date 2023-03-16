@@ -1,18 +1,18 @@
-name: Release Boilerplate
+name: Generate Pull Request Stats
 
 on:
-  push:
-    branches:
-      - main
-      - next
+  pull_request:
+    types: [opened, synchronize]
+    paths-ignore:
+      - '**.md'
 
 env:
   PNPM_VERSION: 7.29.1
 
 jobs:
-  stats:
-    name: Version Boilerplate
-    runs-on: ubuntu-latest
+  format:
+    name: PR Stats
+    runs-on: self-hosted-ruby
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
@@ -30,7 +30,7 @@ jobs:
       - name: 🔥 Setup pnpm
         run: |
           corepack enable
-          corepack prepare pnpm@${PNPM_VERSION} --activate
+          corepack prepare pnpm@${{ env.PNPM_VERSION}} --activate
 
       - name: 📦 Install Dependencies
         run: |
@@ -43,16 +43,3 @@ jobs:
 
       - name: 💅 Prettier
         run: pnpm prettier
-
-      # - name: 💎 lint:types
-      #   run: pnpm turbo run lint:types --cache-dir=".turbo"
-
-      - name: Create Release Pull Request or Publish Design Blocks
-        id: changesets
-        uses: changesets/action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          publish: pnpm release
-          commit: 'ci(release): Version packages'
-          title: 'ci(release): Version packages'

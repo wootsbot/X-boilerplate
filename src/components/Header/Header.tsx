@@ -1,8 +1,7 @@
 'use client';
 
-import * as React from 'react';
-
 import { useRouter } from 'next/navigation';
+import * as React from 'react';
 
 import ButtonGoBack from '@design-system/ButtonGoBack';
 import Typography from '@design-system/Typography';
@@ -14,7 +13,7 @@ function Header({ title, subTitle, message, onGoBack, toGoBack = '/', name, ...p
   const router = useRouter();
 
   function handleToGoBack() {
-    router.push(toGoBack as string)
+    router.push(toGoBack as string);
   }
 
   return (

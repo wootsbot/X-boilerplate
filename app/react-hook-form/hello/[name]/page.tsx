@@ -3,12 +3,15 @@
 import { useRouter } from 'next/navigation';
 import * as React from 'react';
 
-import { NextPageLayout } from '@/utils/types';
-
 import Header from '@/components/Header';
-import MainLayout from '@/layouts/MainLayout';
 
-const HelloNamePage: NextPageLayout = ({ params }) => {
+type HelloNamePageProps = {
+  params: {
+    name: String;
+  };
+};
+
+function HelloNamePage({ params }: HelloNamePageProps) {
   const router = useRouter();
 
   const { name } = params;
@@ -26,10 +29,6 @@ const HelloNamePage: NextPageLayout = ({ params }) => {
       onGoBack={handleGoBack}
     />
   );
-};
-
-HelloNamePage.getLayout = function getLayout(page: React.ReactElement) {
-  return <MainLayout>{page}</MainLayout>;
 };
 
 export default HelloNamePage;

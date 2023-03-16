@@ -1,8 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
+import { getServerSession } from 'next-auth/next';
 import * as React from 'react';
 
 import Typography from '@design-system/Typography';
 
-import { getServerSession } from "next-auth/next"
 import { authOptions } from '@/libs/nextAuth';
 
 import FeatureCard from '@/components/FeatureCard';
@@ -41,9 +42,7 @@ async function HomePage() {
           </Typography>
         </FeatureCard>
 
-        <FeatureCard
-          to="/next-auth"
-        >
+        <FeatureCard to="/next-auth">
           <Typography as="h2">🛡️ Authentication with NextAuth.js</Typography>
           <Typography size="s">
             NextAuth.js is a complete open-source authentication solution for Next.js applications.
@@ -81,6 +80,6 @@ async function HomePage() {
       </div>
     </>
   );
-};
+}
 
 export default HomePage;
