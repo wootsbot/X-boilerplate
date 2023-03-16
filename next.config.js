@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 
-const isEnabledMswMocking = process.env.NEXT_PUBLIC_MSW_MOCKING === "enabled";
+//const isEnabledMswMocking = process.env.NEXT_PUBLIC_MSW_MOCKING === "enabled";
 
 const nextConfig = {
   reactStrictMode: true,
-   images: {
-    domains: ['images.dog.ceo'],
+  images: {
+    domains: ['images.dog.ceo', 'avatars.githubusercontent.com'],
   },
   experimental: {
     appDir: true,

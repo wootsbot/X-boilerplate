@@ -18,7 +18,13 @@ async function NextAuthPage() {
 
   return (
     <div>
-      <Header title="🛡️" subTitle="Hi" name="NextAuth.js" message="Authentication for Next.js, Live Demo." />
+      <Header
+        avatarUrl={session?.user?.image as string}
+        title="🛡️"
+        subTitle="Hi"
+        name={session?.user?.name ?? 'NextAuth.js'}
+        message="Authentication for Next.js, Live Demo."
+      />
 
       {/*https://beta.nextjs.org/docs/data-fetching/fetching#asyncawait-in-server-components */}
       {/* @ts-expect-error Async Server Component */}
