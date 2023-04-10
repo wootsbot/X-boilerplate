@@ -16,17 +16,17 @@
     "release": "changeset publish"
   },
   "dependencies": {
-    "@hookform/resolvers": "2.9.11",
-    "@icons-pack/react-simple-icons": "7.1.0",
+    "@hookform/resolvers": "3.0.1",
+    "@icons-pack/react-simple-icons": "7.2.0",
     "@xstate/immer": "0.3.2",
     "@xstate/react": "3.2.1",
-    "immer": "9.0.19",
-    "next": "13.2.4",
-    "next-auth": "4.20.1",
+    "immer": "9.0.21",
+    "next": "13.3.0",
+    "next-auth": "4.22.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "7.43.5",
-    "xstate": "4.37.0",
+    "react-hook-form": "7.43.9",
+    "xstate": "4.37.1",
     "zod": "3.21.4"
   },
   "lint-staged": {
