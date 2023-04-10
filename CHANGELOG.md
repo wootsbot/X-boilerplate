@@ -1,5 +1,11 @@
 # x-boilerplate
 
+## 0.2.0-beta.2
+
+### Minor Changes
+
+- [`1659591`](https://github.com/wootsbot/X-boilerplate/commit/1659591642ec3d1c4cc6ca121d50674964651d0c) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump next, zod, xstate
+
 ## 0.2.0-beta.1
 
 ### Patch Changes
