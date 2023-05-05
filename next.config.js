@@ -7,9 +7,6 @@ const nextConfig = {
   images: {
     domains: ['images.dog.ceo', 'avatars.githubusercontent.com'],
   },
-  experimental: {
-    appDir: true,
-  },
   // async headers() {
   //   return [
   //     isEnabledMswMocking && {

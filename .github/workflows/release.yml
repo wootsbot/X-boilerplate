@@ -7,7 +7,7 @@ on:
       - next
 
 env:
-  PNPM_VERSION: 7.29.1
+  PNPM_VERSION: 8.4.0
 
 jobs:
   stats:
