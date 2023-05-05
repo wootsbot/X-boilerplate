@@ -1,5 +1,11 @@
 # x-boilerplate
 
+## 0.2.0-beta.3
+
+### Minor Changes
+
+- [`3f3261a`](https://github.com/wootsbot/X-boilerplate/commit/3f3261a434c8f2442378a4aff52679b35711c417) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump next and remove experimental `appDir`
+
 ## 0.2.0-beta.2
 
 ### Minor Changes
