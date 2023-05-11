@@ -38,6 +38,12 @@ async function HomePage() {
         />
 
         <FeatureCard
+          to="/react-query"
+          title="🌺 TanStack Query v4 (WIP)"
+          description="TanStack Query (FKA React Query) it makes fetching, caching, synchronizing and updating server state in your web applications a breeze."
+        />
+
+        <FeatureCard
           to="/next-auth"
           title="🛡️ Authentication with NextAuth.js"
           description="NextAuth.js is a complete open-source authentication solution for Next.js applications."

@@ -34,7 +34,7 @@
 
 ## Optional Features
 
-- 🍍 [State Management x-state](https://xstate.js.org/)
+- 🍍 [State Management x-state](https://xstate.js.org/) or [State Management TanStack Query](https://tanstack.com/query/v4)
 
 - 🔥 Mocking via [msw](https://mswjs.io/)
 

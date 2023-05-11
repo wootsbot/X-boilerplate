@@ -3,6 +3,7 @@ import * as React from 'react';
 
 import Container from '@/components/Container';
 import SocialContainer from '@/components/SocialContainer';
+import ProviderRoot from '@/providers/ProviderRoot';
 import StoreProvider from '@/store/StoreProvider';
 
 type MainLayoutProps = {
@@ -61,9 +62,11 @@ function MainLayout({ children }: MainLayoutProps) {
     <html lang="en">
       <body>
         <StoreProvider>
-          <main>
-            <Container>{children}</Container>
-          </main>
+          <ProviderRoot>
+            <main>
+              <Container>{children}</Container>
+            </main>
+          </ProviderRoot>
         </StoreProvider>
         <SocialContainer />
       </body>
