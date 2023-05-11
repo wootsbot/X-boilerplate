@@ -2,7 +2,7 @@ import { getServerSession } from 'next-auth/next';
 
 import Typography from '@design-system/Typography';
 
-import { authOptions } from '@/libs/nextAuth';
+import { authOptions } from '~/api/auth/options';
 
 async function SessionStatus() {
   const session = await getServerSession(authOptions);

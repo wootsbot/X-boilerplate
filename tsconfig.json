@@ -40,6 +40,9 @@
             ],
             "@/store/*": [
                 "./src/store/*"
+            ],
+            "~/api/*": [
+                "./app/api/*"
             ]
         },
         "plugins": [

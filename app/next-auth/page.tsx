@@ -1,13 +1,12 @@
 import { getServerSession } from 'next-auth/next';
 import { getProviders } from 'next-auth/react';
 
-import { authOptions } from '@/libs/nextAuth';
-
 import SignInProviderButton from './SignInProviderButton';
 import SignOutButton from './SignOutButton';
 
 import Header from '@/components/Header';
 import SessionStatus from '@/server-components/SessionStatus.server';
+import { authOptions } from '~/api/auth/options';
 
 async function NextAuthPage() {
   const session = await getServerSession(authOptions);
