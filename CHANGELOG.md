@@ -1,5 +1,15 @@
 # x-boilerplate
 
+## 0.2.0-beta.4
+
+### Minor Changes
+
+- [`96fa472`](https://github.com/wootsbot/X-boilerplate/commit/96fa472a008136892b9e9a3dce947f61c3bc0c67) Thanks [@wootsbot](https://github.com/wootsbot)! - Wip added State Management TanStack Query 🌺
+
+### Patch Changes
+
+- [`d335ab9`](https://github.com/wootsbot/X-boilerplate/commit/d335ab95e3eefe4c784e557561ce8207008a76e7) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump next and remove `pages/api`
+
 ## 0.2.0-beta.3
 
 ### Minor Changes
