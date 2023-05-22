@@ -1,4 +1,7 @@
-# WIP
+
+> **Warning**
+> This boilerplate is a work in progress.
+
 
 <p align='center'>
   <img src='https://github.com/react-next-boilerplate/X-boilerplate/blob/main/docs/images/preview.png' alt='X-boilerplate a starting point with configuration and best practices for your Next.js projects, so you can only focus on developing your solutions.' width='600'/>
