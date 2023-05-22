@@ -63,7 +63,7 @@ Many of this software's features are based on the philosophy of being optional. 
 - [x] ~Integrate State Management TanStack Query~
 - [x] ~Integrate react-hook-form~
 - [x] ~Integrate Zod to schema validation~
-- [s] ~Authentication (next-auth)~
+- [x] ~Authentication (next-auth)~
 - [x] ~Integrate linters, hooks to DX~
 - [x] Integrate ORM prisma
 - [x] Integrate supabase
