@@ -4,7 +4,7 @@
 
 
 <p align='center'>
-  <img src='https://github.com/react-next-boilerplate/X-boilerplate/blob/main/docs/images/preview.png' alt='X-boilerplate a starting point with configuration and best practices for your Next.js projects, so you can only focus on developing your solutions.' width='600'/>
+  <img src='https://github.com/react-next-boilerplate/X-boilerplate/blob/main/docs/images/preview.png' alt='X-boilerplate a starting boilerplate with configuration and best practices for your Nextjs projects, so you can only focus on building your product.' width='600'/>
 </p>
 
 <div align="center">
@@ -55,7 +55,7 @@
 
 ## Roadmap
 
-Many of this boilerplate features are based on the philosophy of being optional. We understand that every project or product is unique and, therefore, requires different settings and functionalities. We provide you with the freedom to choose the features that best fit your needs so you can only focus on developing your solutions.
+Many of this boilerplate features are based on the philosophy of being optional. We understand that every project or product is unique and, therefore, requires different settings and functionalities. We provide you with the freedom to choose the features that best fit your needs so you can only focus on building your product.
 
 - [x] ~Configure next 13 with new /app dir~
 - [x] ~Integrate State Management x-state~
