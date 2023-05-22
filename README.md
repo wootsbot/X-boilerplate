@@ -72,6 +72,10 @@ Many of this software's features are based on the philosophy of being optional. 
 - [x] Integrate SDK to Subscriptions
 - [x] Add MDX support for basic pages
 - [x] Add OG image for blog using @vercel/og
+- [x] Integrate https://tailwindcss.com/
+- [x] Integrate https://mui.com/
+- [x] Integrate https://www.radix-ui.com/
+- [x] Integrate https://chakra-ui.com/
 - [x] Dark mode
 - [x] Integrate graphql
 
