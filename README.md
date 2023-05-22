@@ -53,10 +53,9 @@
 
 <br>
 
-
 ## Roadmap
 
-Many of this software's features are based on the philosophy of being optional. We understand that every project or product is unique and, therefore, requires different settings and functionalities. We provide you with the freedom to choose the features that best fit your needs to ensure the efficiency and effectiveness of your project.
+Many of this boilerplate features are based on the philosophy of being optional. We understand that every project or product is unique and, therefore, requires different settings and functionalities. We provide you with the freedom to choose the features that best fit your needs so you can only focus on developing your solutions.
 
 - [x] ~Configure next 13 with new /app dir~
 - [x] ~Integrate State Management x-state~
