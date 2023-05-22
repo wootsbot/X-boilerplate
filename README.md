@@ -53,6 +53,28 @@
 
 <br>
 
+
+## Roadmap
+
+Many of this software's features are based on the philosophy of being optional. We understand that every project or product is unique and, therefore, requires different settings and functionalities. We provide you with the freedom to choose the features that best fit your needs to ensure the efficiency and effectiveness of your project.
+
+- [x] ~Configure next 13 with new /app dir~
+- [x] ~Integrate State Management x-state~
+- [x] ~Integrate State Management TanStack Query~
+- [x] ~Integrate react-hook-form~
+- [x] ~Integrate Zod to schema validation~
+- [s] ~Authentication (next-auth)~
+- [x] ~Integrate linters, hooks to DX~
+- [x] Integrate ORM prisma
+- [x] Integrate supabase
+- [x] Integrate planetscale
+- [x] Mocking via msw
+- [x] Integrate SDK to Subscriptions
+- [x] Add MDX support for basic pages
+- [x] Add OG image for blog using @vercel/og
+- [x] Dark mode
+- [x] Integrate graphql
+
 ### Dev tools
 
 - [TypeScript](https://www.typescriptlang.org/)
