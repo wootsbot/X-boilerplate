@@ -2,6 +2,10 @@
   "name": "x-boilerplate",
   "version": "0.2.0-beta.4",
   "private": true,
+  "engines": {
+    "node": ">=16",
+    "pnpm": ">=8"
+  },
   "scripts": {
     "prepare": "husky install",
     "dev": "next dev",
@@ -16,18 +20,18 @@
     "release": "changeset publish"
   },
   "dependencies": {
-    "@hookform/resolvers": "3.1.0",
-    "@icons-pack/react-simple-icons": "7.2.0",
-    "@tanstack/react-query": "4.29.7",
-    "@tanstack/react-query-devtools": "4.29.7",
-    "@xstate/immer": "0.3.2",
+    "@hookform/resolvers": "3.1.1",
+    "@icons-pack/react-simple-icons": "8.0.1",
+    "@tanstack/react-query": "4.29.15",
+    "@tanstack/react-query-devtools": "4.29.15",
+    "@xstate/immer": "0.3.3",
     "@xstate/react": "3.2.2",
     "immer": "10.0.2",
-    "next": "13.4.3",
+    "next": "13.4.7",
     "next-auth": "4.22.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "7.43.9",
+    "react-hook-form": "7.45.0",
     "xstate": "4.37.2",
     "zod": "3.21.4"
   },
@@ -41,23 +45,22 @@
     "@changesets/cli": "2.26.1",
     "@changesets/get-release-plan": "3.0.16",
     "@changesets/types": "5.2.1",
-    "@commitlint/cli": "17.6.3",
-    "@commitlint/config-conventional": "17.6.3",
-    "@types/node": "20.2.3",
-    "@types/react": "18.2.6",
-    "@types/react-dom": "18.2.4",
-    "eslint": "8.41.0",
-    "eslint-config-next": "13.4.3",
+    "@commitlint/cli": "17.6.5",
+    "@commitlint/config-conventional": "17.6.5",
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.13",
+    "@types/react-dom": "18.2.6",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.7",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-simple-import-sort": "10.0.0",
     "husky": "8.0.3",
     "lint-staged": "13.2.2",
-    "msw": "1.2.1",
+    "msw": "1.2.2",
     "prettier": "2.8.8",
     "typescript": "5.0.4"
   },
-  "packageManager": "pnpm@8.5.1",
   "msw": {
     "workerDirectory": "public"
   }
