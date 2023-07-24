@@ -8,9 +8,9 @@ on:
 
 env:
   PNPM_VERSION: 8.6.10
-  GITHUB_ID: ${{ env.X_GITHUB_ID }}
-  GITHUB_SECRET: ${{ env.X_GITHUB_SECRET }}
-  SECRET: ${{ env.SECRET }}
+  GITHUB_ID: ${{ secrets.X_GITHUB_ID }}
+  GITHUB_SECRET: ${{ secrets.X_GITHUB_SECRET }}
+  SECRET: ${{ secrets.SECRET }}
   NEXTAUTH_URL: ${{ vars.NEXTAUTH_URL }}
   NODE_VERSION: 18.16.1
 
