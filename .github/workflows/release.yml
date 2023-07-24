@@ -7,12 +7,12 @@ on:
       - next
 
 env:
-  PNPM_VERSION: 8.6.10
+  PNPM_VERSION: ${{ vars.PNPM_VERSION }}
   GITHUB_ID: ${{ secrets.X_GITHUB_ID }}
   GITHUB_SECRET: ${{ secrets.X_GITHUB_SECRET }}
   SECRET: ${{ secrets.SECRET }}
   NEXTAUTH_URL: ${{ vars.NEXTAUTH_URL }}
-  NODE_VERSION: 18.16.1
+  NODE_VERSION: ${{ vars.NODE_VERSION }}
 
 jobs:
   stats:
