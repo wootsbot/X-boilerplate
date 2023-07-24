@@ -1,11 +1,10 @@
-/* eslint-disable react/no-unescaped-entities */
 import * as React from 'react';
 
 import Typography from '@design-system/Typography';
 
 import FeatureCard from '@/components/FeatureCard';
+import SessionStatus from '@/components/session-status';
 import XBoilerplate from '@/components/XBoilerplate';
-import SessionStatus from '@/server-components/SessionStatus.server';
 
 async function HomePage() {
   return (
@@ -48,8 +47,6 @@ async function HomePage() {
           title="🛡️ Authentication with NextAuth.js"
           description="NextAuth.js is a complete open-source authentication solution for Next.js applications."
         >
-          {/*https://beta.nextjs.org/docs/data-fetching/fetching#asyncawait-in-server-components */}
-          {/* @ts-expect-error Async Server Component */}
           <SessionStatus />
         </FeatureCard>
 

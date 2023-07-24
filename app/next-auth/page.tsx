@@ -1,12 +1,13 @@
 import { getServerSession } from 'next-auth/next';
 import { getProviders } from 'next-auth/react';
 
+import { authOptions } from '@/libs/auth';
+
 import SignInProviderButton from './SignInProviderButton';
 import SignOutButton from './SignOutButton';
 
 import Header from '@/components/Header';
-import SessionStatus from '@/server-components/SessionStatus.server';
-import { authOptions } from '~/api/auth/options';
+import SessionStatus from '@/components/session-status';
 
 async function NextAuthPage() {
   const session = await getServerSession(authOptions);
@@ -25,8 +26,6 @@ async function NextAuthPage() {
         message="Authentication for Next.js, Live Demo."
       />
 
-      {/*https://beta.nextjs.org/docs/data-fetching/fetching#asyncawait-in-server-components */}
-      {/* @ts-expect-error Async Server Component */}
       <SessionStatus />
 
       {session?.user && <SignOutButton />}

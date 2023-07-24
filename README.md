@@ -1,7 +1,5 @@
-
 > **Warning**
 > This boilerplate is a work in progress.
-
 
 <p align='center'>
   <img src='https://github.com/react-next-boilerplate/X-boilerplate/blob/main/docs/images/preview.png' alt='X-boilerplate a starting boilerplate with configuration and best practices for your Nextjs projects, so you can only focus on building your product.' width='600'/>
@@ -64,6 +62,7 @@ Many of this boilerplate features are based on the philosophy of being optional.
 - [x] ~Integrate Zod to schema validation~
 - [x] ~Authentication (next-auth)~
 - [x] ~Integrate linters, hooks to DX~
+- [x] Integrate resend
 - [x] Integrate ORM prisma
 - [x] Integrate supabase
 - [x] Integrate planetscale
