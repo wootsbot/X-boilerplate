@@ -1,5 +1,11 @@
 # x-boilerplate
 
+## 0.2.0-beta.5
+
+### Minor Changes
+
+- [`5f88417`](https://github.com/wootsbot/X-boilerplate/commit/5f884175aaf129f873c9cabb9a564fd13c5b9f62) Thanks [@wootsbot](https://github.com/wootsbot)! - RFC: remove eslint Async Server Component and Bump pakages
+
 ## 0.2.0-beta.4
 
 ### Minor Changes
