@@ -7,7 +7,12 @@ on:
       - next
 
 env:
-  PNPM_VERSION: 8.5.1
+  PNPM_VERSION: 8.6.10
+  GITHUB_ID: ${{ env.X_GITHUB_ID }}
+  GITHUB_SECRET: ${{ env.X_GITHUB_SECRET }}
+  SECRET: ${{ env.SECRET }}
+  NEXTAUTH_URL: ${{ vars.NEXTAUTH_URL }}
+  NODE_VERSION: 18.16.1
 
 jobs:
   stats:
@@ -25,7 +30,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: ${{ env.NODE_VERSION }}
 
       - name: 🔥 Setup pnpm
         run: |
@@ -47,7 +52,7 @@ jobs:
       # - name: 💎 lint:types
       #   run: pnpm turbo run lint:types --cache-dir=".turbo"
 
-      - name: Create Release Pull Request or Publish Design Blocks
+      - name: Create Release Pull Request
         id: changesets
         uses: changesets/action@v1
         env:
