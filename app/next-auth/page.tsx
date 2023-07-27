@@ -13,9 +13,6 @@ async function NextAuthPage() {
   const session = await getServerSession(authOptions);
   const providers = (await getProviders()) ?? [];
 
-  console.log('session', { session });
-  console.log('providers', { providers });
-
   return (
     <div>
       <Header
