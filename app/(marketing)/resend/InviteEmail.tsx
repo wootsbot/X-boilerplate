@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import * as React from 'react';
 
+import env from '~/env';
+
 import {
   Body,
   Button,
@@ -16,8 +18,6 @@ import {
   Tailwind,
   Text,
 } from '@react-email/components';
-
-import env from '~/env';
 
 interface InviteEmailProps {
   invitedByUsername?: string;

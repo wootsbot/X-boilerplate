@@ -13,6 +13,12 @@ env:
   SECRET: ${{ secrets.SECRET }}
   NEXTAUTH_URL: ${{ vars.NEXTAUTH_URL }}
   NODE_VERSION: ${{ vars.NODE_VERSION }}
+  RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+  RESEND_DOMAIN: ${{ vars.RESEND_DOMAIN }}
+  NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+  SITE_NAME: ${{ vars.SITE_NAME }}
+  SITE_URL: ${{ vars.SITE_URL }}
+  TWITTER_CREATOR: ${{ vars.TWITTER_CREATOR }}
 
 jobs:
   format:

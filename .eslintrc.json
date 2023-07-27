@@ -13,6 +13,7 @@
           // `react` come first.
           ["^next", "^react"],
           // all pakages
+          ["^~/?\\w"],
           ["^@?\\w"],
           ["^@/machines", "^@/libs"],
           ["^@/utils"],

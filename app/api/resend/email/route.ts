@@ -1,10 +1,11 @@
 import { NextResponse } from 'next/server';
 
+import InviteEmail from '~/app/(marketing)/resend/InviteEmail';
+import env from '~/env';
+
 import { Resend } from 'resend';
 
 import { emailSchema } from '@/hooks/services/resend/email/email.schema';
-import InviteEmail from '~/app/(marketing)/resend/InviteEmail';
-import env from '~/env';
 
 const resend = new Resend(env.RESEND_API_KEY);
 

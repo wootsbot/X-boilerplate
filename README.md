@@ -41,6 +41,8 @@
 
 - 🛡️ Authentication for Next.js [NextAuth](https://next-auth.js.org/)
 
+- ✉️ Send emails with [Resend](https://resend.com) and [@react-email](https://react.email/docs/integrations/resend)
+
 - 📑 [Finite state machines](./src/machines)
 
 - 📄 [react-hook-form](https://react-hook-form.com/) - Forms with easy-to-use validation
