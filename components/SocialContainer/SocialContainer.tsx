@@ -13,7 +13,7 @@ function SocialContainer() {
         <SiGithub color="#374151" />
       </a>
 
-      <a href="https://x-boilerplate.netlify.app/" target="_blank" rel="noreferrer">
+      <a href="https://x.openkit.run" target="_blank" rel="noreferrer">
         <XBoilerplateSimple color="#374151" />
       </a>
     </div>
