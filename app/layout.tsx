@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import * as React from 'react';
 
+import Providers from './Providers';
+
 import Container from '@/components/Container';
 import SocialContainer from '@/components/SocialContainer';
-import ProviderRoot from '@/providers/ProviderRoot';
-import StoreProvider from '@/store/StoreProvider';
 
 type MainLayoutProps = {
   children?: React.ReactNode;
@@ -61,14 +61,12 @@ function MainLayout({ children }: MainLayoutProps) {
   return (
     <html lang="en">
       <body>
-        <StoreProvider>
-          <ProviderRoot>
+        <Providers>
             <main>
               <Container>{children}</Container>
             </main>
-          </ProviderRoot>
-        </StoreProvider>
-        <SocialContainer />
+            <SocialContainer />
+        </Providers>
       </body>
     </html>
   );

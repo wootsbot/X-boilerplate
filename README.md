@@ -12,7 +12,7 @@
 <br>
 
 <p align='center'>
-  <a href="https://beta-x-boilerplate.vercel.app/">Live Demo</a>
+  <a href="https://x.openkit.run/">Live Demo</a>
 </p>
 
 <br>
@@ -63,6 +63,7 @@ Many of this boilerplate features are based on the philosophy of being optional.
 - [x] ~Authentication (next-auth)~
 - [x] ~Integrate linters, hooks to DX~
 - [x] Integrate resend
+- [x] Integrate @react-email
 - [x] Integrate ORM prisma
 - [x] Integrate supabase
 - [x] Integrate planetscale

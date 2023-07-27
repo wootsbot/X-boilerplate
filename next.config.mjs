@@ -1,7 +1,8 @@
-/** @type {import('next').NextConfig} */
+import './env.mjs';
 
 //const isEnabledMswMocking = process.env.NEXT_PUBLIC_MSW_MOCKING === "enabled";
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -24,4 +25,4 @@ const nextConfig = {
   // },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

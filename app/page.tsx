@@ -58,6 +58,12 @@ async function HomePage() {
         validation with static type inference"
         />
 
+        <FeatureCard
+          to="/resend"
+          title="✉️ Send emails with Resend, @react-email and TanStack Query"
+          description="Resend is the email API for developers."
+        />
+
         {/* <FeatureCard>
           <Typography as="h2">🔥 Mocking via msw</Typography>
           <Typography size="s">

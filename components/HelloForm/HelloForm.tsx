@@ -7,7 +7,7 @@ import InputField from '@design-system/InputField';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 
-import { helloFormSchema } from '@/libs/validations/hello-form';
+import { helloFormSchema } from '@/utils/validations/hello-form';
 
 import { HelloFormProps } from './HelloForm.type';
 
