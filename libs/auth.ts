@@ -6,12 +6,12 @@ import env from '~/env';
 export const authOptions: NextAuthOptions = {
   providers: [
     GithubProvider({
-      clientId: env.GITHUB_ID,
-      clientSecret: env.GITHUB_SECRET,
+      clientId: process.env.GITHUB_ID as string,
+      clientSecret: process.env.GITHUB_SECRET as string,
     }),
   ],
 
-  secret: env.SECRET,
+  secret: process.env.SECRET,
 
   pages: {
     signIn: '/auth/signin',
