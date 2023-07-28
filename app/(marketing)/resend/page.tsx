@@ -12,7 +12,7 @@ import * as z from 'zod';
 
 import { sendEmailSchema } from '@/utils/validations/send-email';
 
-import Header from '@/components/header';
+import Header from '@/components/Header';
 import { useResendEmail } from '@/hooks/services/resend/email/use-resend-email.hook';
 
 type FormValues = z.infer<typeof sendEmailSchema>;

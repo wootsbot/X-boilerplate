@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { AVAILABLE_LANGUAGES } from '@/libs/i18n/constants';
 import i18n from '@/libs/i18n/init';
 
-import Header from '@/components/header';
+import Header from '@/components/Header';
 
 function I18nextPage() {
   const router = useRouter();

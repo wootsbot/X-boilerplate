@@ -3,8 +3,8 @@ import * as React from 'react';
 
 import Providers from './Providers';
 
-import Container from '@/components/container';
-import SocialContainer from '@/components/social-container';
+import Container from '@/components/Container';
+import SocialContainer from '@/components/SocialContainer';
 
 type MainLayoutProps = {
   children?: React.ReactNode;

@@ -11,7 +11,7 @@ import { selectorGetDog, selectorGetDogLoading } from '@/machines/dog/dog.select
 
 import { NextPageLayout } from '@/utils/types';
 
-import Header from '@/components/header';
+import Header from '@/components/Header';
 
 const XstatePage: NextPageLayout = () => {
   const router = useRouter();

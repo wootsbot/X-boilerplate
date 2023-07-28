@@ -3,9 +3,9 @@ import * as React from 'react';
 
 import Typography from '@design-system/Typography';
 
-import FeatureCard from '@/components/feature-card';
-import SessionStatus from '@/components/session-status';
-import XBoilerplate from '@/components/x-boilerplate';
+import FeatureCard from '@/components/FeatureCard';
+import SessionStatus from '@/components/SessionStatus';
+import XBoilerplate from '@/components/XBoilerplate';
 
 async function HomePage() {
   return (

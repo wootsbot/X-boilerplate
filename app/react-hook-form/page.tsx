@@ -5,8 +5,8 @@ import * as React from 'react';
 
 import { NextPageLayout } from '@/utils/types';
 
-import Header from '@/components/header';
-import HelloForm from '@/components/hello-form';
+import Header from '@/components/Header';
+import HelloForm from '@/components/HelloForm';
 
 const XstatePage: NextPageLayout = () => {
   const router = useRouter();
