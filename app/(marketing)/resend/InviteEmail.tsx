@@ -1,8 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import * as React from 'react';
 
-import env from '~/env';
-
 import {
   Body,
   Button,
@@ -24,7 +22,7 @@ interface InviteEmailProps {
   inviteLink?: string;
 }
 
-const baseUrl = env.SITE_URL ?? '';
+const baseUrl = process.env.SITE_URL ?? '';
 
 export const InviteEmail = ({ invitedByUsername = 'X Boilerplate', inviteLink }: InviteEmailProps) => {
   return (

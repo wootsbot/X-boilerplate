@@ -43,6 +43,8 @@
 
 - ✉️ Send emails with [Resend](https://resend.com) and [@react-email](https://react.email/docs/integrations/resend)
 
+- 🐂 Internationalization with [react-i18next](https://react.i18next.com/) (SSG)
+
 - 📑 [Finite state machines](./src/machines)
 
 - 📄 [react-hook-form](https://react-hook-form.com/) - Forms with easy-to-use validation

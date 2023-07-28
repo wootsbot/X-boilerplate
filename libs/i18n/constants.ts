@@ -10,7 +10,7 @@ export type Language = {
 
 export const DEFAULT_NAMESPACE = 'common';
 
-export const DEFAULT_LANGUAGE_KEY: Language['key'] = 'en';
+export const DEFAULT_LANGUAGE_KEY: Language['key'] = process.env.NEXT_PUBLIC_DEFAULT_LANGUAGE_KEY ?? 'en';
 
 export const AVAILABLE_LANGUAGES: Language[] = [
   {

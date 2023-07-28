@@ -4,7 +4,6 @@ import { useRouter } from 'next/navigation';
 import * as React from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { useTranslation } from 'react-i18next';
 
 import Button from '@design-system/Button';
 import InputField from '@design-system/InputField';
@@ -20,8 +19,6 @@ type FormValues = z.infer<typeof sendEmailSchema>;
 
 function ResendPage() {
   const router = useRouter();
-
-  const { t, i18n } = useTranslation(['common', 'resend']);
 
   const {
     register,
@@ -51,22 +48,15 @@ function ResendPage() {
     handleResendEmail({ emailTo: data.emailToField, subject: data.subjectField, inviteLink: data.inviteLinkField });
   }
 
-  function handleChangueL() {
-    i18n.changeLanguage('es_mx');
-  }
-
   return (
     <>
-      <p>{t('languages.en')}</p>
       <Header
-        title={`✉️ ${t('resend:header.title')}`}
+        title="✉️ Resend"
         subTitle="Hi "
         name="Example with Resend, @react-email and TanStack Query"
         message="Example of sending an email with an invitation design to participate in an event, including a link."
         onGoBack={handleGoBack}
       />
-
-      <button onClick={handleChangueL}>Changue lenguaje</button>
 
       <div
         style={{

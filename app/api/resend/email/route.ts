@@ -1,13 +1,12 @@
 import { NextResponse } from 'next/server';
 
 import InviteEmail from '~/app/(marketing)/resend/InviteEmail';
-import env from '~/env';
 
 import { Resend } from 'resend';
 
 import { emailSchema } from '@/hooks/services/resend/email/email.schema';
 
-const resend = new Resend(env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
@@ -15,7 +14,7 @@ export async function POST(req: Request) {
     const emailContent = emailSchema.parse(json);
 
     const data = await resend.emails.send({
-      from: env.RESEND_DOMAIN,
+      from: process.env.RESEND_DOMAIN,
       to: emailContent.emailTo,
       subject: emailContent.subject,
       react: InviteEmail({ ...emailContent }),

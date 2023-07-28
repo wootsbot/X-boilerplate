@@ -9,7 +9,7 @@ import i18n from '@/libs/i18n/init';
 
 import Header from '@/components/Header';
 
-function ResendPage() {
+function I18nextPage() {
   const router = useRouter();
   const { t, i18n } = useTranslation(['common', 'i18next']);
 
@@ -24,7 +24,7 @@ function ResendPage() {
   return (
     <>
       <Header
-        title={`✉️ ${t('i18next:header.title')}`}
+        title={`🐂 ${t('i18next:header.title')}`}
         subTitle={t('i18next:header.subTitle')}
         name={`${t('i18next:header.name')} `}
         message={t('i18next:header.message')}
@@ -50,4 +50,4 @@ function ResendPage() {
   );
 }
 
-export default ResendPage;
+export default I18nextPage;
