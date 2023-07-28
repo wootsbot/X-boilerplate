@@ -50,7 +50,7 @@ try {
       .map(([field, errors]) => (errors ? `${field}: ${errors.join(', ')}` : field))
       .join('\n  ');
 
-    throw new Error(`Missing environment variables:\n  ${errorMessage}`);
+    throw new Error(`X: Missing environment variables:\n  ${errorMessage}`);
 
     process.exit(1);
   }
