@@ -4,6 +4,7 @@ export type HeaderProps = {
   name?: string;
   message?: string;
   onGoBack?: () => void;
+  goBackLabel?: string;
   toGoBack?: string;
   avatarUrl?: string;
 };

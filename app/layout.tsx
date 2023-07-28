@@ -62,10 +62,10 @@ function MainLayout({ children }: MainLayoutProps) {
     <html lang="en">
       <body>
         <Providers>
-            <main>
-              <Container>{children}</Container>
-            </main>
-            <SocialContainer />
+          <main>
+            <Container>{children}</Container>
+          </main>
+          <SocialContainer />
         </Providers>
       </body>
     </html>

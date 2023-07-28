@@ -60,8 +60,14 @@ async function HomePage() {
 
         <FeatureCard
           to="/resend"
-          title="✉️ Send emails with Resend, @react-email and TanStack Query"
+          title="✉️ Send emails with Resend"
           description="Resend is the email API for developers."
+        />
+
+        <FeatureCard
+          to="/i18next"
+          title="🐂 react-i18next"
+          description="react-i18next is a powerful internationalization framework for React / React Native which is based on i18next. Check."
         />
 
         {/* <FeatureCard>

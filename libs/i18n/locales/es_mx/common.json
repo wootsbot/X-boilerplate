@@ -1,0 +1,9 @@
+{
+  "languages": {
+    "en": "Inglés",
+    "es_mx": "Español México"
+  },
+  "actions": {
+    "goBack": "Regresa"
+  }
+}

@@ -29,6 +29,8 @@
     "@tanstack/react-query-devtools": "4.32.0",
     "@xstate/immer": "0.3.3",
     "@xstate/react": "3.2.2",
+    "date-fns": "2.30.0",
+    "i18next": "23.3.0",
     "immer": "10.0.2",
     "next": "13.4.12",
     "next-auth": "4.22.3",
@@ -37,6 +39,7 @@
     "react-email": "1.9.4",
     "react-hook-form": "7.45.2",
     "react-hot-toast": "2.4.1",
+    "react-i18next": "13.0.2",
     "resend": "0.17.2",
     "xstate": "4.38.1",
     "zod": "3.21.4"
