@@ -16,7 +16,7 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "~/env": ["./env.mjs"],
+      "~/env": ["./env.ts"],
       "~/app/*": ["./app/*"],
       "~/api/*": ["./app/api/*"],
       "@design-system/*": ["@design-system/*"],

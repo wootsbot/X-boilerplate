@@ -1,5 +1,3 @@
-import './env.mjs';
-
 //const isEnabledMswMocking = process.env.NEXT_PUBLIC_MSW_MOCKING === "enabled";
 
 /** @type {import('next').NextConfig} */
