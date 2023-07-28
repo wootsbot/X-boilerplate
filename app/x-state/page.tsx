@@ -4,14 +4,14 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import * as React from 'react';
 
-import Button from '@design-system/Button';
+import Button from '@design-system/button';
 
 import { useDogStateService, useSelectedDogState } from '@/machines/dog/dog.machine';
 import { selectorGetDog, selectorGetDogLoading } from '@/machines/dog/dog.selectors';
 
 import { NextPageLayout } from '@/utils/types';
 
-import Header from '@/components/Header';
+import Header from '@/components/header';
 
 const XstatePage: NextPageLayout = () => {
   const router = useRouter();

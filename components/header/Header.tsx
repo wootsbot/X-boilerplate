@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import * as React from 'react';
 
-import ButtonGoBack from '@design-system/ButtonGoBack';
-import Typography from '@design-system/Typography';
+import ButtonGoBack from '@design-system/button-go-back';
+import Typography from '@design-system/typography';
 
 import styles from './Header.module.css';
 import { HeaderProps } from './Header.types';

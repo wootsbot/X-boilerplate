@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import * as React from 'react';
 
-import Typography from '@design-system/Typography';
+import Typography from '@design-system/typography';
 
 import styles from './FeatureCard.module.css';
 

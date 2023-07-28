@@ -2,7 +2,7 @@
 
 import { signOut } from 'next-auth/react';
 
-import Button from '@design-system/Button';
+import Button from '@design-system/button';
 
 function SignOutButton() {
   return <Button onClick={() => signOut()}>SignOut</Button>;

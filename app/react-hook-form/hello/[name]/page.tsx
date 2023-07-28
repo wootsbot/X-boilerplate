@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import * as React from 'react';
 
-import Header from '@/components/Header';
+import Header from '@/components/header';
 
 type HelloNamePageProps = {
   params: {

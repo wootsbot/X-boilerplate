@@ -2,8 +2,8 @@
 
 import { useForm } from 'react-hook-form';
 
-import Button from '@design-system/Button';
-import InputField from '@design-system/InputField';
+import Button from '@design-system/button';
+import InputField from '@design-system/input-field';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 

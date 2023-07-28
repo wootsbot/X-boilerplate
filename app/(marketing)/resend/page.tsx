@@ -5,14 +5,14 @@ import * as React from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 
-import Button from '@design-system/Button';
-import InputField from '@design-system/InputField';
+import Button from '@design-system/button';
+import InputField from '@design-system/input-field';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 
 import { sendEmailSchema } from '@/utils/validations/send-email';
 
-import Header from '@/components/Header';
+import Header from '@/components/header';
 import { useResendEmail } from '@/hooks/services/resend/email/use-resend-email.hook';
 
 type FormValues = z.infer<typeof sendEmailSchema>;

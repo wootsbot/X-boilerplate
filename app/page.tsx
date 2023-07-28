@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import * as React from 'react';
 
-import Typography from '@design-system/Typography';
+import Typography from '@design-system/typography';
 
-import FeatureCard from '@/components/FeatureCard';
-import SessionStatus from '@/components/SessionStatus';
-import XBoilerplate from '@/components/XBoilerplate';
+import FeatureCard from '@/components/feature-card';
+import SessionStatus from '@/components/session-status';
+import XBoilerplate from '@/components/x-boilerplate';
 
 async function HomePage() {
   return (

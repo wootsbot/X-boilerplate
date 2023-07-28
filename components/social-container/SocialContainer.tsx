@@ -4,7 +4,7 @@ import { SiGithub } from '@icons-pack/react-simple-icons';
 
 import styles from './SocialContainer.module.css';
 
-import { XBoilerplateSimple } from '@/components/XBoilerplate';
+import { XBoilerplateSimple } from '@/components/x-boilerplate';
 
 function SocialContainer() {
   return (

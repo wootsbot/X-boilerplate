@@ -3,7 +3,7 @@
 import type { ClientSafeProvider } from 'next-auth/react';
 import { signIn } from 'next-auth/react';
 
-import Button from '@design-system/Button';
+import Button from '@design-system/button';
 
 export type SignInProviderProps = {
   provider: ClientSafeProvider;

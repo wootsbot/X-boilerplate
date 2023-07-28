@@ -6,8 +6,8 @@ import { authOptions } from '@/libs/auth';
 import SignInProviderButton from './SignInProviderButton';
 import SignOutButton from './SignOutButton';
 
-import Header from '@/components/Header';
-import SessionStatus from '@/components/SessionStatus';
+import Header from '@/components/header';
+import SessionStatus from '@/components/session-status';
 
 async function NextAuthPage() {
   const session = await getServerSession(authOptions);

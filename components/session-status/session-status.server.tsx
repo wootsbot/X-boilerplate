@@ -1,6 +1,6 @@
 import { getServerSession } from 'next-auth/next';
 
-import Typography from '@design-system/Typography';
+import Typography from '@design-system/typography';
 
 import { authOptions } from '@/libs/auth';
 
