@@ -20,9 +20,6 @@ dependencies:
   '@react-email/html':
     specifier: 0.0.4
     version: 0.0.4
-  '@t3-oss/env-nextjs':
-    specifier: 0.6.0
-    version: 0.6.0(typescript@5.1.6)(zod@3.21.4)
   '@tanstack/react-query':
     specifier: 4.32.0
     version: 4.32.0(react-dom@18.2.0)(react@18.2.0)
@@ -1352,27 +1349,6 @@ packages:
     resolution: {integrity: sha512-sJ902EfIzn1Fa+qYmjdQqh8tPsoxyBz+8yBKC2HKUxyezKJFwPGOn7pv4WY6QuQW//ySQi5lJjA/ZT9sNWWNTg==}
     dependencies:
       tslib: 2.5.0
-    dev: false
-
-  /@t3-oss/env-core@0.6.0(typescript@5.1.6)(zod@3.21.4):
-    resolution: {integrity: sha512-3FkPAba069WRZVVab/sB1m3eSGn/rZeypx5k+sWEu1d+k0OQdRDnvFS+7MtxYgqVrwaRk3b7yVnX2dgSPVmWPQ==}
-    peerDependencies:
-      typescript: '>=4.7.2'
-      zod: ^3.0.0
-    dependencies:
-      typescript: 5.1.6
-      zod: 3.21.4
-    dev: false
-
-  /@t3-oss/env-nextjs@0.6.0(typescript@5.1.6)(zod@3.21.4):
-    resolution: {integrity: sha512-SpzcGNIbUYcQw4zPPFeRJqCC1560zL7QmB0puIqOnuCsmykPkqHPX+n9CNZLXVQerboHzfvb7Kd+jAdouk72Vw==}
-    peerDependencies:
-      typescript: '>=4.7.2'
-      zod: ^3.0.0
-    dependencies:
-      '@t3-oss/env-core': 0.6.0(typescript@5.1.6)(zod@3.21.4)
-      typescript: 5.1.6
-      zod: 3.21.4
     dev: false
 
   /@tanstack/match-sorter-utils@8.8.4:
