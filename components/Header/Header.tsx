@@ -10,7 +10,17 @@ import Typography from '@design-system/Typography';
 import styles from './Header.module.css';
 import { HeaderProps } from './Header.types';
 
-function Header({ title, subTitle, message, onGoBack, toGoBack = '/', name, avatarUrl, ...props }: HeaderProps) {
+function Header({
+  title,
+  subTitle,
+  message,
+  onGoBack,
+  toGoBack = '/',
+  goBackLabel = 'Go back',
+  name,
+  avatarUrl,
+  ...props
+}: HeaderProps) {
   const router = useRouter();
 
   function handleToGoBack() {
@@ -32,7 +42,7 @@ function Header({ title, subTitle, message, onGoBack, toGoBack = '/', name, avat
       </Typography>
       <Typography size="s">{message}</Typography>
 
-      <ButtonGoBack onClick={onGoBack ?? handleToGoBack} label="Go back" />
+      <ButtonGoBack onClick={onGoBack ?? handleToGoBack} label={goBackLabel} />
     </header>
   );
 }

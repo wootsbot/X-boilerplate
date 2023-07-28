@@ -64,8 +64,10 @@ Many of this boilerplate features are based on the philosophy of being optional.
 - [x] ~Integrate Zod to schema validation~
 - [x] ~Authentication (next-auth)~
 - [x] ~Integrate linters, hooks to DX~
-- [x] Integrate resend
-- [x] Integrate @react-email
+- [x] ~Integrate resend~
+- [x] ~Integrate @react-email~
+- [x] ~Internationalization with react-i18next (SSG)~
+- [x] More examples with resend and @react-email
 - [x] Integrate ORM prisma
 - [x] Integrate supabase
 - [x] Integrate planetscale

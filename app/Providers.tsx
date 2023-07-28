@@ -1,5 +1,7 @@
 'use client';
 
+import '@/libs/i18n/init';
+
 import * as React from 'react';
 import { Toaster } from 'react-hot-toast';
 
