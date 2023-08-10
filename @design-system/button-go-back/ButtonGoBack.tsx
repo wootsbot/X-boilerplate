@@ -1,17 +1,21 @@
+import Link from 'next/link';
+
 import ArrowLeftLine from '@design-system/icons/ArrowLeftLine';
 
 import styles from './ButtonGoBack.module.css';
 import { ButtonGoBackProps } from './ButtonGoBack.types';
 
-function ButtonGoBack({ label, ...props }: ButtonGoBackProps) {
+function ButtonGoBack({ label, to, ...props }: ButtonGoBackProps) {
+  const Component = to ? Link : 'button';
+
   return (
-    <button className={styles.root} {...props}>
+    <Component href={to ?? ''} className={styles.root} {...props}>
       <div className={styles.wrapper}>
         <ArrowLeftLine />
       </div>
 
-      {label}
-    </button>
+      <span className={styles.label}>{label}</span>
+    </Component>
   );
 }
 

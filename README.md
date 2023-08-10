@@ -29,7 +29,7 @@
 
 - 🦾 TypeScript, of course
 
-- 💄 Unstyled - The frontend contains minimal css styling just to show the demo.
+- 💄 Unstyled - The frontend contains minimal css styling just the demo.
 
 - ⚙️ Adjustable to your preferences - Designed to be modular so you can fine-tune it to your preferences
 
@@ -83,6 +83,7 @@ Many of this boilerplate features are based on the philosophy of being optional.
 - [x] Integrate https://chakra-ui.com/
 - [x] Dark mode
 - [x] Integrate graphql
+- [x] Do `cli` to configure all functions
 
 ### Dev tools
 

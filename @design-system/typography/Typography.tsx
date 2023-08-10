@@ -6,6 +6,9 @@ import { HeadingProps } from './Typography.types';
 const fontSizes = {
   s: '14px',
   m: '20px',
+  l: '24px',
+  xl: '32',
+  '2xl': '40px',
 };
 
 function Typography(props: HeadingProps) {

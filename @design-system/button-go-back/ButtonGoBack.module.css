@@ -19,6 +19,12 @@
   background-color: transparent;
 }
 
+.label {
+  text-decoration: none;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .wrapper {
   display: flex;
   justify-content: center;

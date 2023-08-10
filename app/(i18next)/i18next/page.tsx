@@ -11,7 +11,7 @@ import Header from '@/components/header';
 
 function I18nextPage() {
   const router = useRouter();
-  const { t, i18n } = useTranslation(['common', 'i18next']);
+  const { t } = useTranslation(['common', 'i18next']);
 
   function handleGoBack() {
     router.push('/');
