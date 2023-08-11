@@ -1,3 +1,4 @@
+import localeCulture from '@openkit/language-codes';
 import * as z from 'zod';
 
 const zodEnv = z.object({
@@ -32,7 +33,7 @@ const zodEnv = z.object({
   /*
    * LANGUAGE CONFIG - PUBLIC
    */
-  NEXT_PUBLIC_DEFAULT_LANGUAGE_KEY: z.enum(['en', 'es_mx']).optional(),
+  NEXT_PUBLIC_DEFAULT_LANGUAGE_KEY: z.enum([localeCulture.EN.folderName, localeCulture.ES_MX.folderName]).optional(),
 });
 
 declare global {
