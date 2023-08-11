@@ -1,27 +1,46 @@
-# name: Playwright Tests
+name: Playwright Tests
 # on:
 #   push:
-#     branches: [ main, master ]
+#     branches: [main, master]
 #   pull_request:
-#     branches: [ main, master ]
-# jobs:
-#   test:
-#     timeout-minutes: 60
-#     runs-on: ubuntu-latest
-#     steps:
-#     - uses: actions/checkout@v3
-#     - uses: actions/setup-node@v3
-#       with:
-#         node-version: 18
-#     - name: Install dependencies
-#       run: pnpm install
-#     - name: Install Playwright Browsers
-#       run: pnpm exec playwright install --with-deps
-#     - name: Run Playwright tests
-#       run: pnpm exec playwright test
-#     - uses: actions/upload-artifact@v3
-#       if: always()
-#       with:
-#         name: playwright-report
-#         path: playwright-report/
-#         retention-days: 30
+#     branches: [main, master]
+
+on:
+  push:
+    branches:
+      - main
+env:
+  PNPM_VERSION: ${{ vars.PNPM_VERSION }}
+  GITHUB_ID: ${{ secrets.X_GITHUB_ID }}
+  GITHUB_SECRET: ${{ secrets.X_GITHUB_SECRET }}
+  SECRET: ${{ secrets.SECRET }}
+  NEXTAUTH_URL: ${{ vars.NEXTAUTH_URL }}
+  NODE_VERSION: ${{ vars.NODE_VERSION }}
+  RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+  RESEND_DOMAIN: ${{ vars.RESEND_DOMAIN }}
+  NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+  SITE_NAME: ${{ vars.SITE_NAME }}
+  SITE_URL: ${{ vars.SITE_URL }}
+  TWITTER_CREATOR: ${{ vars.TWITTER_CREATOR }}
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: pnpm install
+      - name: Install Playwright Browsers
+        run: pnpm exec playwright install --with-deps
+      - name: Run Playwright tests
+        run: pnpm exec playwright test
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
