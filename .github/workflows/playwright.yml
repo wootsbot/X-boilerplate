@@ -42,6 +42,12 @@ jobs:
           corepack enable
           corepack prepare pnpm@${{ env.PNPM_VERSION}} --activate
 
+      - name: 📦 Install Dependencies
+        run: |
+          pnpm install --no-frozen-lockfile
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps
 
