@@ -45,6 +45,8 @@
 
 - 🐂 Internationalization with [react-i18next](https://react.i18next.com/) (SSG)
 
+- 💩 Tests with [vitest](https://vitest.dev/) and [playwright](https://playwright.dev/)
+
 - 📑 [Finite state machines](./src/machines)
 
 - 📄 [react-hook-form](https://react-hook-form.com/) - Forms with easy-to-use validation
