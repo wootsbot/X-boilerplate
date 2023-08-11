@@ -69,6 +69,9 @@ Many of this boilerplate features are based on the philosophy of being optional.
 - [x] ~Integrate resend~
 - [x] ~Integrate @react-email~
 - [x] ~Internationalization with react-i18next (SSG)~
+- [x] ~Setup tests with [vitest](https://vitest.dev/)~
+- [x] Setup test with [vitest](https://vitest.dev/) and [playwright](https://playwright.dev/)
+- [x] Added test all components
 - [x] More examples with resend and @react-email
 - [x] Integrate ORM prisma
 - [x] Integrate supabase
