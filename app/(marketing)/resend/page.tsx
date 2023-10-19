@@ -29,7 +29,7 @@ function ResendPage() {
     resolver: zodResolver(sendEmailSchema),
   });
 
-  const { mutate: handleResendEmail, isLoading } = useResendEmail({
+  const { mutate: handleResendEmail, isPending } = useResendEmail({
     onSuccess: (data) => {
       toast.success('Congratulations, you have successfully sent an email.');
       reset();
@@ -91,8 +91,8 @@ function ResendPage() {
               />
             </div>
 
-            <Button style={{ marginTop: '8px' }} type="submit" disabled={isLoading}>
-              {isLoading ? 'Sending Email...' : '   Send Email'}
+            <Button style={{ marginTop: '8px' }} type="submit" disabled={isPending}>
+              {isPending ? 'Sending Email...' : '   Send Email'}
             </Button>
           </div>
         </form>

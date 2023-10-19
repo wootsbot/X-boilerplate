@@ -39,7 +39,7 @@ async function HomePage() {
 
         <FeatureCard
           to="/react-query"
-          title="🌺 TanStack Query v4 (WIP)"
+          title="🌺 TanStack Query v5 (WIP)"
           description="TanStack Query (FKA React Query) it makes fetching, caching, synchronizing and updating server state in your web applications a breeze."
         />
 
