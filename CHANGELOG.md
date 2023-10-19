@@ -1,5 +1,47 @@
 # x-boilerplate
 
+## 1.0.0-beta.6
+
+### Major Changes
+
+- [`6a23734`](https://github.com/wootsbot/X-boilerplate/commit/6a237347feb168e48bedd5023f681106230e503c) Thanks [@wootsbot](https://github.com/wootsbot)! - Change names in component structure
+
+### Minor Changes
+
+- [`ba4fc54`](https://github.com/wootsbot/X-boilerplate/commit/ba4fc54689effbe82f828d31fc1518d49c13e5ba) Thanks [@wootsbot](https://github.com/wootsbot)! - migrating `@tanstack/react-query` to v5
+
+- [`7ee7c13`](https://github.com/wootsbot/X-boilerplate/commit/7ee7c1372b6346528f6189c285d8ed238665e48e) Thanks [@wootsbot](https://github.com/wootsbot)! - add support for accessible locales with `@openkit/language-codes`
+
+- [`e7f0ef8`](https://github.com/wootsbot/X-boilerplate/commit/e7f0ef891efc79722a1aa541c6bcc8a078e79777) Thanks [@wootsbot](https://github.com/wootsbot)! - Setup tests with [vitest](https://vitest.dev/)
+
+- [`42d95d4`](https://github.com/wootsbot/X-boilerplate/commit/42d95d482eb5ab51229b841c8a1c4f5e7f8f433f) Thanks [@wootsbot](https://github.com/wootsbot)! - Typesafe environment variables with Zod
+
+- [#11](https://github.com/wootsbot/X-boilerplate/pull/11) [`381a1ad`](https://github.com/wootsbot/X-boilerplate/commit/381a1ad3b6c27f8f2dd3dcabe763d4bb3f6ec921) Thanks [@wootsbot](https://github.com/wootsbot)! - internationalization with react-i18next
+
+- [`ebd5ea6`](https://github.com/wootsbot/X-boilerplate/commit/ebd5ea6a8645bd201baa12e377897c1ad9569048) Thanks [@wootsbot](https://github.com/wootsbot)! - Added page 404
+
+- [`e754407`](https://github.com/wootsbot/X-boilerplate/commit/e754407f63f07d21f145f77f4e6d37a0880395ab) Thanks [@wootsbot](https://github.com/wootsbot)! - Added integration of resend and `@react-email`
+
+- [`f140057`](https://github.com/wootsbot/X-boilerplate/commit/f1400576cc7997f04497accb0e3062f71ccebf5d) Thanks [@wootsbot](https://github.com/wootsbot)! - WIP Added test e2e
+
+- [`45150c9`](https://github.com/wootsbot/X-boilerplate/commit/45150c980ef2fa75d328a7e31374e7ecf651c92a) Thanks [@wootsbot](https://github.com/wootsbot)! - WIP setup playwright test end-to-end
+
+### Patch Changes
+
+- [`592525b`](https://github.com/wootsbot/X-boilerplate/commit/592525bbb986725573d34e2701d8eccf2a1c2b19) Thanks [@wootsbot](https://github.com/wootsbot)! - Set engines node@>=18"
+
+- [`504ff74`](https://github.com/wootsbot/X-boilerplate/commit/504ff743bc89f57a1d63276b2cdaaa1a6fd24f2c) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump next
+
+- [`9e7f020`](https://github.com/wootsbot/X-boilerplate/commit/9e7f0206965a480a6f030b9ac2f9f601b8e57960) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump pakages core
+
+- [`4b53ec9`](https://github.com/wootsbot/X-boilerplate/commit/4b53ec9eef1b99b6054e6283c14c7f6d2d1e98fd) Thanks [@wootsbot](https://github.com/wootsbot)! - Use url base https://x.openkit.run
+
+- [`56e9281`](https://github.com/wootsbot/X-boilerplate/commit/56e9281e9001b1246c35747cb3d98d05d4b69dbb) Thanks [@wootsbot](https://github.com/wootsbot)! - support for `~` imports
+
+- [`2c6d4a5`](https://github.com/wootsbot/X-boilerplate/commit/2c6d4a564382b8c8dc596ad8e55a51a1996579e7) Thanks [@wootsbot](https://github.com/wootsbot)! - Fixed use env local
+
+- [`f3a007d`](https://github.com/wootsbot/X-boilerplate/commit/f3a007d3aefc42fecc2d4141189cf57c2f1bca20) Thanks [@wootsbot](https://github.com/wootsbot)! - Fixed i18 initialization errors
+
 ## 0.2.0-beta.5
 
 ### Minor Changes
