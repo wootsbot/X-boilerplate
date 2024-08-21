@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Container /> > must render correctly 1`] = `
+<div>
+  <div
+    class="_root_078851"
+  >
+    <h1>
+      Container
+    </h1>
+  </div>
+</div>
+`;

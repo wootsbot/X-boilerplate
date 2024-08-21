@@ -13,10 +13,9 @@ const zodEnv = z.object({
    * NEXTAUTH
    * src: See https://next-auth.js.org/deployment.
    */
-  GITHUB_ID: z.string(),
-  GITHUB_SECRET: z.string(),
-  NEXTAUTH_URL: z.string().url(),
-  SECRET: z.string(),
+  AUTH_GITHUB_ID: z.string(),
+  AUTH_GITHUB_SECRET: z.string(),
+  AUTH_SECRET: z.string(),
 
   /*
    * RESEND
@@ -34,6 +33,8 @@ const zodEnv = z.object({
    * LANGUAGE CONFIG - PUBLIC
    */
   NEXT_PUBLIC_DEFAULT_LANGUAGE_KEY: z.enum([localeCulture.EN.folderName, localeCulture.ES_MX.folderName]).optional(),
+
+  NEXT_PUBLIC_API_URL_BASE: z.string().min(1),
 });
 
 declare global {

@@ -19,7 +19,7 @@
 
 ## Core Features
 
-- ⚡️ [React 18](https://reactjs.org/), [Next 13](https://nextjs.org/), [pnpm](https://pnpm.io/) - born with fastness
+- ⚡️ [React 18](https://reactjs.org/), [Next 14](https://nextjs.org/), [pnpm](https://pnpm.io/) - born with fastness
 
 - 🗂 [Structure with paths and alias](./tsconfig.json)
 
@@ -35,9 +35,9 @@
 
 ## Optional Features
 
-- 🍍 [State Management x-state](https://xstate.js.org/) or [State Management TanStack Query](https://tanstack.com/query/v4)
+- 🍍 [Asynchronous state management - TanStack Query](https://tanstack.com/query) and [State Management zustand](https://zustand-demo.pmnd.rs/)
 
-- 🔥 Mocking via [msw](https://mswjs.io/)
+- 🔥 Mocking via [msw](https://mswjs.io/) [WIP]
 
 - 🛡️ Authentication for Next.js [NextAuth](https://next-auth.js.org/)
 
@@ -45,7 +45,7 @@
 
 - 🐂 Internationalization with [react-i18next](https://react.i18next.com/) (SSG)
 
-- 💩 Tests with [vitest](https://vitest.dev/) and [playwright](https://playwright.dev/)
+- 💩 Tests unit with [vitest](https://vitest.dev/) and Tests e2e with [playwright](https://playwright.dev/)
 
 - 📑 [Finite state machines](./src/machines)
 
@@ -61,8 +61,7 @@
 
 Many of this boilerplate features are based on the philosophy of being optional. We understand that every project or product is unique and, therefore, requires different settings and functionalities. We provide you with the freedom to choose the features that best fit your needs so you can only focus on building your product.
 
-- [x] ~Configure next 13 with new /app dir~
-- [x] ~Integrate State Management x-state~
+- [x] ~Configure next 14 with new /app dir~
 - [x] ~Integrate State Management TanStack Query~
 - [x] ~Integrate react-hook-form~
 - [x] ~Integrate Zod to schema validation~
@@ -80,12 +79,11 @@ Many of this boilerplate features are based on the philosophy of being optional.
 - [x] Integrate planetscale
 - [x] Mocking via msw
 - [x] Integrate SDK to Subscriptions
+- [x] Integrate stripe to payments
 - [x] Add MDX support for basic pages
 - [x] Add OG image for blog using @vercel/og
 - [x] Integrate https://tailwindcss.com/
-- [x] Integrate https://mui.com/
 - [x] Integrate https://www.radix-ui.com/
-- [x] Integrate https://chakra-ui.com/
 - [x] Dark mode
 - [x] Integrate graphql
 - [x] Do `cli` to configure all functions
