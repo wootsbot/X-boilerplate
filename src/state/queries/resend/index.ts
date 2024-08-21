@@ -1,8 +1,10 @@
 import { useMutation, UseMutationOptions } from '@tanstack/react-query';
 
-import { Email, EmailPayload, zEmailPayload } from './email.schema';
+import { Email, EmailPayload, zEmailPayload } from './schema';
 
-export const useResendEmail = (config: UseMutationOptions<EmailPayload, Error, Email> = {}) => {
+export * from '#/state/queries/resend/schema';
+
+export const useResendEmailMutation = (config: UseMutationOptions<EmailPayload, Error, Email> = {}) => {
   return useMutation({
     mutationFn: async ({ emailTo, subject, inviteLink }) => {
       const response = await fetch('/api/resend/email', {
@@ -18,8 +20,5 @@ export const useResendEmail = (config: UseMutationOptions<EmailPayload, Error, E
       return zEmailPayload().parse(json);
     },
     ...config,
-    onSuccess: (data, ...args) => {
-      config?.onSuccess?.(data, ...args);
-    },
   });
 };

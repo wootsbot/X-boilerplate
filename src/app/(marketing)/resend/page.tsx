@@ -13,7 +13,7 @@ import * as z from 'zod';
 import { sendEmailSchema } from '@/utils/validations/send-email';
 
 import Header from '@/components/header';
-import { useResendEmail } from '@/hooks/services/resend/email/use-resend-email.hook';
+import { useResendEmailMutation } from '#/state/queries/resend';
 
 type FormValues = z.infer<typeof sendEmailSchema>;
 
@@ -29,7 +29,7 @@ function ResendPage() {
     resolver: zodResolver(sendEmailSchema),
   });
 
-  const { mutate: handleResendEmail, isPending } = useResendEmail({
+  const { mutate: handleResendEmail, isPending } = useResendEmailMutation({
     onSuccess: (_data) => {
       toast.success('Congratulations, you have successfully sent an email.');
       reset();
