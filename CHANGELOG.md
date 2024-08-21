@@ -1,5 +1,11 @@
 # x-boilerplate
 
+## 1.0.0-beta.9
+
+### Patch Changes
+
+- [`b5d1066`](https://github.com/wootsbot/X-boilerplate/commit/b5d106699da50b992220d8142180f51f97266fee) Thanks [@wootsbot](https://github.com/wootsbot)! - moved resend query to `#/state`
+
 ## 1.0.0-beta.8
 
 ### Patch Changes
