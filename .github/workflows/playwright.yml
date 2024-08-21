@@ -11,17 +11,17 @@ on:
       - main
 env:
   PNPM_VERSION: ${{ vars.PNPM_VERSION }}
-  GITHUB_ID: ${{ secrets.X_GITHUB_ID }}
-  GITHUB_SECRET: ${{ secrets.X_GITHUB_SECRET }}
-  SECRET: ${{ secrets.SECRET }}
-  NEXTAUTH_URL: ${{ vars.NEXTAUTH_URL }}
   NODE_VERSION: ${{ vars.NODE_VERSION }}
-  RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-  RESEND_DOMAIN: ${{ vars.RESEND_DOMAIN }}
+  NEXT_PUBLIC_API_URL_BASE: ${{ vars.NEXT_PUBLIC_API_URL_BASE }}
   NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
   SITE_NAME: ${{ vars.SITE_NAME }}
-  SITE_URL: ${{ vars.SITE_URL }}
   TWITTER_CREATOR: ${{ vars.TWITTER_CREATOR }}
+  SITE_URL: ${{ vars.SITE_URL }}
+  RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+  RESEND_DOMAIN: ${{ vars.RESEND_DOMAIN }}
+  AUTH_GITHUB_ID: ${{ secrets.AUTH_GITHUB_ID }}
+  AUTH_GITHUB_SECRET: ${{ secrets.AUTH_GITHUB_SECRET }}
+  AUTH_SECRET: ${{ secrets.AUTH_SECRET }}
 
 jobs:
   test:

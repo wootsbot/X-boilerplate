@@ -39,7 +39,7 @@
 
 - 🔥 Mocking via [msw](https://mswjs.io/) [WIP]
 
-- 🛡️ Authentication for Next.js [NextAuth](https://next-auth.js.org/)
+- 🛡️ Authentication [authjs](https://authjs.dev/)
 
 - ✉️ Send emails with [Resend](https://resend.com) and [@react-email](https://react.email/docs/integrations/resend)
 
