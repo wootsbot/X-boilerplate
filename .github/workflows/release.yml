@@ -64,5 +64,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           publish: pnpm release
-          commit: 'ci(release): Version packages'
-          title: 'ci(release): Version packages'
+          commit: 'ci(release): Version X-boilerplate'
+          title: 'ci(release): Version X-boilerplate - template'
