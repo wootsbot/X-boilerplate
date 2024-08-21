@@ -1,5 +1,11 @@
 # x-boilerplate
 
+## 1.0.0-beta.7
+
+### Major Changes
+
+- [`f5a7389`](https://github.com/wootsbot/X-boilerplate/commit/f5a73893a95b6fb8c9b3851560817ed74e77ef4e) Thanks [@wootsbot](https://github.com/wootsbot)! - Use folder src and structure new folders, remove libs and Bump nextJS@14.x.x
+
 ## 1.0.0-beta.6
 
 ### Major Changes
