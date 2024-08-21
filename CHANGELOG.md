@@ -1,5 +1,11 @@
 # x-boilerplate
 
+## 1.0.0-beta.8
+
+### Patch Changes
+
+- [`d3ad04b`](https://github.com/wootsbot/X-boilerplate/commit/d3ad04bcb558f268575a9c2e4de9140b09a61aa5) Thanks [@wootsbot](https://github.com/wootsbot)! - Export utils and const of querys
+
 ## 1.0.0-beta.7
 
 ### Major Changes
