@@ -1,14 +1,10 @@
 name: Playwright Tests
-# on:
-#   push:
-#     branches: [main, master]
-#   pull_request:
-#     branches: [main, master]
 
 on:
-  push:
+  pull_request:
     branches:
       - main
+
 env:
   PNPM_VERSION: ${{ vars.PNPM_VERSION }}
   NODE_VERSION: ${{ vars.NODE_VERSION }}

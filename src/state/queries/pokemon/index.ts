@@ -8,6 +8,9 @@ import { zPokemonListPayload } from './schema';
 
 import { STALE } from '#/state/queries';
 
+export * from '#/state/queries/pokemon/const';
+export * from '#/state/queries/pokemon/schema';
+
 export const usePokemonListQuery = (
   { offset, limit }: { offset: number; limit: number } = { offset: 0, limit: 10 },
   queryOptions: Omit<UseQueryOptions<PokemonListPayload>, 'queryKey'> = {},
