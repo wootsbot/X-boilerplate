@@ -5,7 +5,7 @@ import { signIn } from 'next-auth/react';
 import Button from '@design-system/button/Button';
 import { SiGithub } from '@icons-pack/react-simple-icons';
 
-export function LoginForm({ showTitle = true, showFooter = true }: { showTitle: boolean; showFooter?: boolean }) {
+export function LoginForm({ showTitle = true, showFooter = true }: { showTitle?: boolean; showFooter?: boolean }) {
   return (
     <div className="flex flex-col gap-11">
       <div className="flex flex-col gap-8">
