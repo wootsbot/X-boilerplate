@@ -2,30 +2,7 @@
   "$schema": "https://json.schemastore.org/eslintrc",
   "root": true,
   "extends": ["next/core-web-vitals", "prettier"],
-  "plugins": ["simple-import-sort"],
-  "rules": {
-    "simple-import-sort/imports": [
-      "error",
-      {
-        "groups": [
-          // Side effect imports.
-          ["^\\u0000"],
-          // `react` come first.
-          ["^next", "^react"],
-          // all pakages
-          ["^~/?\\w"],
-          ["^@?\\w"],
-          ["^@/machines", "^@/libs"],
-          ["^@/utils"],
-          // Parent imports. Put `..` last.
-          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-          // Other relative imports. Put same-folder imports and `.` last.
-          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"]
-        ]
-      }
-    ],
-    "simple-import-sort/exports": "error"
-  },
+  "rules": {},
   "settings": {
     "next": {
       "rootDir": true

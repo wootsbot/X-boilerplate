@@ -14,6 +14,10 @@ const Toaster = ({ ...props }: React.ComponentProps<typeof Sonner>) => {
           description: 'group-[.toast]:text-muted-foreground',
           actionButton: 'group-[.toast]:bg-primary group-[.toast]:text-primary-foreground',
           cancelButton: 'group-[.toast]:bg-muted group-[.toast]:text-muted-foreground',
+          error: 'bg-red-400',
+          success: 'bg-green-400',
+          warning: 'bg-yellow-400',
+          info: 'bg-blue-400',
         },
       }}
       {...props}

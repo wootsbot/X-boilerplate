@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { XBoilerplateProps } from './XBoilerplate.types';
 
-const XBoilerplate = React.forwardRef<SVGSVGElement, XBoilerplateProps>(function OpenFlags(props, ref) {
+export const IconXBoilerplate = React.forwardRef<SVGSVGElement, XBoilerplateProps>(function OpenFlags(props, ref) {
   const { color = '#000000', size = 24, ...others } = props;
 
   return (
@@ -73,5 +73,3 @@ const XBoilerplate = React.forwardRef<SVGSVGElement, XBoilerplateProps>(function
     </svg>
   );
 });
-
-export default XBoilerplate;

@@ -17,6 +17,8 @@ const zodEnv = z.object({
   AUTH_GITHUB_SECRET: z.string(),
   AUTH_SECRET: z.string(),
 
+  NEXT_PUBLIC_PERSONAL_GITHUB_TOKEN: z.string(),
+
   /*
    * RESEND
    * src: See https://resend.com/docs/send-with-nextjs.
@@ -33,8 +35,13 @@ const zodEnv = z.object({
    * LANGUAGE CONFIG - PUBLIC
    */
   NEXT_PUBLIC_DEFAULT_LANGUAGE_KEY: z.enum([localeCulture.EN.folderName, localeCulture.ES_MX.folderName]).optional(),
-
   NEXT_PUBLIC_API_URL_BASE: z.string().min(1),
+  NEXT_PUBLIC_LANGUAGE: z.string(),
+
+  STRIPE_SECRET_KEY: z.string().min(1),
+  NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: z.string().min(1),
+  STRIPE_CURRENCY: z.string().min(1),
+  STRIPE_WEBHOOK_SECRET: z.string().min(1),
 });
 
 declare global {

@@ -1,7 +1,7 @@
 import type { En, EsMX } from '@openkit/language-codes';
 import localeCulture from '@openkit/language-codes';
 
-import locales from '@/libs/i18n/locales';
+import type locales from '@/libs/i18n/locales';
 
 export type Language = {
   key: keyof typeof locales;

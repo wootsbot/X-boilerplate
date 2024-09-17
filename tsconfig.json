@@ -22,7 +22,8 @@
       "~/api/*": ["./src/app/api/*"],
       "@design-system/*": ["./src/@design-system/*"],
       "@/*": ["./src/*"],
-      "#/state/*": ["./src/state/*"]
+      "#/state/*": ["./src/state/*"],
+      "~/pgk": ["./package.json"]
     },
     "plugins": [
       {
@@ -30,6 +31,6 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["i18n.d.ts", "**/*.mjs", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
