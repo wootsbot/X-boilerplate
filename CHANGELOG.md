@@ -1,5 +1,11 @@
 # x-boilerplate
 
+## 1.0.0-beta.10
+
+### Major Changes
+
+- [`7b2d50b`](https://github.com/wootsbot/X-boilerplate/commit/7b2d50bb967f9db8c5be7b60c20cda99cd28b9d8) Thanks [@wootsbot](https://github.com/wootsbot)! - feat(stripe): add integration stripe
+
 ## 1.0.0-beta.9
 
 ### Patch Changes
