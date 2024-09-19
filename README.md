@@ -43,6 +43,8 @@
 
 - 🛡️ Authentication [authjs](https://authjs.dev/)
 
+- 💸 Payments [stripe](https://stripe.com)
+
 - ✉️ Send emails with [Resend](https://resend.com) and [@react-email](https://react.email/docs/integrations/resend)
 
 - 🐂 Internationalization with [next-intl](https://next-intl-docs.vercel.app/)
