@@ -1,5 +1,9 @@
 'use client';
 
+import * as React from 'react';
+
+import { useFormStatus } from 'react-dom';
+
 import Button from '@design-system/button/Button';
 import * as Icons from '@design-system/icons';
 import { motion } from 'framer-motion';
@@ -12,34 +16,34 @@ type FeatureProps = {
 };
 
 type PricingCardProps = {
+  priceId?: string;
   price: number;
   title: string;
   description: string;
   isPopular?: boolean;
-  isSubscription?: boolean;
+  interval?: string | null;
   priceDescription?: string;
   isOneTime?: boolean;
   textHelper?: string;
-  textAction: string;
   features: FeatureProps[];
-  onAction?: () => void;
   isPendingAction?: boolean;
+  submitButton?: React.ReactNode;
 };
 
 export function PricingCard({
   price,
   title,
   isPopular,
-  isSubscription,
+  interval,
   description,
   priceDescription,
   isOneTime,
   textHelper,
-  textAction,
   features,
-  onAction,
-  isPendingAction,
+  submitButton,
 }: PricingCardProps) {
+  const { pending } = useFormStatus();
+
   const hoverVariants = {
     initial: {
       scale: isPopular ? 1.05 : 1,
@@ -72,21 +76,14 @@ export function PricingCard({
 
           <p className="text-sm">{description}</p>
 
-          <Button
-            disabled={isPendingAction}
-            loading={isPendingAction}
-            onClick={onAction}
-            endIcon={<Icons.ArrowRightIcon size={16} color="#fff" />}
-          >
-            {textAction}
-          </Button>
+          {submitButton}
 
           <div className="flex flex-col gap-1">
-            {isSubscription && <span className="text-sm text-stone-600">From</span>}
+            {interval && <span className="text-sm text-stone-600">From</span>}
 
             <div className="flex flex-row items-baseline gap-2">
-              <span className="text-5xl font-medium">${price}</span>
-              {isSubscription && <span className="text-xs text-stone-600">/ month</span>}
+              <span className="text-5xl font-medium">${price / 100}</span>
+              {interval && <span className="text-xs text-stone-600">/ {interval}</span>}
               {isOneTime && <span className="px-2 py-1 text-xs rounded-full bg-amber-500">One time</span>}
             </div>
 
@@ -118,5 +115,24 @@ function Feature({ title, description }: FeatureProps) {
         {description && <span className="text-xs text-stone-600">{description}</span>}
       </div>
     </li>
+  );
+}
+
+export function SubmitButton({
+  priceId,
+  action,
+  children,
+  ...props
+}: {
+  priceId?: string;
+  action?: () => Promise<void> | void;
+  children: React.ReactNode;
+}) {
+  const { pending } = useFormStatus();
+
+  return (
+    <Button type="submit" loading={pending} endIcon={<Icons.ArrowRightIcon size={16} color="#fff" />} {...props}>
+      {children}
+    </Button>
   );
 }

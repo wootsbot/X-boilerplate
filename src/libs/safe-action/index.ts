@@ -1,5 +1,8 @@
 import { createSafeActionClient, DEFAULT_SERVER_ERROR_MESSAGE } from 'next-safe-action';
 
+import { auth } from '@/libs/auth';
+import { logger } from '@/libs/logger';
+
 import * as z from 'zod';
 
 class ActionError extends Error {}
@@ -22,3 +25,48 @@ export const actionClient = createSafeActionClient({
     });
   },
 });
+
+export const authUserActionClient = actionClient.use(async ({ next, clientInput, metadata }) => {
+  const session = await auth();
+  const result = await next({
+    ctx: {
+      user: session?.user ?? null,
+    },
+  });
+
+  if (process.env.NODE_ENV === 'development') {
+    logger('Input ->', clientInput);
+    logger('Result ->', result.data);
+    logger('Metadata ->', metadata);
+  }
+
+  return result;
+});
+
+export const authRequiredActionClient = actionClient
+  .use(async ({ next, clientInput, metadata }) => {
+    const result = await next();
+
+    if (process.env.NODE_ENV === 'development') {
+      logger('Input ->', clientInput);
+      logger('Result ->', result.data);
+      logger('Metadata ->', metadata);
+
+      return result;
+    }
+
+    return result;
+  })
+  .use(async ({ next }) => {
+    const session = await auth();
+
+    if (!session) {
+      throw new ActionError('Unauthorized');
+    }
+
+    return next({
+      ctx: {
+        user: session.user,
+      },
+    });
+  });

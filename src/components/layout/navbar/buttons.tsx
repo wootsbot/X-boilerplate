@@ -1,5 +1,7 @@
 'use client';
 
+import { SiGithub } from '@icons-pack/react-simple-icons';
+
 import { signOut } from 'next-auth/react';
 import Link from 'next/link';
 
@@ -17,4 +19,8 @@ export function SignOutButton() {
       Log Out
     </button>
   );
+}
+
+export function SignGithub() {
+  return <SiGithub />;
 }

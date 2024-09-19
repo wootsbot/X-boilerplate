@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { auth } from '@/libs/auth';
 
@@ -12,13 +13,16 @@ export async function Navbar() {
     <header className="border-b border-stone-300">
       <nav className="px-4 py-4 max-w-7xl sm:mx-auto">
         <div className="flex flex-row items-center justify-between h-full">
-          <a href="/">
+          <Link href="/">
             <IconXB size={28} />
-          </a>
+          </Link>
 
           <ul className="flex items-center gap-6 text-sm">
-            <li>Build</li>
-            <li>Resources</li>
+            <li>
+              <Link href="https://github.com/wootsbot/X-boilerplate" target="_blank">
+                <Buttons.SignGithub />
+              </Link>
+            </li>
           </ul>
 
           <div className="flex items-center gap-3">

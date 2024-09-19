@@ -17,6 +17,10 @@
 
 <br>
 
+📚 [Documentation (WIP)](#documentation) - 🚀 [Getting Started (WIP)](#getting-started) - 🎉 [Development (WIP)](#development)
+
+<br>
+
 ## Core Features
 
 - ⚡️ [React 18](https://reactjs.org/), [Next 14](https://nextjs.org/), [pnpm](https://pnpm.io/) - born with fastness
@@ -37,17 +41,13 @@
 
 - 🍍 [Asynchronous state management - TanStack Query](https://tanstack.com/query) and [State Management zustand](https://zustand-demo.pmnd.rs/)
 
-- 🔥 Mocking via [msw](https://mswjs.io/) [WIP]
-
 - 🛡️ Authentication [authjs](https://authjs.dev/)
 
 - ✉️ Send emails with [Resend](https://resend.com) and [@react-email](https://react.email/docs/integrations/resend)
 
-- 🐂 Internationalization with [react-i18next](https://react.i18next.com/) (SSG)
+- 🐂 Internationalization with [next-intl](https://next-intl-docs.vercel.app/)
 
 - 💩 Tests unit with [vitest](https://vitest.dev/) and Tests e2e with [playwright](https://playwright.dev/)
-
-- 📑 [Finite state machines](./src/machines)
 
 - 📄 [react-hook-form](https://react-hook-form.com/) - Forms with easy-to-use validation
 
@@ -69,21 +69,19 @@ Many of this boilerplate features are based on the philosophy of being optional.
 - [x] ~Integrate linters, hooks to DX~
 - [x] ~Integrate resend~
 - [x] ~Integrate @react-email~
-- [x] ~Internationalization with react-i18next (SSG)~
 - [x] ~Setup tests with [vitest](https://vitest.dev/)~
 - [x] Setup test with [vitest](https://vitest.dev/) and [playwright](https://playwright.dev/)
 - [x] Added test all components
-- [x] More examples with resend and @react-email
+- [x] ~More examples with resend and @react-email~
 - [x] Integrate ORM prisma
 - [x] Integrate supabase
 - [x] Integrate planetscale
 - [x] Mocking via msw
-- [x] Integrate SDK to Subscriptions
-- [x] Integrate stripe to payments
+- [x] ~Integrate stripe to payments~
 - [x] Add MDX support for basic pages
 - [x] Add OG image for blog using @vercel/og
-- [x] Integrate https://tailwindcss.com/
-- [x] Integrate https://www.radix-ui.com/
+- [x] ~Integrate https://tailwindcss.com/~
+- [x] ~Integrate https://www.radix-ui.com/~
 - [x] Dark mode
 - [x] Integrate graphql
 - [x] Do `cli` to configure all functions
