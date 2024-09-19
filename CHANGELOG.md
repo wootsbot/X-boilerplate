@@ -1,5 +1,15 @@
 # x-boilerplate
 
+## 1.0.0-beta.11
+
+### Minor Changes
+
+- [`8e5c0bc`](https://github.com/wootsbot/X-boilerplate/commit/8e5c0bcaa37c581cec466e241bee1ce0d83a6875) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump nextjs
+
+### Patch Changes
+
+- [`449ab5c`](https://github.com/wootsbot/X-boilerplate/commit/449ab5c8bf96966ac9af032dacec1206f55eaad0) Thanks [@wootsbot](https://github.com/wootsbot)! - Fixed stripe check session
+
 ## 1.0.0-beta.10
 
 ### Major Changes
