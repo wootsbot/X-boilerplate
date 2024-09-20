@@ -32,7 +32,6 @@ export default async function AuthjsPage() {
         <p className="text-lg">{session?.user?.email}</p>
         <p className="text-sm text-stone-500">{formattedDate}</p>
       </div>
-
       <section className="py-10">
         <div className="flex flex-col gap-8">
           <div className="flex items-end gap-3">

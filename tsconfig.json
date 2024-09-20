@@ -17,9 +17,6 @@
     "incremental": true,
     "noUncheckedIndexedAccess": true,
     "paths": {
-      "~/env": ["./env.ts"],
-      "~/app/*": ["./src/app/*"],
-      "~/api/*": ["./src/app/api/*"],
       "@design-system/*": ["./src/@design-system/*"],
       "@/*": ["./src/*"],
       "#/state/*": ["./src/state/*"],
