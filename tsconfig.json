@@ -23,7 +23,7 @@
       "@design-system/*": ["./src/@design-system/*"],
       "@/*": ["./src/*"],
       "#/state/*": ["./src/state/*"],
-      "~/pgk": ["./package.json"]
+      "~/pkg": ["./package.json"]
     },
     "plugins": [
       {

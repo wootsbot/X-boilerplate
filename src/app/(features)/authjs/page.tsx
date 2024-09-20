@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import * as dateFns from 'date-fns';
 
-import pkg from '~/pgk';
+import pkg from '~/pkg';
 import type { Tool } from '@/components/tools-list';
 import { ToolsList } from '@/components/tools-list';
 
@@ -37,7 +37,9 @@ export default async function AuthjsPage() {
         <div className="flex flex-col gap-8">
           <div className="flex items-end gap-3">
             <h2 className="text-5xl font-medium">Tools</h2>
-            <p className="text-sm font-thin">tools used in the development this example and its respective versions.</p>
+            <p className="text-sm font-thin">
+              Tools used in the development of this example and their respective versions.
+            </p>
           </div>
 
           <ToolsList list={TOOLS} />

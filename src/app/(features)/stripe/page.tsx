@@ -4,7 +4,7 @@ import * as Pricing from '@/components/pricing-card';
 import { ToolsList } from '@/components/tools-list';
 import type { Tool } from '@/components/tools-list';
 
-import pkg from '~/pgk';
+import pkg from '~/pkg';
 
 import { PriceButton } from './price-button';
 

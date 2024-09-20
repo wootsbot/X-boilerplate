@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import Button from '@design-system/button';
 
-import pkg from '~/pgk';
+import pkg from '~/pkg';
 
 import { Form } from './form';
 
