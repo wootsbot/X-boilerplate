@@ -1,5 +1,11 @@
 # x-boilerplate
 
+## 1.0.0-beta.13
+
+### Patch Changes
+
+- [`c7c9ff5`](https://github.com/wootsbot/X-boilerplate/commit/c7c9ff529e166cbf5da7ee357a8ac5f6abf24f05) Thanks [@wootsbot](https://github.com/wootsbot)! - Fixed dialgo use title
+
 ## 1.0.0-beta.12
 
 ### Minor Changes
