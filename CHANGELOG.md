@@ -1,5 +1,11 @@
 # x-boilerplate
 
+## 1.0.0-beta.12
+
+### Minor Changes
+
+- [`73f250e`](https://github.com/wootsbot/X-boilerplate/commit/73f250ee0947c67f27cbcc18ac801316c2069357) Thanks [@wootsbot](https://github.com/wootsbot)! - Support for NextJS 15
+
 ## 1.0.0-beta.11
 
 ### Minor Changes
