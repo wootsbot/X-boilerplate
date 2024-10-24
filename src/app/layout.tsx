@@ -3,6 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages, getTranslations } from 'next-intl/server';
+import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import type { PropsWithChildren, ReactNode } from 'react';
 
 import { GeistSans } from 'geist/font/sans';
@@ -69,15 +70,17 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={GeistSans.variable}>
-      <body className="bg-[#f2f0ed] text-[#0d0c0c]">
-        <NextIntlClientProvider messages={messages}>
-          <RootProvider>
-            {children}
-            {auth}
-          </RootProvider>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <html lang={locale} className={GeistSans.variable}>
+        <body className="bg-[#f2f0ed] text-[#0d0c0c]">
+          <NuqsAdapter>
+            <RootProvider>
+              {children}
+              {auth}
+            </RootProvider>
+          </NuqsAdapter>
+        </body>
+      </html>
+    </NextIntlClientProvider>
   );
 }
