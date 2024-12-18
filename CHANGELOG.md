@@ -1,5 +1,15 @@
 # x-boilerplate
 
+## 1.0.0-beta.14
+
+### Minor Changes
+
+- [`1b2301b`](https://github.com/wootsbot/X-boilerplate/commit/1b2301b29a19c485c60aa50c0affde1ec3ed083b) Thanks [@wootsbot](https://github.com/wootsbot)! - Use biomejs and fix next-intl
+
+### Patch Changes
+
+- [`6d0e03e`](https://github.com/wootsbot/X-boilerplate/commit/6d0e03e692871fe2864397131c56cbc48e2056d8) Thanks [@wootsbot](https://github.com/wootsbot)! - Fix Actions
+
 ## 1.0.0-beta.13
 
 ### Patch Changes
