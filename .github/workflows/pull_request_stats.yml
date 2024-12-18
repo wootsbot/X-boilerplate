@@ -52,5 +52,5 @@ jobs:
       - name: 💣 build
         run: pnpm build
 
-      - name: 💅 Prettier
-        run: pnpm prettier
+      - name: 💅 Lint
+        run: pnpm lint

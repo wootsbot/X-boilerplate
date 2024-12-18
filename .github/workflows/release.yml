@@ -57,11 +57,8 @@ jobs:
       - name: 💣 build
         run: pnpm build
 
-      - name: 💅 Prettier
-        run: pnpm prettier
-
-      # - name: 💎 lint:types
-      #   run: pnpm turbo run lint:types --cache-dir=".turbo"
+      - name: 💅 Lint
+        run: pnpm lint
 
       - name: Create Release Pull Request
         id: changesets
