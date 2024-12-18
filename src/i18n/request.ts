@@ -1,12 +1,12 @@
-import { getRequestConfig } from 'next-intl/server';
+import { getRequestConfig } from "next-intl/server";
 
-type En = typeof import('../../messages/en.json');
+type En = typeof import("../../messages/en.json");
 
 export default getRequestConfig(async () => {
-  const locale = process.env.NEXT_PUBLIC_LANGUAGE;
+	const locale = "en";
 
-  return {
-    locale,
-    messages: ((await import(`../../messages/${locale}.json`)) as { default: En }).default,
-  };
+	return {
+		locale,
+		messages: ((await import(`../../messages/${locale}.json`)) as { default: En }).default,
+	};
 });

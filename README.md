@@ -97,6 +97,4 @@ Many of this boilerplate features are based on the philosophy of being optional.
 - [husky](https://typicode.github.io/husky/#/) - Husky improves your commits and more 🐶 woof!.
 
 - [VS Code Extensions](./.vscode/extensions.json)
-  - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Code formatter using prettier.
-  - [Formatting Toggle](https://marketplace.visualstudio.com/items?itemName=tombonnike.vscode-status-bar-format-toggle) - You to toggle formatting settings ON and OFF.
-  - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+  - [biome](https://marketplace.visualstudio.com/items?itemName=biomejs.biome) - Biome Extension for VS Code.

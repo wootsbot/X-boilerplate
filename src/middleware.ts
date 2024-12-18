@@ -1,35 +1,35 @@
-import { type NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from "next/server";
 
-import { auth } from '@/libs/auth';
+import { auth } from "@/libs/auth";
 
 export const config = {
-  matcher: ['/login', '/authjs'],
+	matcher: ["/login", "/authjs"],
 };
 
 export async function middleware(request: NextRequest) {
-  const session = await auth();
-  const isAuthPage = request.nextUrl.pathname.startsWith('/login');
+	const session = await auth();
+	const isAuthPage = request.nextUrl.pathname.startsWith("/login");
 
-  if (isAuthPage) {
-    if (session) {
-      return NextResponse.redirect(new URL('/', request.url));
-    }
+	if (isAuthPage) {
+		if (session) {
+			return NextResponse.redirect(new URL("/", request.url));
+		}
 
-    return null;
-  }
+		return null;
+	}
 
-  if (!session) {
-    let from = request.nextUrl.pathname;
+	if (!session) {
+		let from = request.nextUrl.pathname;
 
-    if (request.nextUrl.search) {
-      from += request.nextUrl.search;
-    }
+		if (request.nextUrl.search) {
+			from += request.nextUrl.search;
+		}
 
-    // if this an API request, respond with JSON
-    if (request.nextUrl.pathname.startsWith('/api/auth')) {
-      return new NextResponse(JSON.stringify({ error: { message: 'authentication required' } }), { status: 401 });
-    }
+		// if this an API request, respond with JSON
+		if (request.nextUrl.pathname.startsWith("/api/auth")) {
+			return new NextResponse(JSON.stringify({ error: { message: "authentication required" } }), { status: 401 });
+		}
 
-    return NextResponse.redirect(new URL(`/login?from=${encodeURIComponent(from)}`, request.url));
-  }
+		return NextResponse.redirect(new URL(`/login?from=${encodeURIComponent(from)}`, request.url));
+	}
 }

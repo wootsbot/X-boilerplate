@@ -1,3 +1,4 @@
 export const logger = (message: string, params?: unknown) => {
-  console.log(message, params);
+	// biome-ignore lint/suspicious/noConsoleLog: <explanation>
+	console.log(message, params);
 };

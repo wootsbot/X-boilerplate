@@ -1,3 +1,3 @@
 export type HelloFormProps = {
-  onSubmit: ({ name }: { name: string }) => void;
+	onSubmit: ({ name }: { name: string }) => void;
 };
