@@ -7,7 +7,7 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"ignore": [".next/**", "public/**", "node_modules/**", "pnpm-lock.yaml", "playwright-report/**"]
+		"ignore": [".next/**", "public/**", "node_modules/**", "pnpm-lock.yaml", "playwright-report/**", ".changeset/**"]
 	},
 	"formatter": {
 		"enabled": true,
