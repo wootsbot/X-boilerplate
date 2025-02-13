@@ -66,8 +66,8 @@ importers:
         specifier: 3.26.1
         version: 3.26.1(next@15.1.7(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
       next-safe-action:
-        specifier: 7.10.2
-        version: 7.10.2(next@15.1.7(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(zod@3.24.2)
+        specifier: 7.10.3
+        version: 7.10.3(next@15.1.7(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(zod@3.24.2)
       nuqs:
         specifier: 2.3.2
         version: 2.3.2(next@15.1.7(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
@@ -3164,8 +3164,8 @@ packages:
       next: ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || >=19.0.0-rc <19.0.0 || ^19.0.0
 
-  next-safe-action@7.10.2:
-    resolution: {integrity: sha512-Tpho8EolopnbJFYNuRuA1sXvUxndGuWhk17HbrPl701uuNOA+fs9zQx4vWCjkGWRvfZap67HqKOBueX7/x2Tug==}
+  next-safe-action@7.10.3:
+    resolution: {integrity: sha512-Kn4zTnOiRkfWfQ0DH94I79Eycq6i+qS6WzhuGzxlWhVe6/yrEXHt+yU4GdqJ1O7vLyDAOWv4rXaRu+FkfVUAqQ==}
     engines: {node: '>=18.17'}
     peerDependencies:
       '@sinclair/typebox': '>= 0.33.3'
@@ -7280,7 +7280,7 @@ snapshots:
       react: 19.0.0
       use-intl: 3.26.1(react@19.0.0)
 
-  next-safe-action@7.10.2(next@15.1.7(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(zod@3.24.2):
+  next-safe-action@7.10.3(next@15.1.7(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(zod@3.24.2):
     dependencies:
       next: 15.1.7(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react: 19.0.0
