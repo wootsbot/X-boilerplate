@@ -3,11 +3,11 @@
 	"version": "1.0.0-beta.14",
 	"private": true,
 	"engines": {
-		"node": ">=20",
+		"node": ">=22",
 		"pnpm": ">=9"
 	},
 	"scripts": {
-		"prepare": "husky install",
+		"prepare": "husky",
 		"dev": "next dev --turbo",
 		"build": "next build",
 		"start": "next start",

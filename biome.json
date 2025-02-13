@@ -59,7 +59,12 @@
 				"noForEach": "error",
 				"noUselessTypeConstraint": "error",
 				"useLiteralKeys": "error",
-				"useOptionalChain": "error"
+				"useOptionalChain": "error",
+				"noUselessFragments": "error"
+			},
+			"nursery": {
+				"useConsistentCurlyBraces": "error",
+				"noNestedTernary": "error"
 			}
 		}
 	},

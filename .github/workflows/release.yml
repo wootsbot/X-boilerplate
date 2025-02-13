@@ -6,6 +6,7 @@ on:
       - main
 
 env:
+  PNPM_VERSION: 9.15.4
   NEXT_PUBLIC_API_URL_BASE: ${{ vars.NEXT_PUBLIC_API_URL_BASE }}
   NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
   SITE_NAME: ${{ vars.SITE_NAME }}
@@ -33,15 +34,19 @@ jobs:
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
 
       - uses: actions/checkout@v4
-
-      - name: 🔥 Setup corepack
-        run: corepack enable
+        with:
+          fetch-depth: 25
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v4
         with:
           node-version-file: package.json
           cache: "pnpm"
+
+      - name: 🔥 Setup corepack
+        run: |
+          corepack enable
+          corepack prepare pnpm@${{ env.PNPM_VERSION }} --activate
 
       - name: 📁 Cache
         uses: actions/cache@v4

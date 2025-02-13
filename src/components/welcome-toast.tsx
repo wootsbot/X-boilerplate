@@ -17,7 +17,7 @@ export function WelcomeToast() {
 				},
 				description: (
 					<>
-						A starting boilerplate with configuration and best practices for your Nextjs projects.{" "}
+						A starting boilerplate with configuration and best practices for your Nextjs projects.
 						<a
 							href="https://github.com/wootsbot/X-boilerplate"
 							className="text-amber-600 hover:underline"

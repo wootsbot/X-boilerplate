@@ -63,7 +63,7 @@ export const InviteEmail = ({ invitedByUsername = "X Boilerplate", inviteLink }:
 							</Button>
 						</Section>
 						<Text className="text-black text-[14px] leading-[24px]">
-							Or copy and paste this URL into your browser:{" "}
+							Or copy and paste this URL into your browser:
 							<Link href={inviteLink} className="text-blue-600 no-underline">
 								{inviteLink}
 							</Link>
