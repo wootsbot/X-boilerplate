@@ -2,6 +2,7 @@ import { type NextRequest, NextResponse } from "next/server";
 
 import { auth } from "@/libs/auth";
 
+// example of a middleware that checks if the user is authenticated
 export const config = {
 	matcher: ["/login", "/authjs"],
 };
