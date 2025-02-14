@@ -1,5 +1,27 @@
 # x-boilerplate
 
+## 1.0.0-beta.15
+
+### Minor Changes
+
+- [`6ffea3e`](https://github.com/wootsbot/X-boilerplate/commit/6ffea3e69477e1c4e4d8420eb06fab2f28c88d95) Thanks [@wootsbot](https://github.com/wootsbot)! - 🔴 Errors that should trigger the ErrorBoundary and ⚠️ Errors that should NOT trigger the ErrorBoundary
+
+- [`c306e94`](https://github.com/wootsbot/X-boilerplate/commit/c306e9407e5cea38f01530455b00e80a7be7d3a4) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump nextjs
+
+- [`d36a459`](https://github.com/wootsbot/X-boilerplate/commit/d36a4591e447297095efe01c0ce0ae5d7d7236b1) Thanks [@wootsbot](https://github.com/wootsbot)! - Use next.config.env to a more intuitive and ergonomic experience envs
+
+### Patch Changes
+
+- [`3c61652`](https://github.com/wootsbot/X-boilerplate/commit/3c61652f08d843307cd47cad61d7dfa4c4cc5e0e) Thanks [@wootsbot](https://github.com/wootsbot)! - Use node Node.js `v22.x.x` - (LTS)
+
+- [`6c19b6a`](https://github.com/wootsbot/X-boilerplate/commit/6c19b6a09637fefbabb0e75470141566f1c81fe1) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump next-safe-action
+
+- [`35d2130`](https://github.com/wootsbot/X-boilerplate/commit/35d2130e532eefd7f7db89354339238c9d394316) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump nuqs
+
+- [`db83500`](https://github.com/wootsbot/X-boilerplate/commit/db835000caba29f95ad2fe1aef7c4708f4311572) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump @icons-pack/react-simple-icons
+
+- [`8a66815`](https://github.com/wootsbot/X-boilerplate/commit/8a66815822be581875b0e0420483b4d20477ce78) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump `hookform/resolvers`, `zod`, `react-hook-form`'
+
 ## 1.0.0-beta.14
 
 ### Minor Changes
