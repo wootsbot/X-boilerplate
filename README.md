@@ -27,7 +27,7 @@
 
 - 🗂 [Structure with paths and alias](./tsconfig.json)
 
-- 💅 Code formatter with [prettier](https://prettier.io/) and Find and fix problems via [eslint](https://eslint.org/)
+- 💅 Code formatter and find and fix with [biome](https://biomejs.dev/)
 
 - 🪝 [husky](https://commitlint.js.org/#/)
 
