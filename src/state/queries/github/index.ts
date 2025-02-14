@@ -21,7 +21,7 @@ export const useRepositoriesQuery = (
 			const response = await axios.get("https://api.github.com/search/repositories", {
 				params: { q: search, per_page: perPage, page },
 				headers: {
-					Authorization: `Bearer ${process.env.NEXT_PUBLIC_PERSONAL_GITHUB_TOKEN}`,
+					Authorization: `Bearer ${process.env.PERSONAL_GITHUB_TOKEN}`,
 				},
 			});
 

@@ -8,16 +8,6 @@ on:
 
 env:
   PNPM_VERSION: 9.15.4
-  NEXT_PUBLIC_API_URL_BASE: ${{ vars.NEXT_PUBLIC_API_URL_BASE }}
-  NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
-  SITE_NAME: ${{ vars.SITE_NAME }}
-  TWITTER_CREATOR: ${{ vars.TWITTER_CREATOR }}
-  SITE_URL: ${{ vars.SITE_URL }}
-  RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-  RESEND_DOMAIN: ${{ vars.RESEND_DOMAIN }}
-  AUTH_GITHUB_ID: ${{ secrets.AUTH_GITHUB_ID }}
-  AUTH_GITHUB_SECRET: ${{ secrets.AUTH_GITHUB_SECRET }}
-  AUTH_SECRET: ${{ secrets.AUTH_SECRET }}
 
 jobs:
   format:
@@ -51,6 +41,21 @@ jobs:
             key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
             restore-keys: |
               ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
+
+      - name: Set environment variables
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_DOMAIN: ${{ secrets.RESEND_DOMAIN }}
+          AUTH_GITHUB_ID: ${{ secrets.AUTH_GITHUB_ID }}
+          AUTH_GITHUB_SECRET: ${{ secrets.AUTH_GITHUB_SECRET }}
+          AUTH_SECRET: ${{ secrets.AUTH_SECRET }}
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+          STRIPE_PUBLISHABLE_KEY: ${{ secrets.STRIPE_PUBLISHABLE_KEY }}
+          STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+          PERSONAL_GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+        run: |
+          cp .env.development .env
+          chmod +x ./scripts/setEnv.sh && ./scripts/setEnv.sh
 
       - name: 📦 Install Dependencies
         run: |

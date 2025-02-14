@@ -6,7 +6,6 @@ Axios.interceptors.request.use(
 	async (config) => {
 		const headers = new AxiosHeaders(config.headers);
 
-		// config.baseURL = process.env.NEXT_PUBLIC_API_URL_BASE;
 		config.headers = headers;
 		return config;
 	},
