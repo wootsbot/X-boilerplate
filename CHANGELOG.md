@@ -1,5 +1,13 @@
 # x-boilerplate
 
+## 1.0.0-beta.16
+
+### Minor Changes
+
+- [`c7c8f96`](https://github.com/wootsbot/X-boilerplate/commit/c7c8f9650f803679a81cdcda5e69ef21bd8d0377) Thanks [@wootsbot](https://github.com/wootsbot)! - Update tailwindcss to v4
+
+- [`2b1d19b`](https://github.com/wootsbot/X-boilerplate/commit/2b1d19b545416fa62585794628c27104ddc6f64f) Thanks [@wootsbot](https://github.com/wootsbot)! - Bupm `@react-email` and `resend`
+
 ## 1.0.0-beta.15
 
 ### Minor Changes
