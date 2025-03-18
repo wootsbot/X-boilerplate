@@ -15,7 +15,7 @@ function Button({ children, className, disabled, variant, endIcon, loading, ...p
 		<button
 			disabled={disabled || loading}
 			className={cls(
-				"flex flex-row items-center justify-center gap-2 bg-stone-950 px-4 py-3 text-white rounded-md outline outline-1 outline-stone-950 hover:bg-stone-800",
+				"flex flex-row items-center justify-center gap-2 bg-stone-950 px-4 py-3 text-white rounded-md outline outline-stone-950 hover:bg-stone-800",
 				className,
 				disabled && "bg-stone-400 hover:bg-stone-400 outline-stone-400",
 				variant === "secondary" && "bg-amber-600 hover:bg-amber-700 outline-amber-600",
@@ -39,7 +39,7 @@ function Button({ children, className, disabled, variant, endIcon, loading, ...p
 				</svg>
 			)}
 			{!loading && children}
-			{endIcon && <div className="flex-grow" />}
+			{endIcon && <div className="grow" />}
 			{endIcon}
 		</button>
 	);

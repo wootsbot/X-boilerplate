@@ -28,7 +28,7 @@ export const InviteEmail = ({ invitedByUsername = "X Boilerplate", inviteLink }:
 			<Preview>{invitedByUsername}</Preview>
 			<Tailwind>
 				<Body className="mx-auto my-auto font-sans bg-white">
-					<Container className="border border-solid border-[#eaeaea] rounded my-[40px] mx-auto p-[20px] w-[465px]">
+					<Container className="border border-solid border-[#eaeaea] rounded-sm my-[40px] mx-auto p-[20px] w-[465px]">
 						<Section className="mt-[32px]">
 							<Img src={`${baseUrl}/email-img.png`} width="40" height="40" alt="Openkit img" className="mx-auto my-0" />
 						</Section>
@@ -56,7 +56,7 @@ export const InviteEmail = ({ invitedByUsername = "X Boilerplate", inviteLink }:
 
 						<Section className="text-center mt-[32px] mb-[32px]">
 							<Button
-								className="bg-[#000000] rounded text-white text-[12px] font-semibold no-underline text-center px-[20px] py-[12px]"
+								className="bg-[#000000] rounded-sm text-white text-[12px] font-semibold no-underline text-center px-[20px] py-[12px]"
 								href={inviteLink}
 							>
 								Join the Talk!

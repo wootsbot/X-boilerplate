@@ -26,7 +26,7 @@ export function CardFeature({
 }: CardFeatureProps) {
 	return (
 		<Link href={to} aria-label={title}>
-			<div className="p-[1.5px] rounded-md bg-gradient-to-b from-stone-300 via-stone-300 to-stone-300 hover:from-stone-300 hover:via-red-300 hover:to-red-600 transition-all duration-700 ease-out h-full min-h-[380px]">
+			<div className="p-[1.5px] rounded-md bg-linear-to-b from-stone-300 via-stone-300 to-stone-300 hover:from-stone-300 hover:via-red-300 hover:to-red-600 transition-all duration-700 ease-out h-full min-h-[380px]">
 				<div
 					id="feature"
 					className="bg-[#f2f0ed] flex flex-col justify-between gap-4 pt-4 px-6 rounded-md w-auto hover:cursor-pointer overflow-hidden h-full"
@@ -63,14 +63,12 @@ export function CardFeature({
 						</div>
 					</div>
 
-					{figuresCenter && (
-						<div className="flex justify-end flex-shrink-0 overflow-hidden -mb-[50px]">{figuresCenter}</div>
-					)}
+					{figuresCenter && <div className="flex justify-end shrink-0 overflow-hidden -mb-[50px]">{figuresCenter}</div>}
 
-					{figureLeft && <div className="flex-shrink-0 overflow-hidden -ml-[80px] -mb-[50px]">{figureLeft}</div>}
+					{figureLeft && <div className="shrink-0 overflow-hidden -ml-[80px] -mb-[50px]">{figureLeft}</div>}
 
 					{figureRight && (
-						<div className="flex justify-end flex-shrink-0 overflow-hidden -mr-[50px] -mb-[50px]">{figureRight}</div>
+						<div className="flex justify-end shrink-0 overflow-hidden -mr-[50px] -mb-[50px]">{figureRight}</div>
 					)}
 				</div>
 			</div>

@@ -58,7 +58,7 @@ export function Repository({
 							{topics.slice(0, 5).map((topic) => (
 								<p
 									key={topic}
-									className={cls("text-xs font-mono text-stone-500", "bg-stone-200", "px-1", "rounded-sm")}
+									className={cls("text-xs font-mono text-stone-500", "bg-stone-200", "px-1", "rounded-xs")}
 								>
 									{topic}
 								</p>
@@ -115,20 +115,20 @@ export function Loader({ itemsLoadingCount = 10 }: { itemsLoadingCount?: number 
 						<div className="flex flex-col w-full gap-2">
 							<div className="flex items-center gap-2">
 								<div className="w-5 h-5 rounded-full bg-stone-300" />
-								<div className="w-full h-3 max-w-xs rounded bg-stone-300" />
+								<div className="w-full h-3 max-w-xs rounded-sm bg-stone-300" />
 							</div>
 
-							<div className="h-3 rounded bg-stone-300" />
+							<div className="h-3 rounded-sm bg-stone-300" />
 
 							<div className="flex items-center gap-1">
-								<div className="w-16 h-3 rounded-sm bg-stone-300" />
-								<div className="w-16 h-3 rounded-sm bg-stone-300" />
-								<div className="w-16 h-3 rounded-sm bg-stone-300" />
-								<div className="w-16 h-3 rounded-sm bg-stone-300" />
-								<div className="w-16 h-3 rounded-sm bg-stone-300" />
+								<div className="w-16 h-3 rounded-xs bg-stone-300" />
+								<div className="w-16 h-3 rounded-xs bg-stone-300" />
+								<div className="w-16 h-3 rounded-xs bg-stone-300" />
+								<div className="w-16 h-3 rounded-xs bg-stone-300" />
+								<div className="w-16 h-3 rounded-xs bg-stone-300" />
 							</div>
 
-							<div className="w-full h-3 max-w-xs rounded bg-stone-300" />
+							<div className="w-full h-3 max-w-xs rounded-sm bg-stone-300" />
 						</div>
 					</div>
 				</div>

@@ -44,7 +44,7 @@ export default function QueryV5Page() {
 						sort by owner, repository name, programming language, number of stars, or creation date.
 					</h2>
 
-					<div className="bg-[#f2f0ed] shadow-md outline outline-stone-400 outline-[0.5px] px-3 flex items-center">
+					<div className="bg-[#f2f0ed] shadow-md outline outline-stone-400 px-3 flex items-center">
 						<svg
 							className="stroke-stone-400"
 							xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ export default function QueryV5Page() {
 						</svg>
 
 						<input
-							className="w-full h-full px-3 py-5 font-mono text-sm font-normal bg-transparent rounded-sm outline-none placeholder:font-mono placeholder:text-stone-400"
+							className="w-full h-full px-3 py-5 font-mono text-sm font-normal bg-transparent rounded-xs outline-hidden placeholder:font-mono placeholder:text-stone-400"
 							type="text"
 							placeholder="Search for a name"
 							onChange={handleChange}
@@ -94,7 +94,7 @@ export default function QueryV5Page() {
 					<div className="flex items-center justify-center mt-4 pagination">
 						<button
 							type="button"
-							className="px-4 py-2 mx-1 bg-gray-200 rounded disabled:opacity-50"
+							className="px-4 py-2 mx-1 bg-gray-200 rounded-sm disabled:opacity-50"
 							onClick={() => setPage(Math.max(page - 1, 1))}
 							disabled={page === 1}
 						>
@@ -107,7 +107,7 @@ export default function QueryV5Page() {
 
 						<button
 							type="button"
-							className="px-4 py-2 mx-1 bg-gray-200 rounded disabled:opacity-50"
+							className="px-4 py-2 mx-1 bg-gray-200 rounded-sm disabled:opacity-50"
 							onClick={() => setPage(Math.min(page + 1, totalPages))}
 							disabled={page === totalPages}
 						>

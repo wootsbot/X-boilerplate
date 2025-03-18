@@ -43,7 +43,7 @@ function NotFoundPage(): JSX.Element {
 				<div className="flex items-center justify-center">
 					<Link
 						href="/"
-						className="px-4 py-2 font-mono text-xs rounded-sm outline outline-stone-300 hover:bg-stone-300"
+						className="px-4 py-2 font-mono text-xs rounded-xs outline outline-stone-300 hover:bg-stone-300"
 					>
 						← Go back home
 					</Link>
