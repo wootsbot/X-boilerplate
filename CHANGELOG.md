@@ -1,5 +1,11 @@
 # x-boilerplate
 
+## 1.0.0-beta.17
+
+### Patch Changes
+
+- [`ae91780`](https://github.com/wootsbot/X-boilerplate/commit/ae917805444e5716fde3f92b509cf8a3673dc51e) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump Nextjs
+
 ## 1.0.0-beta.16
 
 ### Minor Changes
