@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  PNPM_VERSION: 10.6.5
+  PNPM_VERSION: 10.14.0
 
 jobs:
   stats:
