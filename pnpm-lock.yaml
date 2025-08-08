@@ -69,8 +69,8 @@ importers:
         specifier: 8.0.8
         version: 8.0.8(next@15.4.6(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       nuqs:
-        specifier: 2.3.2
-        version: 2.3.2(next@15.4.6(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)
+        specifier: 2.4.3
+        version: 2.4.3(next@15.4.6(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)
       react:
         specifier: ^19
         version: 19.1.1
@@ -3237,8 +3237,8 @@ packages:
     resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==}
     engines: {node: '>=8'}
 
-  nuqs@2.3.2:
-    resolution: {integrity: sha512-WeG78r8e3a30JY3P8npldvNiAZwGIk499lnpeRs3UYA3PpSvs2/PLunKGgjuF/JMw4BOowD3K2xgGEOZ3PeODA==}
+  nuqs@2.4.3:
+    resolution: {integrity: sha512-BgtlYpvRwLYiJuWzxt34q2bXu/AIS66sLU1QePIMr2LWkb+XH0vKXdbLSgn9t6p7QKzwI7f38rX3Wl9llTXQ8Q==}
     peerDependencies:
       '@remix-run/react': '>=2'
       next: '>=14.2.0'
@@ -7079,7 +7079,7 @@ snapshots:
     dependencies:
       path-key: 3.1.1
 
-  nuqs@2.3.2(next@15.4.6(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1):
+  nuqs@2.4.3(next@15.4.6(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1):
     dependencies:
       mitt: 3.0.1
       react: 19.1.1
