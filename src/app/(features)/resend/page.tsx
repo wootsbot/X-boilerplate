@@ -18,11 +18,6 @@ const TOOLS: Tool[] = [
 		name: "@react-email/components",
 		urlRef: "https://react.email/docs/components/head",
 	},
-	{
-		version: pkg.dependencies["@react-email/html"],
-		name: "@react-email/html",
-		urlRef: "https://react.email/docs/components/html",
-	},
 	{ version: pkg.dependencies["next-safe-action"], name: "next-safe-action", urlRef: "https://next-safe-action.dev/" },
 	{ version: pkg.dependencies.zod, name: "zod", urlRef: "https://zod.dev/" },
 	{ version: pkg.dependencies["react-hook-form"], name: "react-hook-form", urlRef: "https://react-hook-form.com/" },
