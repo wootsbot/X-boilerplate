@@ -34,10 +34,14 @@ export const authUserActionClient = actionClient.use(async ({ next, clientInput,
 		},
 	});
 
+	const startTime = performance.now();
+	const endTime = performance.now();
+
 	if (process.env.NODE_ENV === "development") {
-		logger("Input ->", clientInput);
-		logger("Result ->", result.data);
 		logger("Metadata ->", metadata);
+		logger("Client Input ->", clientInput);
+		logger("Result ->", result.data);
+		logger("Action execution took", endTime - startTime, "ms");
 	}
 
 	return result;
@@ -47,12 +51,14 @@ export const authRequiredActionClient = actionClient
 	.use(async ({ next, clientInput, metadata }) => {
 		const result = await next();
 
-		if (process.env.NODE_ENV === "development") {
-			logger("Input ->", clientInput);
-			logger("Result ->", result.data);
-			logger("Metadata ->", metadata);
+		const startTime = performance.now();
+		const endTime = performance.now();
 
-			return result;
+		if (process.env.NODE_ENV === "development") {
+			logger("Metadata ->", metadata);
+			logger("Client Input ->", clientInput);
+			logger("Result ->", result.data);
+			logger("Action execution took", endTime - startTime, "ms");
 		}
 
 		return result;

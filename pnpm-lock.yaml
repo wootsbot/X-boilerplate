@@ -66,8 +66,8 @@ importers:
         specifier: 4.3.4
         version: 4.3.4(next@15.4.6(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)(typescript@5.9.2)
       next-safe-action:
-        specifier: 7.10.3
-        version: 7.10.3(next@15.4.6(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.0.15)
+        specifier: 8.0.8
+        version: 8.0.8(next@15.4.6(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       nuqs:
         specifier: 2.3.2
         version: 2.3.2(next@15.4.6(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)
@@ -3155,26 +3155,13 @@ packages:
       typescript:
         optional: true
 
-  next-safe-action@7.10.3:
-    resolution: {integrity: sha512-Kn4zTnOiRkfWfQ0DH94I79Eycq6i+qS6WzhuGzxlWhVe6/yrEXHt+yU4GdqJ1O7vLyDAOWv4rXaRu+FkfVUAqQ==}
+  next-safe-action@8.0.8:
+    resolution: {integrity: sha512-qh1wMMrv7vfxoL67ePn1+LDWOrEjlRe7bIgKI47e5TVWOQ2YCHY/ir2Wx687vwDWPF41ifUnHA7jm/HH8JQHNQ==}
     engines: {node: '>=18.17'}
     peerDependencies:
-      '@sinclair/typebox': '>= 0.33.3'
       next: '>= 14.0.0'
       react: '>= 18.2.0'
       react-dom: '>= 18.2.0'
-      valibot: '>= 0.36.0'
-      yup: '>= 1.0.0'
-      zod: '>= 3.0.0'
-    peerDependenciesMeta:
-      '@sinclair/typebox':
-        optional: true
-      valibot:
-        optional: true
-      yup:
-        optional: true
-      zod:
-        optional: true
 
   next@15.0.4:
     resolution: {integrity: sha512-nuy8FH6M1FG0lktGotamQDCXhh5hZ19Vo0ht1AOIQWrYJLP598TIUagKtvJrfJ5AGwB/WmDqkKaKhMpVifvGPA==}
@@ -7006,13 +6993,11 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.2
 
-  next-safe-action@7.10.3(next@15.4.6(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(zod@4.0.15):
+  next-safe-action@8.0.8(next@15.4.6(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
     dependencies:
       next: 15.4.6(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
-    optionalDependencies:
-      zod: 4.0.15
 
   next@15.0.4(@babel/core@7.24.5)(@playwright/test@1.46.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
     dependencies:
