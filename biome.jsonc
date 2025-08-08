@@ -1,0 +1,104 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.1.4/schema.json",
+  "files": {
+    "ignoreUnknown": false,
+    "includes": [
+      "./src/**",
+      "**/*.ts",
+      "**/*.tsx",
+      "!*.mjs",
+      "!*.cjs",
+      "!*.d.ts",
+      "!*.d.cts",
+      "!*.d.mts",
+      "!lib",
+      "!coverage",
+      "!dist",
+      "!node_modules",
+      "!.next",
+      "!public",
+      "!playwright-report/**",
+      "!.changeset/**"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "lineWidth": 120,
+    "lineEnding": "lf"
+  },
+  "javascript": {
+    "formatter": {
+      "trailingCommas": "all"
+    }
+  },
+  "json": {
+    "formatter": {
+      "trailingCommas": "none"
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "style": {
+        "noUselessElse": "error",
+        "useImportType": "error",
+        "useShorthandFunctionType": "error",
+        "useAsConstAssertion": "error",
+        "noNamespace": "error",
+        "noInferrableTypes": "error",
+        "useConsistentCurlyBraces": "error",
+        "noNestedTernary": "error",
+        "useCollapsedIf": "error",
+        "useTemplate": {
+          "level": "warn",
+          "fix": "safe",
+          "options": {}
+        }
+      },
+      "suspicious": {
+        "noConsole": {
+          "level": "error",
+          "options": {
+            "allow": ["assert", "error", "info", "warn"]
+          }
+        },
+        "noEmptyInterface": "warn",
+        "noExplicitAny": "warn",
+        "noExtraNonNullAssertion": "error"
+      },
+      "correctness": {
+        "noRenderReturnValue": "error",
+        "useHookAtTopLevel": "error",
+        "useJsxKeyInIterable": "error",
+        "useExhaustiveDependencies": "warn",
+        "noChildrenProp": "error",
+        "noPrecisionLoss": "error",
+        "noUnusedVariables": "error",
+        "noUnusedImports": "error"
+      },
+      "performance": {
+        "noDelete": "error"
+      },
+      "complexity": {
+        "noBannedTypes": "error",
+        "noUselessThisAlias": "error",
+        "noForEach": "error",
+        "noUselessTypeConstraint": "error",
+        "useLiteralKeys": "error",
+        "useOptionalChain": "error",
+        "noUselessFragments": "error"
+      },
+      "nursery": {}
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  }
+}

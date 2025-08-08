@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-	--font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-geist-sans);
 }
 
 @keyframes fadeInSlideRight {
-	0% {
-		opacity: 0;
-		transform: translateX(-50px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
