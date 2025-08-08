@@ -24,8 +24,8 @@ importers:
         specifier: 0.5.0
         version: 0.5.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@stripe/stripe-js':
-        specifier: 4.9.0
-        version: 4.9.0
+        specifier: 7.8.0
+        version: 7.8.0
       '@tanstack/react-query':
         specifier: 5.84.2
         version: 5.84.2(react@19.1.1)
@@ -87,8 +87,8 @@ importers:
         specifier: 1.7.1
         version: 1.7.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       stripe:
-        specifier: 17.2.1
-        version: 17.2.1
+        specifier: 18.4.0
+        version: 18.4.0(@types/node@22.17.1)
       tailwind-merge:
         specifier: 3.3.1
         version: 3.3.1
@@ -1491,8 +1491,8 @@ packages:
   '@standard-schema/utils@0.3.0':
     resolution: {integrity: sha512-e7Mew686owMaPJVNNLs55PUvgz371nKgwsc4vxE49zsODpJEnxgxRo2y/OKrqueavXgZNMDVj3DdHFlaSAeU8g==}
 
-  '@stripe/stripe-js@4.9.0':
-    resolution: {integrity: sha512-tMPZQZZXGWyNX7hbgenq+1xEj2oigJ54XddbtSX36VedoKsPBq7dxwRXu4Xd5FdpT3JDyyDtnmvYkaSnH1yHTQ==}
+  '@stripe/stripe-js@7.8.0':
+    resolution: {integrity: sha512-DNXRfYUgkZlrniQORbA/wH8CdFRhiBSE0R56gYU0V5vvpJ9WZwvGrz9tBAZmfq2aTgw6SK7mNpmTizGzLWVezw==}
     engines: {node: '>=12.16'}
 
   '@swc/helpers@0.5.15':
@@ -3647,9 +3647,14 @@ packages:
     resolution: {integrity: sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==}
     engines: {node: '>=8'}
 
-  stripe@17.2.1:
-    resolution: {integrity: sha512-Mwb0SitV/UjxTLSUiTlUQ0VDE/gfyQ7OHDGdvDdvKIH4CNNqobPKlzlWhoZHFFU0OA/YsZyBtPULK4JG86BAAg==}
+  stripe@18.4.0:
+    resolution: {integrity: sha512-LKFeDnDYo4U/YzNgx2Lc9PT9XgKN0JNF1iQwZxgkS4lOw5NunWCnzyH5RhTlD3clIZnf54h7nyMWkS8VXPmtTQ==}
     engines: {node: '>=12.*'}
+    peerDependencies:
+      '@types/node': '>=12.x.x'
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
 
   styled-jsx@5.1.6:
     resolution: {integrity: sha512-qSVyDTeMotdvQYoHWLNGwRFJHC+i+ZvdBRYosOFgC+Wg1vx4frN2/RG/NA7SYqqvKNLf39P2LSRA2pu6n0XYZA==}
@@ -5255,7 +5260,7 @@ snapshots:
 
   '@standard-schema/utils@0.3.0': {}
 
-  '@stripe/stripe-js@4.9.0': {}
+  '@stripe/stripe-js@7.8.0': {}
 
   '@swc/helpers@0.5.15':
     dependencies:
@@ -7381,10 +7386,11 @@ snapshots:
     dependencies:
       min-indent: 1.0.1
 
-  stripe@17.2.1:
+  stripe@18.4.0(@types/node@22.17.1):
     dependencies:
-      '@types/node': 22.17.1
       qs: 6.14.0
+    optionalDependencies:
+      '@types/node': 22.17.1
 
   styled-jsx@5.1.6(@babel/core@7.28.0)(react@19.1.1):
     dependencies:

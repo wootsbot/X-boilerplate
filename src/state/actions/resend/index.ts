@@ -7,7 +7,7 @@ import { InviteEmail } from "./invite-event.template";
 import { zSendEmailSchema } from "./schema";
 
 export const sendEmailAction = actionClient
-	.schema(zSendEmailSchema())
+	.inputSchema(zSendEmailSchema())
 	.metadata({
 		name: "send-email",
 	})

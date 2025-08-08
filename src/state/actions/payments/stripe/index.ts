@@ -12,7 +12,7 @@ import { getURL } from "@/utils/helpers";
 import { zStripeCheckoutPriceSchema } from "./schema";
 
 export const stripeCheckoutAction = authUserActionClient
-	.schema(zStripeCheckoutPriceSchema())
+	.inputSchema(zStripeCheckoutPriceSchema())
 	.metadata({
 		name: "stripe-checkout",
 	})
