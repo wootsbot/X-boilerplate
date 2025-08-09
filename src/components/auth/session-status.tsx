@@ -1,10 +1,14 @@
 "use server";
 
+import { headers } from "next/headers";
+
 import { CirclePulse } from "#/components/com/circle-pulse";
 import { auth } from "#/lib/auth";
 
 export async function SessionStatus() {
-  const session = await auth();
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
 
   return (
     <>

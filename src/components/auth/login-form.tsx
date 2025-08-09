@@ -1,8 +1,8 @@
 "use client";
 
 import { SiGithub } from "@icons-pack/react-simple-icons";
-import { signIn } from "next-auth/react";
 import { Button } from "#/components/ui/button";
+import { signIn } from "#/lib/auth-client";
 
 export function LoginForm({ showTitle = true, showFooter = true }: { showTitle?: boolean; showFooter?: boolean }) {
   return (
@@ -11,7 +11,7 @@ export function LoginForm({ showTitle = true, showFooter = true }: { showTitle?:
         {showTitle && <h1 className="text-xl text-center">Log in to X Boilerplate</h1>}
 
         <div className="flex flex-col gap-4">
-          <Button className="w-full" onClick={() => signIn("github")}>
+          <Button className="w-full" onClick={() => signIn.social({ provider: "github" })}>
             <SiGithub />
             Continue with Github
           </Button>

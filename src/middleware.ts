@@ -1,6 +1,10 @@
+import { betterFetch } from "@better-fetch/fetch";
+import { getSessionCookie } from "better-auth/cookies";
 import { type NextRequest, NextResponse } from "next/server";
 
-import { auth } from "#/lib/auth";
+import type { auth } from "#/lib/auth";
+
+type Session = typeof auth.$Infer.Session;
 
 // example of a middleware that checks if the user is authenticated
 export const config = {
@@ -8,18 +12,25 @@ export const config = {
 };
 
 export async function middleware(request: NextRequest) {
-  const session = await auth();
+  const { data: session } = await betterFetch<Session>("/api/auth/get-session", {
+    baseURL: request.nextUrl.origin,
+    headers: {
+      cookie: request.headers.get("cookie") || "", // Forward the cookies from the request
+    },
+  });
+  const sessionCookie = getSessionCookie(request);
+
   const isAuthPage = request.nextUrl.pathname.startsWith("/login");
 
   if (isAuthPage) {
-    if (session) {
+    if (sessionCookie && session) {
       return NextResponse.redirect(new URL("/", request.url));
     }
 
     return null;
   }
 
-  if (!session) {
+  if (!sessionCookie || !session) {
     let from = request.nextUrl.pathname;
 
     if (request.nextUrl.search) {

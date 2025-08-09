@@ -3,7 +3,7 @@
 import { resend } from "#/lib/resend";
 import { actionClient } from "#/lib/safe-action";
 
-import { InviteEmail } from "./invite-event.template";
+import { InviteEmail } from "./invite-event-template";
 import { zSendEmailSchema } from "./schema";
 
 export const sendEmailAction = actionClient

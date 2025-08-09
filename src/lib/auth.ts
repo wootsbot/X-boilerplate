@@ -1,18 +1,18 @@
-import NextAuth from "next-auth";
-import GitHub from "next-auth/providers/github";
+import { betterAuth } from "better-auth";
+import { Pool } from "pg";
 
-export const {
-  handlers: { GET, POST },
-  auth,
-} = NextAuth({
-  providers: [
-    GitHub({
-      clientId: process.env.GITHUB_CLIENT_ID,
-      clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    }),
-  ],
-  // secret: process.env.AUTH_SECRET,
-  pages: {
-    signIn: "/login",
+export const auth = betterAuth({
+  //database: new Database("../../auth.db"),
+  database: new Pool({
+    connectionString: "postgresql://postgres:Loco20wey51216@db.nxbumasfeshhuoscxeny.supabase.co:5432/postgres",
+  }),
+  socialProviders: {
+    github: {
+      clientId: process.env.GITHUB_CLIENT_ID as string,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
+    },
+  },
+  advanced: {
+    cookiePrefix: "x-boilerplate",
   },
 });

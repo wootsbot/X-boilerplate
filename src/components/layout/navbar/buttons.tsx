@@ -2,7 +2,8 @@
 
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
-import { signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { signOut } from "#/lib/auth-client";
 
 export function LoginButton() {
   return (
@@ -15,8 +16,22 @@ export function LoginButton() {
 }
 
 export function SignOutButton() {
+  const router = useRouter();
+
   return (
-    <button type="button" className="px-4 py-1 border rounded-md border-stone-900" onClick={() => signOut()}>
+    <button
+      type="button"
+      className="px-4 py-1 border rounded-md border-stone-900"
+      onClick={() => {
+        signOut({
+          fetchOptions: {
+            onSuccess: () => {
+              router.push("/"); // redirect to login page
+            },
+          },
+        });
+      }}
+    >
       Log Out
     </button>
   );

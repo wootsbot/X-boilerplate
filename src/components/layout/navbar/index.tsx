@@ -1,3 +1,5 @@
+import { headers } from "next/headers";
+
 import Image from "next/image";
 import Link from "next/link";
 import * as Icons from "#/components/ui/icons";
@@ -5,7 +7,9 @@ import { auth } from "#/lib/auth";
 import * as Buttons from "./buttons";
 
 export async function Navbar() {
-  const session = await auth();
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
 
   return (
     <header className="border-b border-stone-300">
