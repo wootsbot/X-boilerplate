@@ -1,10 +1,12 @@
 import { betterAuth } from "better-auth";
-import { Pool } from "pg";
+import { drizzleAdapter } from "better-auth/adapters/drizzle";
+import * as schema from "#/db/schema";
+import { db } from "#/lib/drizzle";
 
 export const auth = betterAuth({
-  //database: new Database("../../auth.db"),
-  database: new Pool({
-    connectionString: "postgresql://postgres:Loco20wey51216@db.nxbumasfeshhuoscxeny.supabase.co:5432/postgres",
+  database: drizzleAdapter(db, {
+    provider: "pg",
+    schema: { ...schema },
   }),
   socialProviders: {
     github: {

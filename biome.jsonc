@@ -18,7 +18,8 @@
       "!.next",
       "!public",
       "!playwright-report/**",
-      "!.changeset/**"
+      "!.changeset/**",
+      "!drizzle"
     ]
   },
   "formatter": {

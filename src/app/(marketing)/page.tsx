@@ -119,12 +119,21 @@ function HomePage() {
               />
 
               <CardFeature
-                to="/authjs"
+                to="/profile"
                 type="optional"
-                title="Authentication with Auth.js"
-                resume="Auth.js is a complete open-source authentication solution for Next.js applications."
-                // biome-ignore lint/performance/noImgElement: <>
-                figureRight={<img width={200} height={200} src="/img/logo-sm.webp" alt="img authjs" />}
+                title="Authentication with better-auth"
+                resume="The most comprehensive authentication framework for TypeScript."
+                figureRight={
+                  <svg width="260" height="245" viewBox="0 0 60 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      className="fill-black"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M0 0H15V15H30V30H15V45H0V30V15V0ZM45 30V15H30V0H45H60V15V30V45H45H30V30H45Z"
+                    />
+                    <title>Better Auth</title>
+                  </svg>
+                }
                 authStateComponent={<SessionStatus />}
               />
 

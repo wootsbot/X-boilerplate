@@ -3,7 +3,7 @@
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { signOut } from "#/lib/auth-client";
+import { signOut } from "#/lib/auth/auth-client";
 
 export function LoginButton() {
   return (

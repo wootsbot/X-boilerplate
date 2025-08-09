@@ -2,7 +2,7 @@
 
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { Button } from "#/components/ui/button";
-import { signIn } from "#/lib/auth-client";
+import { signIn } from "#/lib/auth/auth-client";
 
 export function LoginForm({ showTitle = true, showFooter = true }: { showTitle?: boolean; showFooter?: boolean }) {
   return (
