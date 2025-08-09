@@ -1,3 +1,5 @@
+import { headers } from "next/headers";
+
 import { createSafeActionClient, DEFAULT_SERVER_ERROR_MESSAGE } from "next-safe-action";
 import * as z from "zod";
 import { auth } from "#/lib/auth";
@@ -25,7 +27,10 @@ export const actionClient = createSafeActionClient({
 });
 
 export const authUserActionClient = actionClient.use(async ({ next, clientInput, metadata }) => {
-  const session = await auth();
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
   const result = await next({
     ctx: {
       user: session?.user ?? null,
@@ -62,7 +67,9 @@ export const authRequiredActionClient = actionClient
     return result;
   })
   .use(async ({ next }) => {
-    const session = await auth();
+    const session = await auth.api.getSession({
+      headers: await headers(),
+    });
 
     if (!session) {
       throw new ActionError("Unauthorized");

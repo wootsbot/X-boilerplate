@@ -1,4 +1,6 @@
 import * as dateFns from "date-fns";
+import { headers } from "next/headers";
+
 import Image from "next/image";
 import type { Tool } from "#/components/com/tools-list";
 import { ToolsList } from "#/components/com/tools-list";
@@ -6,12 +8,14 @@ import { auth } from "#/lib/auth";
 import pkg from "~/pkg";
 
 const TOOLS: Tool[] = [
-  { version: pkg.dependencies["next-auth"], name: "next-auth", urlRef: "https://next-auth.js.org" },
+  { version: pkg.dependencies["better-auth"], name: "better-auth", urlRef: "https://www.better-auth.com" },
   { version: pkg.dependencies["date-fns"], name: "date-fns", urlRef: "https://github.com/date-fns/date-fns#readme" },
 ];
 
 export default async function AuthjsPage() {
-  const session = await auth();
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
 
   const formattedDate = dateFns.format(new Date(), "EEEE, dd 'de' MMMM 'de' yyyy, HH:mm:ss");
 

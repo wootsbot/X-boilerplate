@@ -41,7 +41,7 @@
 
 - 🍍 [Asynchronous state management - TanStack Query](https://tanstack.com/query) and [State Management zustand](https://zustand-demo.pmnd.rs/)
 
-- 🛡️ Authentication [authjs](https://authjs.dev/)
+- 🛡️ Authentication [better-auth](https://www.better-auth.com)
 
 - 💸 Payments [stripe](https://stripe.com)
 
@@ -67,7 +67,7 @@ Many of this boilerplate features are based on the philosophy of being optional.
 - [x] ~Integrate State Management TanStack Query~
 - [x] ~Integrate react-hook-form~
 - [x] ~Integrate Zod to schema validation~
-- [x] ~Authentication (next-auth)~
+- [x] ~Authentication (better-auth)~
 - [x] ~Integrate linters, hooks to DX~
 - [x] ~Integrate resend~
 - [x] ~Integrate @react-email~
