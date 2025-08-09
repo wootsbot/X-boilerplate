@@ -1,5 +1,13 @@
 # x-boilerplate
 
+## 1.0.0-beta.18
+
+### Minor Changes
+
+- [`a8ab91f`](https://github.com/wootsbot/X-boilerplate/commit/a8ab91f600a5b9c45d6d36727445b3e567d5e5f4) Thanks [@wootsbot](https://github.com/wootsbot)! - Update structure folders and set biome config format
+
+- [`e931763`](https://github.com/wootsbot/X-boilerplate/commit/e9317633db5863b1d86a37b12f620f827927d492) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump packages and package dev, use news apis packages update
+
 ## 1.0.0-beta.17
 
 ### Patch Changes
