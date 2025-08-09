@@ -1,5 +1,11 @@
 # x-boilerplate
 
+## 1.0.0-beta.19
+
+### Minor Changes
+
+- [#24](https://github.com/wootsbot/X-boilerplate/pull/24) [`a7b0a39`](https://github.com/wootsbot/X-boilerplate/commit/a7b0a397a72bbee991b5e9bf483abb393dc98776) Thanks [@wootsbot](https://github.com/wootsbot)! - Add `drizzle` ORM and config `better-auth` remplce `next-auth`
+
 ## 1.0.0-beta.18
 
 ### Minor Changes
