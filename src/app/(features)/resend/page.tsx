@@ -1,10 +1,10 @@
-import Button from "@design-system/button";
 import Link from "next/link";
-import { Card } from "@/components/card";
-import type { Tool } from "@/components/tools-list";
-import { ToolsList } from "@/components/tools-list";
+import { Card } from "#/components/com/card";
+import type { Tool } from "#/components/com/tools-list";
+import { ToolsList } from "#/components/com/tools-list";
+import { FormSendEmail } from "#/components/resend/form-send-email";
+import { Button } from "#/components/ui/button";
 import pkg from "~/pkg";
-import { Form } from "./form";
 
 const TOOLS: Tool[] = [
   { version: pkg.dependencies.resend, name: "resend", urlRef: "https://resend.com/docs/send-with-nextjs" },
@@ -52,7 +52,7 @@ export default function ResendPage() {
             <p>Example of sending an email with an invitation design to participate in an event, including a link.</p>
           </div>
 
-          <Form />
+          <FormSendEmail />
         </Card>
       </section>
 

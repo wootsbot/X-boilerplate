@@ -20,9 +20,7 @@
 			}
 		],
 		"paths": {
-			"@/*": ["./src/*"],
-			"@design-system/*": ["./src/@design-system/*"],
-			"#/state/*": ["./src/state/*"],
+		  "#/*": ["./src/*"],
 			"~/pkg": ["./package.json"]
 		}
 	},

@@ -2,7 +2,7 @@
 
 import type { PropsWithChildren } from "react";
 
-import { cls } from "@/utils/cls";
+import { cls } from "#/lib/utils/cls";
 
 export function Card({
   children,
@@ -15,7 +15,7 @@ export function Card({
   return (
     <div
       className={cls(
-        'px-6 py-12 rounded-md outline outline-1 outline-stone-400 bg-[url("/svg/grid_01.svg")] bg-cover bg-center bg-no-repeat bg-white/0',
+        'px-6 py-12 rounded-md outline-1 outline-stone-400 bg-[url("/svg/grid_01.svg")] bg-cover bg-center bg-no-repeat bg-white/0',
         className,
       )}
     >

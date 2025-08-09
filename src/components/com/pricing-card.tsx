@@ -1,12 +1,12 @@
 "use client";
 
-import Button from "@design-system/button/Button";
-import * as Icons from "@design-system/icons";
 import { motion } from "framer-motion";
 import type * as React from "react";
 import { useFormStatus } from "react-dom";
+import { Button } from "#/components/ui/button";
+import * as Icons from "#/components/ui/icons";
 
-import { cls } from "@/utils/cls";
+import { cls } from "#/lib/utils/cls";
 
 type FeatureProps = {
   title: string;
@@ -53,7 +53,7 @@ export function PricingCard({
   return (
     <motion.div
       className={cls(
-        "relative w-full px-6 py-12 rounded-md outline outline-1 outline-stone-300 bg-stone-200",
+        "relative w-full px-6 py-12 rounded-md outline-1 outline-stone-300 bg-stone-200",
         isPopular && "bg-stone-300 outline-stone-400",
       )}
       variants={hoverVariants}
@@ -90,7 +90,7 @@ export function PricingCard({
             )}
           </div>
 
-          <div className="w-full bg-black outline outline-[0.5px] outline-amber-950" />
+          <div className="w-full bg-black outline-[0.5px] outline-amber-950" />
           {textHelper && <h3 className="text-sm text-stone-600">{textHelper}</h3>}
           <ul className="flex flex-col gap-2">
             {features?.map((feature) => (

@@ -1,8 +1,8 @@
 "use client";
 
-import Button from "@design-system/button/Button";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { signIn } from "next-auth/react";
+import { Button } from "#/components/ui/button";
 
 export function LoginForm({ showTitle = true, showFooter = true }: { showTitle?: boolean; showFooter?: boolean }) {
   return (

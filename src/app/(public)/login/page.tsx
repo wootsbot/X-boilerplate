@@ -1,8 +1,8 @@
 "use client";
 
-import { IconXB } from "@design-system/icons/x-boilerpplate";
 import Link from "next/link";
-import { LoginForm } from "@/components/auth/login-form";
+import { LoginForm } from "#/components/auth/login-form";
+import * as Icons from "#/components/ui/icons";
 
 export default function AuthLoginPage() {
   return (
@@ -12,7 +12,7 @@ export default function AuthLoginPage() {
           <div className="h-full max-w-lg px-4 mx-4 sm:mx-auto">
             <div className="flex flex-col justify-between h-full py-4">
               <Link href="/">
-                <IconXB />
+                <Icons.XBIcon />
               </Link>
 
               <div className="flex flex-col gap-5">

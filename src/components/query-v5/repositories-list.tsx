@@ -3,8 +3,8 @@
 import * as dateFns from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
+import { cls } from "#/lib/utils/cls";
 import type { Repository as RepositoryT } from "#/state/queries/github";
-import { cls } from "@/utils/cls";
 
 export function RepositoriesList({ items }: { items: RepositoryT[] }) {
   return (

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-import { cls } from "@/utils/cls";
+import { cls } from "#/lib/utils/cls";
 
 export type Tool = {
   version: string;

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { cls } from "@/utils/cls";
+import { cls } from "#/lib/utils/cls";
 
 type CirclePulseProps = {
   size?: number;

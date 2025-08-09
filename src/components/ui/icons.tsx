@@ -1,8 +1,36 @@
 import * as React from "react";
 
-import type { IconProps } from "./types";
+export type IconProps = React.SVGProps<SVGSVGElement> & {
+  size?: number;
+  color?: string;
+};
 
-export const IconXB = React.forwardRef<SVGSVGElement, IconProps>(function IconXB(props, ref) {
+export function ArrowRightIcon({ size = 16, color = "#000" }: IconProps) {
+  return (
+    <svg height={size} strokeLinejoin="round" viewBox="0 0 16 16" width={size}>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M9.53033 2.21968L9 1.68935L7.93934 2.75001L8.46967 3.28034L12.4393 7.25001H1.75H1V8.75001H1.75H12.4393L8.46967 12.7197L7.93934 13.25L9 14.3107L9.53033 13.7803L14.6036 8.70711C14.9941 8.31659 14.9941 7.68342 14.6036 7.2929L9.53033 2.21968Z"
+        fill={color}
+      />
+      <title>Arrow Right</title>
+    </svg>
+  );
+}
+
+export function ArrowLeftLine(props: IconProps) {
+  const { size = 24, color = "#000000" } = props;
+  return (
+    <svg height={size} width={size} fill="none" viewBox="0 0 24 24" {...props}>
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path d="M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414z" fill={color} />
+      <title>Arrow Left</title>
+    </svg>
+  );
+}
+
+export const XBIcon = React.forwardRef<SVGSVGElement, IconProps>(function IconXB(props, ref) {
   const { color = "#000", size = 24, ...rest } = props;
 
   return (

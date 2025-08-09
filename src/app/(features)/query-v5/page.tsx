@@ -2,9 +2,8 @@
 
 import { useDebounce } from "@uidotdev/usehooks";
 import { parseAsInteger, useQueryState } from "nuqs";
-
-import { useRepositoriesQuery } from "@/state/queries/github";
-import * as Repository from "./repositories-list";
+import * as Repository from "#/components/query-v5/repositories-list";
+import { useRepositoriesQuery } from "#/state/queries/github";
 
 export default function QueryV5Page() {
   const [queryField, setQueryField] = useQueryState("q");

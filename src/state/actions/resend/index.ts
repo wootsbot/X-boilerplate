@@ -1,7 +1,7 @@
 "use server";
 
-import { resend } from "@/libs/resend";
-import { actionClient } from "@/libs/safe-action";
+import { resend } from "#/lib/resend";
+import { actionClient } from "#/lib/safe-action";
 
 import { InviteEmail } from "./invite-event.template";
 import { zSendEmailSchema } from "./schema";

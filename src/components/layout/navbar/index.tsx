@@ -1,7 +1,7 @@
-import { IconXB } from "@design-system/icons/x-boilerpplate";
 import Image from "next/image";
 import Link from "next/link";
-import { auth } from "@/libs/auth";
+import * as Icons from "#/components/ui/icons";
+import { auth } from "#/lib/auth";
 import * as Buttons from "./buttons";
 
 export async function Navbar() {
@@ -12,7 +12,7 @@ export async function Navbar() {
       <nav className="px-4 py-4 max-w-7xl sm:mx-auto">
         <div className="flex flex-row items-center justify-between h-full">
           <Link href="/">
-            <IconXB size={28} />
+            <Icons.XBIcon size={28} />
           </Link>
 
           <ul className="flex items-center gap-6 text-sm">

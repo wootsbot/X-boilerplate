@@ -1,5 +1,5 @@
-import { SessionStatus } from "@/components/auth/session-status";
-import { CardFeature } from "@/components/features/card-feature";
+import { SessionStatus } from "#/components/auth/session-status";
+import { CardFeature } from "#/components/features/card-feature";
 
 function HomePage() {
   return (

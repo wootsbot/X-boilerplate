@@ -1,6 +1,6 @@
 import type * as React from "react";
 
-import { Navbar } from "@/components/layout/navbar";
+import { Navbar } from "#/components/layout/navbar";
 
 function MarketingLayout({ children }: React.PropsWithChildren) {
   return (

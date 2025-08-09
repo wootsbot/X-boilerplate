@@ -1,7 +1,7 @@
 import { createSafeActionClient, DEFAULT_SERVER_ERROR_MESSAGE } from "next-safe-action";
 import * as z from "zod";
-import { auth } from "@/libs/auth";
-import { logger } from "@/libs/logger";
+import { auth } from "#/lib/auth";
+import { logger } from "#/lib/logger";
 
 class ActionError extends Error {}
 

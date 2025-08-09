@@ -1,9 +1,9 @@
 "use client";
 
-import Button from "@design-system/button/Button";
-import * as Icons from "@design-system/icons";
 import { useAction } from "next-safe-action/hooks";
 import type * as React from "react";
+import { Button } from "#/components/ui/button";
+import * as Icons from "#/components/ui/icons";
 import { stripeCheckoutAction } from "#/state/actions/payments/stripe";
 import type { StripeCheckoutPriceSchema } from "#/state/actions/payments/stripe/schema";
 

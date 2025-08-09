@@ -1,7 +1,7 @@
-import * as Pricing from "@/components/pricing-card";
-import type { Tool } from "@/components/tools-list";
-import { ToolsList } from "@/components/tools-list";
-import { getStripePricesAction, getStripeProductsAction } from "@/state/actions/payments/stripe";
+import * as Pricing from "#/components/com/pricing-card";
+import type { Tool } from "#/components/com/tools-list";
+import { ToolsList } from "#/components/com/tools-list";
+import { getStripePricesAction, getStripeProductsAction } from "#/state/actions/payments/stripe";
 
 import pkg from "~/pkg";
 
@@ -50,7 +50,7 @@ export default async function StripePage() {
 
   return (
     <div className="flex flex-col gap-16">
-      <section className="px-6 py-12 rounded-md outline outline-1 outline-stone-400 bg-[url('/svg/grid_03.svg')] bg-cover bg-no-repeat">
+      <section className="px-6 py-12 rounded-md outline-1 outline-stone-400 bg-[url('/svg/grid_03.svg')] bg-cover bg-no-repeat">
         <div className="flex flex-col gap-20">
           <div className="flex flex-col gap-5 text-center">
             <h1 className="text-6xl">Find a plan to power your projects.</h1>

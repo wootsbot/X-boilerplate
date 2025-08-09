@@ -2,7 +2,7 @@
 
 import type * as React from "react";
 
-import { cls } from "@/utils/cls";
+import { cls } from "#/lib/utils/cls";
 
 type ButtonProps = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> & {
   variant?: "primary" | "secondary";
@@ -10,7 +10,7 @@ type ButtonProps = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButton
   endIcon?: React.ReactNode;
 };
 
-function Button({ children, className, disabled, variant, endIcon, loading, ...props }: ButtonProps) {
+export function Button({ children, className, disabled, variant, endIcon, loading, ...props }: ButtonProps) {
   return (
     <button
       disabled={disabled || loading}
@@ -44,5 +44,3 @@ function Button({ children, className, disabled, variant, endIcon, loading, ...p
     </button>
   );
 }
-
-export default Button;

@@ -14,10 +14,9 @@ import {
   Text,
 } from "@react-email/components";
 
-interface InviteEmailProps {
-  invitedByUsername?: string;
-  inviteLink?: string;
-}
+import type { SendEmailSchema } from "#/state/actions/resend/schema";
+
+type InviteEmailProps = Pick<SendEmailSchema, "invitedByUsername" | "inviteLink">;
 
 const baseUrl = process.env.SITE_URL ?? "";
 

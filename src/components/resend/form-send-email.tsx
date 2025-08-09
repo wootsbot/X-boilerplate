@@ -1,17 +1,17 @@
 "use client";
 
-import Button from "@design-system/button";
-import InputField from "@design-system/input-field";
-import { toast } from "@design-system/toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useAction } from "next-safe-action/hooks";
 import { useForm } from "react-hook-form";
+import { Button } from "#/components/ui/button";
+import { InputField } from "#/components/ui/input-field";
+import { toast } from "#/components/ui/toast";
 
 import { sendEmailAction } from "#/state/actions/resend";
 import type { SendEmailSchema } from "#/state/actions/resend/schema";
 import { zSendEmailSchema } from "#/state/actions/resend/schema";
 
-export function Form() {
+export function FormSendEmail() {
   const {
     register,
     handleSubmit,
@@ -24,6 +24,9 @@ export function Form() {
   const sendEmail = useAction(sendEmailAction, {
     onSuccess: () => {
       toast.success("Congratulations, you have successfully sent an email.");
+      /**
+       * Fields must be reset when sending a successful email
+       */
       reset();
     },
     onError: ({ error }) => {

@@ -1,8 +1,8 @@
 import * as dateFns from "date-fns";
 import Image from "next/image";
-import type { Tool } from "@/components/tools-list";
-import { ToolsList } from "@/components/tools-list";
-import { auth } from "@/libs/auth";
+import type { Tool } from "#/components/com/tools-list";
+import { ToolsList } from "#/components/com/tools-list";
+import { auth } from "#/lib/auth";
 import pkg from "~/pkg";
 
 const TOOLS: Tool[] = [

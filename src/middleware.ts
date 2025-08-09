@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
 
-import { auth } from "@/libs/auth";
+import { auth } from "#/lib/auth";
 
 // example of a middleware that checks if the user is authenticated
 export const config = {

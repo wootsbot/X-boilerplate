@@ -1,7 +1,7 @@
 "use server";
 
-import { CirclePulse } from "@/components/circle-pulse";
-import { auth } from "@/libs/auth";
+import { CirclePulse } from "#/components/com/circle-pulse";
+import { auth } from "#/lib/auth";
 
 export async function SessionStatus() {
   const session = await auth();

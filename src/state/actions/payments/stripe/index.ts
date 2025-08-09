@@ -4,10 +4,10 @@ import { redirect } from "next/navigation";
 
 import type Stripe from "stripe";
 
-import { stripe } from "@/libs/payments/stripe/checkout/config";
-import { actionClient, authUserActionClient } from "@/libs/safe-action";
+import { stripe } from "#/lib/payments/stripe/checkout/config";
+import { actionClient, authUserActionClient } from "#/lib/safe-action";
 
-import { getURL } from "@/utils/helpers";
+import { getURL } from "#/lib/utils/helpers";
 
 import { zStripeCheckoutPriceSchema } from "./schema";
 
