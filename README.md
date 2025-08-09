@@ -75,17 +75,14 @@ Many of this boilerplate features are based on the philosophy of being optional.
 - [x] Setup test with [vitest](https://vitest.dev/) and [playwright](https://playwright.dev/)
 - [x] Added test all components
 - [x] ~More examples with resend and @react-email~
-- [x] Integrate ORM prisma
+- [x] Integrate ORM drizzle
 - [x] Integrate supabase
-- [x] Integrate planetscale
-- [x] Mocking via msw
 - [x] ~Integrate stripe to payments~
 - [x] Add MDX support for basic pages
 - [x] Add OG image for blog using @vercel/og
 - [x] ~Integrate https://tailwindcss.com/~
 - [x] ~Integrate https://www.radix-ui.com/~
 - [x] Dark mode
-- [x] Integrate graphql
 - [x] Do `cli` to configure all functions
 
 ### Dev tools
