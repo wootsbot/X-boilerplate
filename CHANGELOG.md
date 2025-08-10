@@ -1,5 +1,11 @@
 # x-boilerplate
 
+## 1.0.0-beta.20
+
+### Minor Changes
+
+- [`333b7b7`](https://github.com/wootsbot/X-boilerplate/commit/333b7b732abb45777ed55aa3e82207bd424ecd13) Thanks [@wootsbot](https://github.com/wootsbot)! - Add stripe customers create in `stripeCheckoutAction`
+
 ## 1.0.0-beta.19
 
 ### Minor Changes
