@@ -23,6 +23,30 @@ export const stripeCheckoutAction = authUserActionClient
       redirect(`/login?redirect=checkout&priceId=${priceId}`);
     }
 
+    let stripeCustomer: Stripe.Customer;
+
+    try {
+      const existingCustomers = await stripe.customers.list({
+        email: user.email,
+        limit: 1,
+      });
+
+      if (existingCustomers.data.length > 0) {
+        stripeCustomer = existingCustomers.data[0];
+      } else {
+        stripeCustomer = await stripe.customers.create({
+          email: user.email,
+          name: user.name || undefined,
+          metadata: {
+            sessionUserId: user.id,
+          },
+        });
+      }
+    } catch (err) {
+      console.error("Error handling Stripe customer:", err);
+      throw new Error("Unable to create or find customer.");
+    }
+
     let params: Stripe.Checkout.SessionCreateParams = {
       line_items: [
         {
@@ -31,7 +55,7 @@ export const stripeCheckoutAction = authUserActionClient
         },
       ],
       allow_promotion_codes: true,
-      customer: user.id || undefined,
+      customer: stripeCustomer.id || undefined,
       client_reference_id: user.id,
       cancel_url: getURL("/stripe"),
       success_url: getURL("/stripe?session_id={CHECKOUT_SESSION_ID}"),
