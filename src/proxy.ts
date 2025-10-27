@@ -10,7 +10,7 @@ export const config = {
   matcher: ["/login", "/profile"],
 };
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { data: session } = await betterFetch<Session>("/api/auth/get-session", {
     baseURL: request.nextUrl.origin,
     headers: {
