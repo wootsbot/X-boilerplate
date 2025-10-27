@@ -1,5 +1,11 @@
 # x-boilerplate
 
+## 1.0.0-beta.22
+
+### Minor Changes
+
+- [`5eb3457`](https://github.com/wootsbot/X-boilerplate/commit/5eb3457e99abd60cddfe36421a5ecfaf68d9a8e1) Thanks [@wootsbot](https://github.com/wootsbot)! - Update docs
+
 ## 1.0.0-beta.21
 
 ### Minor Changes
