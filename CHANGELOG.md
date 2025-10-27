@@ -1,5 +1,23 @@
 # x-boilerplate
 
+## 1.0.0-beta.21
+
+### Minor Changes
+
+- [#27](https://github.com/wootsbot/X-boilerplate/pull/27) [`d80ea10`](https://github.com/wootsbot/X-boilerplate/commit/d80ea103a2802d8f201a9a8c5b1097321058d07f) Thanks [@wootsbot](https://github.com/wootsbot)! - Update to nextjs 15 🔥
+
+- [#27](https://github.com/wootsbot/X-boilerplate/pull/27) [`fb18073`](https://github.com/wootsbot/X-boilerplate/commit/fb1807341892174921004e29811c5c06cf63fefe) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump biomejs and set config in biome.jsonc
+
+- [#27](https://github.com/wootsbot/X-boilerplate/pull/27) [`fb18073`](https://github.com/wootsbot/X-boilerplate/commit/fb1807341892174921004e29811c5c06cf63fefe) Thanks [@wootsbot](https://github.com/wootsbot)! - Add `CLAUDE.md` to LLM claude code
+
+- [#27](https://github.com/wootsbot/X-boilerplate/pull/27) [`1ff8dd7`](https://github.com/wootsbot/X-boilerplate/commit/1ff8dd7363ecc532b06403d7092c5f4d03428b64) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump @tanstack/\*\*
+
+- [#27](https://github.com/wootsbot/X-boilerplate/pull/27) [`d80ea10`](https://github.com/wootsbot/X-boilerplate/commit/d80ea103a2802d8f201a9a8c5b1097321058d07f) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump stripe
+
+### Patch Changes
+
+- [#27](https://github.com/wootsbot/X-boilerplate/pull/27) [`8b3510f`](https://github.com/wootsbot/X-boilerplate/commit/8b3510ffd1f408ec26fbeecc4ee64937ff6f9d53) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump packages
+
 ## 1.0.0-beta.20
 
 ### Minor Changes
