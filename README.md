@@ -23,7 +23,7 @@
 
 ## Core Features
 
-- ⚡️ [React 19](https://reactjs.org/), [Next 15](https://nextjs.org/), [pnpm](https://pnpm.io/) - born with fastness
+- ⚡️ [React 19](https://reactjs.org/), [Next 16](https://nextjs.org/), [pnpm 10](https://pnpm.io/) - born with fastness
 
 - 🗂 [Structure with paths and alias](./tsconfig.json)
 
