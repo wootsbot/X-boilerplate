@@ -8,7 +8,7 @@ import pkg from "~/pkg";
 
 const TOOLS: Tool[] = [
   { version: pkg.dependencies.resend, name: "resend", urlRef: "https://resend.com/docs/send-with-nextjs" },
-  { version: pkg.dependencies["react-email"], name: "react-email", urlRef: "https://github.com/resend/react-email" },
+  { version: pkg.devDependencies["react-email"], name: "react-email", urlRef: "https://github.com/resend/react-email" },
   {
     version: pkg.dependencies["@react-email/components"],
     name: "@react-email/components",
