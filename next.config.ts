@@ -1,7 +1,19 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
-const withNextIntl = createNextIntlPlugin();
+const withNextIntl = createNextIntlPlugin({
+  experimental: {
+    srcPath: "./src",
+    extract: {
+      sourceLocale: "en",
+    },
+    messages: {
+      path: "./messages",
+      format: "po",
+      locales: ["en", "es-mx"],
+    },
+  },
+});
 
 const {
   SITE_NAME,

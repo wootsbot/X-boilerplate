@@ -1,0 +1,67 @@
+msgid ""
+msgstr ""
+"Language: en\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: next-intl\n"
+"X-Crowdin-SourceKey: msgstr\n"
+
+#: src/app/(marketing)/page.tsx
+msgid "IkH2T/"
+msgstr "A starting boilerplate with configuration and best practices for your Nextjs projects."
+
+#: src/app/(marketing)/page.tsx
+msgid "/zwHtF"
+msgstr "Authentication with better-auth"
+
+#: src/app/(marketing)/page.tsx
+msgid "3Uw5Gb"
+msgstr "Build a low-code payment form and embed it on your site or host it on Stripe."
+
+#: src/app/(marketing)/page.tsx
+msgid "j2CZNi"
+msgstr "Emails with Resend and react-email"
+
+#: src/app/(marketing)/page.tsx
+msgid "IbQwzk"
+msgstr "Let's try the features live"
+
+#: src/app/(marketing)/page.tsx
+msgid "UCefK7"
+msgstr "Only focus on building your product."
+
+#: src/app/(marketing)/page.tsx
+msgid "R3UQDJ"
+msgstr "Payments with Stripe"
+
+#: src/app/(marketing)/page.tsx
+msgid "G4K6AW"
+msgstr "Performant, flexible and extensible forms with easy-to-use validation. and TypeScript-first schema validation with static type inference"
+
+#: src/app/(marketing)/page.tsx
+msgid "5r+Pvd"
+msgstr "React-Hook-Form and Zod"
+
+#: src/app/(marketing)/page.tsx
+msgid "Bj6iEn"
+msgstr "Resend is the email API for developers."
+
+#: src/app/(marketing)/page.tsx
+msgid "YZxAbg"
+msgstr "TanStack Query (FKA React Query) it makes fetching, caching, synchronizing and updating server state in your web applications a breeze."
+
+#: src/app/(marketing)/page.tsx
+msgid "k+crSC"
+msgstr "TanStack Query v5"
+
+#: src/app/(marketing)/page.tsx
+msgid "lJiqOh"
+msgstr "The most comprehensive authentication framework for TypeScript."
+
+#: src/app/layout.tsx
+msgid "AHf07b"
+msgstr "X Boilerplate"
+
+#: src/app/layout.tsx
+msgid "znS5Lu"
+msgstr "X-boilerplate a starting boilerplate with configuration and best practices for your Nextjs projects, so you can only focus on building your product."

@@ -1,7 +1,8 @@
-import { headers } from "next/headers";
-
+import { cookies, headers } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
+import type { Locale } from "next-intl";
+import { LocaleSwitcher } from "#/components/next-intl/locale-switcher";
 import * as Icons from "#/components/ui/icons";
 import { auth } from "#/lib/auth";
 import * as Buttons from "./buttons";
@@ -10,6 +11,12 @@ export async function Navbar() {
   const session = await auth.api.getSession({
     headers: await headers(),
   });
+
+  async function changeLocaleAction(locale: Locale) {
+    "use server";
+    const store = await cookies();
+    store.set("locale", locale);
+  }
 
   return (
     <header className="border-b border-stone-300">
@@ -39,6 +46,8 @@ export async function Navbar() {
             )}
 
             <div className="flex-none">{session?.user ? <Buttons.SignOutButton /> : <Buttons.LoginButton />}</div>
+
+            <LocaleSwitcher changeLocaleAction={changeLocaleAction} />
           </div>
         </div>
       </nav>

@@ -155,3 +155,62 @@ Strict rules are enforced:
 ### Vitest Unit Tests
 - Runs with jsdom environment
 - Coverage enabled with @vitest/coverage-v8
+
+## Internationalization & Translation
+
+### Translation Workflow (`.po` files)
+The project uses `next-intl` with `.po` files for managing translations across languages.
+
+**File Structure:**
+- Source language: `messages/en.po` (English)
+- Spanish (Mexico): `messages/es-mx.po`
+- Each string is identified by a unique `msgid` (message ID)
+
+**Translation Best Practices:**
+1. **Always use `msgid` as source of truth** - The `msgid` field is the unique identifier for each translatable string
+2. **Respect technical terms** - Technical terminology must remain unchanged and intact in translations:
+   - Technology names (Next.js, Stripe, React, TypeScript, better-auth, Resend, TanStack Query, Drizzle ORM, etc.)
+   - Library and package names (react-email, Zod, Husky, Biome, etc.)
+   - Service names (GitHub, PostgreSQL, AWS, etc.)
+   - Technical concepts (API, server state, schema validation, type inference, async/await, caching, etc.)
+   - The surrounding words can be translated, but technical terms themselves must remain exactly as they appear
+3. **Maintain context** - Review the `#:` comment to understand where the string appears in the application
+4. **Natural language** - Adapt translations to the target locale (e.g., Mexican Spanish uses specific expressions and vocabulary)
+5. **Consistency** - Keep the same terminology throughout the file for repeated concepts
+6. **Format preservation** - Maintain the exact structure: `msgid "ID"` followed by `msgstr "translated text"`
+7. **No automatic modifications** - Existing correct translations are never modified. Only new/untranslated entries are added
+
+**Translation Command:**
+Use `/translate-i18n` to translate `.po` files with proper validation and typo detection.
+
+**How to use `/translate-i18n`:**
+This prompt is a Claude Code slash command that automates the translation workflow:
+
+1. **Analyzes both files** - Compares source language (en.po) with target language to identify:
+   - ✅ Already translated entries (skipped)
+   - ⚠️ Entries with potential typos (reported for review)
+   - ❌ Missing translations (translated automatically)
+
+2. **Validates technical terms** - Ensures technical terminology (Next.js, TypeScript, better-auth, React, Stripe, etc.) remains unchanged in translations
+
+3. **Conservative approach** - Never modifies existing correct translations automatically; only reports issues for your review
+
+4. **Provides summary** - Shows statistics of what was done (correct translations, typos found, translations added)
+
+**Example workflow:**
+```bash
+# Run the translate-i18n prompt when you have new messages to translate
+# The prompt will analyze messages/en.po and messages/es-mx.po
+# Review any reported typos
+# Accept the translations made by the prompt
+
+# After translation, verify with tests
+pnpm test
+```
+
+**Key Features:**
+- Type-safe message IDs (msgid values)
+- Respects `.po` file structure
+- Detects grammar/spelling issues
+- Preserves all technical terminology
+- Maintains consistency across translations

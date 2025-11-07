@@ -2,21 +2,25 @@ import "./globals.css";
 
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
+
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages, getTranslations } from "next-intl/server";
+import { getExtracted, getLocale } from "next-intl/server";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import type { PropsWithChildren, ReactNode } from "react";
 
 import { Provider as RootProvider } from "./provider";
 
 export const generateMetadata = async (): Promise<Metadata> => {
-  const t = await getTranslations("Global.metadata");
+  const t = await getExtracted();
+
   return {
     title: {
-      default: t("title"),
+      default: t("X Boilerplate"),
       template: "%s | X Boilerplate",
     },
-    description: t("description"),
+    description: t(
+      "X-boilerplate a starting boilerplate with configuration and best practices for your Nextjs projects, so you can only focus on building your product.",
+    ),
     metadataBase: new URL("https://beta-x-boilerplate.vercel.app"),
     openGraph: {
       title: "X Boilerplate",
@@ -66,10 +70,9 @@ export default async function RootLayout({
   auth: ReactNode;
 }>) {
   const locale = await getLocale();
-  const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
+    <NextIntlClientProvider>
       <html lang={locale} className={GeistSans.variable}>
         <body className="bg-[#f2f0ed] text-[#0d0c0c]">
           <NuqsAdapter>

@@ -47,7 +47,7 @@
 
 - ✉️ Send emails with [Resend](https://resend.com) and [@react-email](https://react.email/docs/integrations/resend)
 
-- 🐂 Internationalization with [next-intl](https://next-intl-docs.vercel.app/)
+- 🐂 Internationalization with [next-intl](https://next-intl-docs.vercel.app/) - Use `/translate-i18n` command for translating `.po` files
 
 - 💩 Tests unit with [vitest](https://vitest.dev/) and Tests e2e with [playwright](https://playwright.dev/)
 
@@ -63,19 +63,20 @@
 
 Many of this boilerplate features are based on the philosophy of being optional. We understand that every project or product is unique and, therefore, requires different settings and functionalities. We provide you with the freedom to choose the features that best fit your needs so you can only focus on building your product.
 
-- [x] ~Configure next 14 with new /app dir~
+- [x] ~Configure next 16 with new /app dir~
 - [x] ~Integrate State Management TanStack Query~
 - [x] ~Integrate react-hook-form~
 - [x] ~Integrate Zod to schema validation~
 - [x] ~Authentication (better-auth)~
-- [x] ~Integrate linters, hooks to DX~
+- [x] ~Integrate biome, hooks to DX~
 - [x] ~Integrate resend~
 - [x] ~Integrate @react-email~
+- [x] ~Integrate Internationalization~
 - [x] ~Setup tests with [vitest](https://vitest.dev/)~
 - [x] Setup test with [vitest](https://vitest.dev/) and [playwright](https://playwright.dev/)
 - [x] Added test all components
 - [x] ~More examples with resend and @react-email~
-- [x] Integrate ORM drizzle
+- [x] ~Integrate ORM drizzle~
 - [x] Integrate supabase
 - [x] ~Integrate stripe to payments~
 - [x] Add MDX support for basic pages

@@ -1,0 +1,67 @@
+msgid ""
+msgstr ""
+"Language: es-mx\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: next-intl\n"
+"X-Crowdin-SourceKey: msgstr\n"
+
+#: src/app/(marketing)/page.tsx
+msgid "/zwHtF"
+msgstr "Autenticación con better-auth"
+
+#: src/app/(marketing)/page.tsx
+msgid "j2CZNi"
+msgstr "Correos electrónicos con Resend y react-email"
+
+#: src/app/(marketing)/page.tsx
+msgid "3Uw5Gb"
+msgstr "Crea un formulario de pago sin código y embébelo en tu sitio o alójalo en Stripe."
+
+#: src/app/(marketing)/page.tsx
+msgid "lJiqOh"
+msgstr "El marco de autenticación más completo para TypeScript."
+
+#: src/app/(marketing)/page.tsx
+msgid "G4K6AW"
+msgstr "Formularios de alto rendimiento, flexibles y extensibles con validación fácil de usar y validación de esquema orientada a TypeScript con inferencia de tipos estática"
+
+#: src/app/(marketing)/page.tsx
+msgid "R3UQDJ"
+msgstr "Pagos con Stripe"
+
+#: src/app/(marketing)/page.tsx
+msgid "IbQwzk"
+msgstr "Prueba las características en vivo"
+
+#: src/app/(marketing)/page.tsx
+msgid "5r+Pvd"
+msgstr "React-Hook-Form y Zod"
+
+#: src/app/(marketing)/page.tsx
+msgid "Bj6iEn"
+msgstr "Resend es la API de correo electrónico para desarrolladores."
+
+#: src/app/(marketing)/page.tsx
+msgid "UCefK7"
+msgstr "Solo enfócate en construir tu producto."
+
+#: src/app/(marketing)/page.tsx
+msgid "YZxAbg"
+msgstr "TanStack Query (anteriormente conocido como React Query) hace que obtener datos, almacenamiento en caché, sincronización y actualización del estado del servidor en tus aplicaciones web sea muy sencillo."
+
+#: src/app/(marketing)/page.tsx
+msgid "k+crSC"
+msgstr "TanStack Query v5"
+
+#: src/app/(marketing)/page.tsx
+msgid "IkH2T/"
+msgstr "Un boilerplate inicial con configuración y mejores prácticas para tus proyectos de Next.js."
+
+#: src/app/layout.tsx
+msgid "AHf07b"
+msgstr "X Boilerplate"
+
+#: src/app/layout.tsx
+msgid "znS5Lu"
+msgstr "X-boilerplate un boilerplate inicial con configuración y mejores prácticas para tus proyectos de Next.js, para que solo te enfoques en construir tu producto."

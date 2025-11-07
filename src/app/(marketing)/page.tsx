@@ -1,18 +1,22 @@
+import { useExtracted } from "next-intl";
+
 import { SessionStatus } from "#/components/auth/session-status";
 import { CardFeature } from "#/components/features/card-feature";
 
 function HomePage() {
+  const t = useExtracted();
+
   return (
     <div>
       <div className="flex flex-col px-4 mx-4 mt-24 max-w-7xl sm:mx-auto">
         <div className="flex flex-col items-center gap-4">
           <h1 className="text-6xl font-semibold text-center w-full max-w-[700px]">
-            Only focus on building your product.
+            {t("Only focus on building your product.")}
           </h1>
 
           <div className="flex flex-col items-center gap-1">
             <h2 className="font-mono text-center w-full max-w-[600px]">
-              A starting boilerplate with configuration and best practices for your Nextjs projects.
+              {t("A starting boilerplate with configuration and best practices for your Nextjs projects.")}
             </h2>
           </div>
         </div>
@@ -20,7 +24,7 @@ function HomePage() {
 
       <section className="py-40">
         <div className="flex flex-col gap-8 px-4 pb-5 mx-4 mt-24 max-w-7xl sm:mx-auto">
-          <h3 className="text-3xl font-medium">Let's try the features live</h3>
+          <h3 className="text-3xl font-medium">{t(`Let's try the features live`)}</h3>
         </div>
 
         <div className="border-t-2 border-dotted border-stone-300">
@@ -29,9 +33,10 @@ function HomePage() {
               <CardFeature
                 to="/query-v5"
                 type="optional"
-                title="TanStack Query v5"
-                resume="TanStack Query (FKA React Query) it makes fetching, caching, synchronizing and updating server state in your
-            web applications a breeze."
+                title={t("TanStack Query v5")}
+                resume={t(
+                  "TanStack Query (FKA React Query) it makes fetching, caching, synchronizing and updating server state in your web applications a breeze.",
+                )}
                 figureRight={
                   <svg
                     width={200}
@@ -56,7 +61,6 @@ function HomePage() {
                       d="M111.3 73.7h31.6c4.6 0 8.9 2.4 11.2 6.4l15.8 27.7c2.3 4 2.3 8.8 0 12.8l-15.8 27.6c-2.3 4-6.6 6.5-11.2 6.5h-31.6c-4.6 0-8.9-2.5-11.2-6.5l-15.8-27.6c-2.3-4-2.3-8.9 0-12.8L100 80c2.3-4 6.6-6.4 11.2-6.4ZM138 82c4.6 0 8.8 2.5 11.1 6.5l11.1 19.3c2.3 4 2.3 8.8 0 12.8l-11 19.3c-2.4 4-6.6 6.5-11.2 6.5h-22c-4.6 0-8.9-2.5-11.2-6.5l-11-19.3c-2.3-4-2.3-8.9 0-12.8l11-19.3c2.3-4 6.6-6.5 11.2-6.5h22Zm-5.2 9.1h-11.6c-4.6 0-8.9 2.5-11.2 6.5l-5.8 10.2c-2.3 4-2.3 8.8 0 12.8l5.8 10.2c2.3 4 6.6 6.4 11.2 6.4h11.6c4.6 0 8.8-2.4 11.1-6.4l5.9-10.2c2.3-4 2.3-8.9 0-12.8L144 97.6c-2.3-4-6.5-6.5-11.1-6.5Zm-5 8.8c4.6 0 8.8 2.4 11.1 6.4l.9 1.5c2.3 4 2.3 8.8 0 12.8l-.9 1.5c-2.3 4-6.5 6.4-11.1 6.4h-1.6c-4.6 0-8.9-2.4-11.2-6.4l-.8-1.5c-2.3-4-2.3-8.9 0-12.8l.8-1.5c2.3-4 6.6-6.4 11.2-6.4h1.6Zm-.8 8.6a5.7 5.7 0 1 0 0 11.4 5.7 5.7 0 1 0 0-11.4Zm-46.5 5.7h10.3"
                       fill="#FFD94C"
                     />
-                    <title>React Query</title>
                   </svg>
                 }
               />
@@ -64,8 +68,8 @@ function HomePage() {
               <CardFeature
                 to="/resend"
                 type="optional"
-                title="Emails with Resend and react-email"
-                resume="Resend is the email API for developers."
+                title={t("Emails with Resend and react-email")}
+                resume={t("Resend is the email API for developers.")}
                 figuresCenter={
                   <div className="bg-[#262626]">
                     <svg width={200} height={200} viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +77,6 @@ function HomePage() {
                         d="M186 447.471V154H318.062C336.788 154 353.697 158.053 368.79 166.158C384.163 174.263 396.181 185.443 404.845 199.698C413.51 213.672 417.842 229.604 417.842 247.491C417.842 265.938 413.51 282.568 404.845 297.381C396.181 311.915 384.302 323.375 369.209 331.759C354.117 340.144 337.067 344.337 318.062 344.337H253.917V447.471H186ZM348.667 447.471L274.041 314.99L346.99 304.509L430 447.471H348.667ZM253.917 289.835H311.773C319.04 289.835 325.329 288.298 330.639 285.223C336.229 281.869 340.421 277.258 343.216 271.388C346.291 265.519 347.828 258.811 347.828 251.265C347.828 243.718 346.151 237.15 342.797 231.56C339.443 225.691 334.552 221.219 328.124 218.144C321.975 215.07 314.428 213.533 305.484 213.533H253.917V289.835Z"
                         fill="white"
                       />
-                      <title>Resend</title>
                     </svg>
                   </div>
                 }
@@ -82,8 +85,10 @@ function HomePage() {
               <CardFeature
                 to="/react-hook-form"
                 type="optional"
-                title="React-Hook-Form and Zod"
-                resume="Performant, flexible and extensible forms with easy-to-use validation. and TypeScript-first schema validation with static type inference"
+                title={t("React-Hook-Form and Zod")}
+                resume={t(
+                  "Performant, flexible and extensible forms with easy-to-use validation. and TypeScript-first schema validation with static type inference",
+                )}
                 figureLeft={
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +118,6 @@ function HomePage() {
                       <use xlinkHref="#b" filter="url(#a)" />
                       <use xlinkHref="#b" fill="#3068B7" />
                     </g>
-                    <title>React Hook Form</title>
                   </svg>
                 }
               />
@@ -121,8 +125,8 @@ function HomePage() {
               <CardFeature
                 to="/profile"
                 type="optional"
-                title="Authentication with better-auth"
-                resume="The most comprehensive authentication framework for TypeScript."
+                title={t("Authentication with better-auth")}
+                resume={t("The most comprehensive authentication framework for TypeScript.")}
                 figureRight={
                   <svg width="260" height="245" viewBox="0 0 60 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -131,7 +135,6 @@ function HomePage() {
                       clipRule="evenodd"
                       d="M0 0H15V15H30V30H15V45H0V30V15V0ZM45 30V15H30V0H45H60V15V30V45H45H30V30H45Z"
                     />
-                    <title>Better Auth</title>
                   </svg>
                 }
                 authStateComponent={<SessionStatus />}
@@ -140,15 +143,14 @@ function HomePage() {
               <CardFeature
                 to="/stripe"
                 type="optional"
-                title="Payments with Stripe"
-                resume="Build a low-code payment form and embed it on your site or host it on Stripe."
+                title={t("Payments with Stripe")}
+                resume={t("Build a low-code payment form and embed it on your site or host it on Stripe.")}
                 figuresCenter={
                   <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 512 214">
                     <path
                       fill="#635BFF"
                       d="M512 110.08c0-36.409-17.636-65.138-51.342-65.138c-33.85 0-54.33 28.73-54.33 64.854c0 42.808 24.179 64.426 58.88 64.426c16.925 0 29.725-3.84 39.396-9.244v-28.445c-9.67 4.836-20.764 7.823-34.844 7.823c-13.796 0-26.027-4.836-27.591-21.618h69.547c0-1.85.284-9.245.284-12.658m-70.258-13.511c0-16.071 9.814-22.756 18.774-22.756c8.675 0 17.92 6.685 17.92 22.756zm-90.31-51.627c-13.939 0-22.899 6.542-27.876 11.094l-1.85-8.818h-31.288v165.83l35.555-7.537l.143-40.249c5.12 3.698 12.657 8.96 25.173 8.96c25.458 0 48.64-20.48 48.64-65.564c-.142-41.245-23.609-63.716-48.498-63.716m-8.534 97.991c-8.391 0-13.37-2.986-16.782-6.684l-.143-52.765c3.698-4.124 8.818-6.968 16.925-6.968c12.942 0 21.902 14.506 21.902 33.137c0 19.058-8.818 33.28-21.902 33.28M241.493 36.551l35.698-7.68V0l-35.698 7.538zm0 10.809h35.698v124.444h-35.698zm-38.257 10.524L200.96 47.36h-30.72v124.444h35.556V87.467c8.39-10.951 22.613-8.96 27.022-7.396V47.36c-4.551-1.707-21.191-4.836-29.582 10.524m-71.112-41.386l-34.702 7.395l-.142 113.92c0 21.05 15.787 36.551 36.836 36.551c11.662 0 20.195-2.133 24.888-4.693V140.8c-4.55 1.849-27.022 8.391-27.022-12.658V77.653h27.022V47.36h-27.022zM35.982 83.484c0-5.546 4.551-7.68 12.09-7.68c10.808 0 24.461 3.272 35.27 9.103V51.484c-11.804-4.693-23.466-6.542-35.27-6.542C19.2 44.942 0 60.018 0 85.192c0 39.252 54.044 32.995 54.044 49.92c0 6.541-5.688 8.675-13.653 8.675c-11.804 0-26.88-4.836-38.827-11.378v33.849c13.227 5.689 26.596 8.106 38.827 8.106c29.582 0 49.92-14.648 49.92-40.106c-.142-42.382-54.329-34.845-54.329-50.774"
                     />
-                    <title>Stripe</title>
                   </svg>
                 }
               />
