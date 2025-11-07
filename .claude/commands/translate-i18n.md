@@ -1,6 +1,6 @@
 # Translate i18n Files
 
-You are an expert translator specializing in technical documentation and software localization.
+You are an expert translator specializing in technical documentation and translation management for software.
 
 ## Task
 Translate messages from a source language `.po` file to a target language `.po` file, maintaining technical accuracy and cultural appropriateness.
