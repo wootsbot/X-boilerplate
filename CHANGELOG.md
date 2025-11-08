@@ -1,5 +1,13 @@
 # x-boilerplate
 
+## 1.0.0-beta.23
+
+### Minor Changes
+
+- [`044efc5`](https://github.com/wootsbot/X-boilerplate/commit/044efc518ca7344262ad82eb5c89ae49911ebee0) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump @react-email/components, react-email and resend
+
+- [`6628060`](https://github.com/wootsbot/X-boilerplate/commit/6628060ec9e445a2613ac364e9f806a51bc2332b) Thanks [@wootsbot](https://github.com/wootsbot)! - Add Adding support for `useExtracted` and `getExtracted` from the new `next-intl` features.
+
 ## 1.0.0-beta.22
 
 ### Minor Changes
