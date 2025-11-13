@@ -1,5 +1,17 @@
 # x-boilerplate
 
+## 1.0.0-beta.24
+
+### Patch Changes
+
+- [`33b3a94`](https://github.com/wootsbot/X-boilerplate/commit/33b3a94977cd600b323250592c88465a2295c8fa) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump next
+
+- [`625fa31`](https://github.com/wootsbot/X-boilerplate/commit/625fa31e5956dee99196a219bfcd349141c437c9) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump next-intl and Bug fixes for useExtracted
+
+- [`5998ace`](https://github.com/wootsbot/X-boilerplate/commit/5998ace6ac544082bc1b10abac676a936ff49255) Thanks [@wootsbot](https://github.com/wootsbot)! - Fixed clean config of `next-intl`
+
+- [`cd4f2d3`](https://github.com/wootsbot/X-boilerplate/commit/cd4f2d324fabdd19c8c43eaff7535fcb9531aa65) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump drizzle-kit
+
 ## 1.0.0-beta.23
 
 ### Minor Changes
