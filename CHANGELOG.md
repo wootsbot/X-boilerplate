@@ -1,5 +1,33 @@
 # x-boilerplate
 
+## 1.0.0-beta.25
+
+### Patch Changes
+
+- [`8bc4f77`](https://github.com/wootsbot/X-boilerplate/commit/8bc4f7726d6101e7a434ee256d68a5f03eb70041) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump nextjs Security Advisory: CVE-2025-66478
+
+- [`47af7f3`](https://github.com/wootsbot/X-boilerplate/commit/47af7f3d27a879a0b4cdc05b6973fae3c135e7d7) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump commitlint
+
+- [`1993684`](https://github.com/wootsbot/X-boilerplate/commit/19936840e93d8dbb09a8aa04f565676daae61cce) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump next-intl
+
+- [`71c0f69`](https://github.com/wootsbot/X-boilerplate/commit/71c0f6901a44fa9e33057ccc0672f1c001a251b6) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump changesets
+
+- [`c072ae2`](https://github.com/wootsbot/X-boilerplate/commit/c072ae28d5c338bc551ef0f38f652a7a750d12e6) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump typescript
+
+- [`15d693e`](https://github.com/wootsbot/X-boilerplate/commit/15d693e0e7f5fcd955eda72a7fa467a540342294) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump biome
+
+- [`64bebd3`](https://github.com/wootsbot/X-boilerplate/commit/64bebd30898cb6f1c0e0380f8c903e10b3d04f50) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump zod
+
+- [`1495cd1`](https://github.com/wootsbot/X-boilerplate/commit/1495cd1b571c5807c0dee8d7aae0972feb617e32) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump react-hook-form
+
+- [`8dfbb33`](https://github.com/wootsbot/X-boilerplate/commit/8dfbb330af8fcbaa473608f546c1514817286006) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump nuqs
+
+- [`78c1845`](https://github.com/wootsbot/X-boilerplate/commit/78c1845339882b2f0b3474da8e47c6dcf968b712) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump tailwindcss
+
+- [`285475f`](https://github.com/wootsbot/X-boilerplate/commit/285475f7c27de6b8184d6d6572319dbf5dc7bdfd) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump drizzle
+
+- [`ab0969c`](https://github.com/wootsbot/X-boilerplate/commit/ab0969c1558c64303daf7e4f0bd3d8febb2be713) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump better-auth
+
 ## 1.0.0-beta.24
 
 ### Patch Changes
