@@ -175,7 +175,7 @@ importers:
         specifier: ^4.1.17
         version: 4.1.17
       typescript:
-        specifier: ^5.9.3
+        specifier: ^5
         version: 5.9.3
       vite-tsconfig-paths:
         specifier: 5.1.4
