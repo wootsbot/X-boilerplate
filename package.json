@@ -54,12 +54,12 @@
     "postgres": "3.4.7",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
-    "react-hook-form": "7.68.0",
+    "react-hook-form": "7.71.1",
     "resend": "6.4.2",
     "sonner": "2.0.7",
     "stripe": "19.1.0",
     "tailwind-merge": "3.3.1",
-    "zod": "4.1.13"
+    "zod": "4.3.6"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.12",
