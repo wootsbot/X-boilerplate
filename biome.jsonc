@@ -30,13 +30,36 @@
       "trailingCommas": "none"
     }
   },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true,
       "style": {
+        "noRestrictedImports": {
+          "options": {
+            "paths": {
+              "zod": {
+                "importNames": ["z"],
+                "message": "Use `import * as z from \"zod\"` instead of `import { z }`."
+              }
+            }
+          },
+          "level": "error"
+        },
+        "useImportType": {
+          "level": "error",
+          "options": {
+            "style": "separatedType"
+          }
+        },
+        "useNodejsImportProtocol": "error",
+        "useConst": "error",
         "noUselessElse": "error",
-        "useImportType": "error",
         "useShorthandFunctionType": "error",
         "useAsConstAssertion": "error",
         "noNamespace": "error",
@@ -93,11 +116,6 @@
     "domains": {
       "next": "recommended",
       "react": "recommended"
-    }
-  },
-  "css": {
-    "parser": {
-      "tailwindDirectives": true
     }
   },
   "assist": {

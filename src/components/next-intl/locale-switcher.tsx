@@ -1,6 +1,7 @@
 "use client";
 
-import { type Locale, useLocale } from "next-intl";
+import type { Locale } from "next-intl";
+import { useLocale } from "next-intl";
 
 type Props = {
   changeLocaleAction: (locale: Locale) => Promise<void>;
