@@ -1,5 +1,21 @@
 # x-boilerplate
 
+## 1.0.0-beta.26
+
+### Minor Changes
+
+- [`0f7c946`](https://github.com/wootsbot/X-boilerplate/commit/0f7c946878a06c0507f6d6a931435fd7c5d5f733) Thanks [@wootsbot](https://github.com/wootsbot)! - Add config type and up biome
+
+### Patch Changes
+
+- [`b613c54`](https://github.com/wootsbot/X-boilerplate/commit/b613c5417e61ddc098b7c9ec82672c7d7644cd39) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump next-intl
+
+- [`0116ba0`](https://github.com/wootsbot/X-boilerplate/commit/0116ba087a5d7beb041b9d06499dbec1ef53bd79) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump pnpm
+
+- [`cbff67c`](https://github.com/wootsbot/X-boilerplate/commit/cbff67cbced951a2d520fc660ded501f0f306625) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump zod and react-hook-form
+
+- [`088b657`](https://github.com/wootsbot/X-boilerplate/commit/088b6574f76c29eb64a242fc96d131a7a9feee7d) Thanks [@wootsbot](https://github.com/wootsbot)! - Bupm nextjs
+
 ## 1.0.0-beta.25
 
 ### Patch Changes
