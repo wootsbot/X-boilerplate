@@ -48,7 +48,7 @@
     "framer-motion": "12.23.24",
     "geist": "1.5.1",
     "next": "16.1.4",
-    "next-intl": "4.5.8",
+    "next-intl": "4.7.0",
     "next-safe-action": "8.0.11",
     "nuqs": "2.8.3",
     "postgres": "3.4.7",
@@ -94,6 +94,7 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "@biomejs/biome",
+      "@parcel/watcher",
       "@swc/core",
       "@tailwindcss/oxide",
       "esbuild",
