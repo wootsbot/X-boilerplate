@@ -1,0 +1,9 @@
+RQKEYS
+postgres
+Nextjs
+tailwindcss
+geist
+Nuqs
+spdxId
+Authjs
+nuqs

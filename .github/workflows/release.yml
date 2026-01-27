@@ -26,12 +26,7 @@ jobs:
         with:
           node-version-file: package.json
 
-      - name: 🔥 Setup corepack
-        run: |
-          corepack enable
-          corepack prepare pnpm@${{ env.PNPM_VERSION }} --activate
-
-      - name: 📁 Cache
+      - name: Cache 📁
         uses: actions/cache@v4
         with:
           path: |
@@ -54,17 +49,19 @@ jobs:
           cp .env.development .env
           chmod +x ./scripts/setEnv.sh && ./scripts/setEnv.sh
 
-      - name: 📦 Install Dependencies
-        run: |
-          pnpm --version && pnpm install --frozen-lockfile
+      - name: Install Dependencies 📦
+        uses: ./.github/actions/install
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 💣 Build Application
+      - name: Build Application 💣
         run: pnpm build
 
-      - name: 💅 Run Linter
+      - name: Run Linter 💅
         run: pnpm lint
+
+      - name: Run Linter Spell 🌐
+        run: pnpm lint:spell
 
       - name: Create Release Pull Request
         id: changesets

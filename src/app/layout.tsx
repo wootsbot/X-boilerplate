@@ -58,7 +58,6 @@ export const generateMetadata = async (): Promise<Metadata> => {
     },
     // verification: {
     //   google: 'ID',
-    //   yandex: 'yandex',
     // },
   };
 };
