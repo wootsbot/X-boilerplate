@@ -96,6 +96,9 @@ Many of this boilerplate features are based on the philosophy of being optional.
 - [commitlint](https://commitlint.js.org/#/) - Lint commit messages.
 - [husky](https://typicode.github.io/husky/#/) - Husky improves your commits and more 🐶 woof!.
 - [cspell](https://cspell.org/) - Spell checker for code. Find more dictionaries at [cspell-dicts](https://github.com/streetsidesoftware/cspell-dicts).
+  - `.cspell/tech-terms.txt` - Project-specific technical terminology
+  - `.cspell/alt-languages.txt` - Words in other languages
+  - `.cspell/word-issue.txt` - Known exceptions
 
 - [VS Code Extensions](./.vscode/extensions.json)
   - [biome](https://marketplace.visualstudio.com/items?itemName=biomejs.biome) - Biome Extension for VS Code.
