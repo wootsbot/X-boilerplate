@@ -57,6 +57,8 @@
 
 - ❤️ Lint commit messages via [commitlint](https://commitlint.js.org/#/)
 
+- 🔤 Spell checking for code with [cspell](https://cspell.org/) - Includes Spanish dictionary via [@cspell/dict-es-es](https://github.com/streetsidesoftware/cspell-dicts/tree/main/dictionaries/es_ES)
+
 <br>
 
 ## Roadmap
@@ -93,6 +95,7 @@ Many of this boilerplate features are based on the philosophy of being optional.
 - [msw](https://mswjs.io/) - API mocking of the next generation.
 - [commitlint](https://commitlint.js.org/#/) - Lint commit messages.
 - [husky](https://typicode.github.io/husky/#/) - Husky improves your commits and more 🐶 woof!.
+- [cspell](https://cspell.org/) - Spell checker for code. Find more dictionaries at [cspell-dicts](https://github.com/streetsidesoftware/cspell-dicts).
 
 - [VS Code Extensions](./.vscode/extensions.json)
   - [biome](https://marketplace.visualstudio.com/items?itemName=biomejs.biome) - Biome Extension for VS Code.
