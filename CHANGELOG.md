@@ -1,5 +1,11 @@
 # x-boilerplate
 
+## 1.0.0-beta.27
+
+### Minor Changes
+
+- [`e13fbc7`](https://github.com/wootsbot/X-boilerplate/commit/e13fbc72f0609d3414cb97dc1215d88ab55e8d51) Thanks [@wootsbot](https://github.com/wootsbot)! - Add tool to `cspell`
+
 ## 1.0.0-beta.26
 
 ### Minor Changes
