@@ -1,0 +1,29 @@
+repos:
+  - repo: local
+    hooks:
+    - id: format
+      name: Biome format
+      entry: pnpm biome format --write
+      language: system
+      pass_filenames: false
+
+    - id: lint
+      name: Biome check
+      entry: pnpm biome check
+      language: system
+      pass_filenames: false
+      stages: [pre-commit]
+
+    - id: lint-spell
+      name: Lint Spell Code
+      entry: pnpm lint:spell
+      language: system
+      pass_filenames: false
+      stages: [pre-commit]
+
+    - id: commitlint
+      name:  Commitlint
+      entry: pnpm commitlint --edit $1
+      language: system
+      pass_filenames: false
+      stages: [commit-msg]

@@ -94,7 +94,7 @@ Many of this boilerplate features are based on the philosophy of being optional.
 - [pnpm](https://pnpm.io/)- fast, disk space efficient package manager.
 - [msw](https://mswjs.io/) - API mocking of the next generation.
 - [commitlint](https://commitlint.js.org/#/) - Lint commit messages.
-- [husky](https://typicode.github.io/husky/#/) - Husky improves your commits and more 🐶 woof!.
+- [prek](https://github.com/j178/prek) - Pre-commit hooks for TypeScript projects.
 - [cspell](https://cspell.org/) - Spell checker for code. Find more dictionaries at [cspell-dicts](https://github.com/streetsidesoftware/cspell-dicts).
   - `.cspell/tech-terms.txt` - Project-specific technical terminology
   - `.cspell/alt-languages.txt` - Words in other languages

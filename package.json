@@ -7,7 +7,7 @@
     "pnpm": ">=10"
   },
   "scripts": {
-    "prepare": "husky",
+    "prepare": "prek install",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -69,6 +69,7 @@
     "@commitlint/cli": "20.2.0",
     "@commitlint/config-conventional": "20.2.0",
     "@cspell/dict-es-es": "3.0.8",
+    "@j178/prek": "0.3.1",
     "@playwright/test": "1.56.1",
     "@tailwindcss/postcss": "4.1.16",
     "@testing-library/jest-dom": "6.9.1",
@@ -84,7 +85,6 @@
     "cspell": "9.6.2",
     "dotenv": "17.2.3",
     "drizzle-kit": "0.31.8",
-    "husky": "9.1.7",
     "jsdom": "27.0.1",
     "postcss": "^8.5.6",
     "react-email": "5.0.1",
@@ -97,6 +97,7 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "@biomejs/biome",
+      "@j178/prek",
       "@parcel/watcher",
       "@swc/core",
       "@tailwindcss/oxide",
