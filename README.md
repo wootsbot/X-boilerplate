@@ -29,7 +29,7 @@
 
 - 💅 Code formatter and find and fix with [biome](https://biomejs.dev/)
 
-- 🪝 [husky](https://commitlint.js.org/#/)
+- 🪝 [prek](https://github.com/j178/prek)
 
 - 🦾 TypeScript, of course
 
