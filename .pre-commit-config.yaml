@@ -23,7 +23,7 @@ repos:
 
     - id: commitlint
       name:  Commitlint
-      entry: pnpm commitlint --edit $1
+      entry: pnpm commitlint --edit
       language: system
       pass_filenames: false
       stages: [commit-msg]
