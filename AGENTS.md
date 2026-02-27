@@ -1,0 +1,261 @@
+# X-Boilerplate Development Guide
+
+Instructions for AI agents working on this codebase.
+
+---
+
+> **Note:** `CLAUDE.md` is a symlink to `AGENTS.md`. They are the same file.
+
+## Project Overview
+
+X-Boilerplate is a production-ready Next.js SaaS starter that ships with
+authentication, database, payments, and email pre-configured. The goal is
+to provide a scalable foundation so developers can focus on product features
+rather than infrastructure setup.
+
+This codebase follows opinionated patterns: type-safe server actions,
+structured query keys, and strict linting via Biome. When adding features,
+prefer extending existing patterns over introducing new ones.
+
+## Requirements
+- Node.js 22+
+- pnpm 10+
+- PostgreSQL database for development
+- GitHub OAuth credentials (GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET)
+
+## Environment Variables
+
+Copy `.env.template` to `.env.local` and fill in the values before running the project.
+
+| Variable | Description |
+|---|---|
+| `SITE_NAME` | Display name of the site |
+| `SITE_URL` | Public URL of the site |
+| `TWITTER_CREATOR` | Twitter handle for metadata |
+| `RESEND_API_KEY` | Resend API key for sending emails |
+| `RESEND_DOMAIN` | Sender email address |
+| `GITHUB_CLIENT_ID` | GitHub OAuth app client ID |
+| `GITHUB_CLIENT_SECRET` | GitHub OAuth app client secret |
+| `AUTH_SECRET` | Secret for better-auth session signing |
+| `STRIPE_SECRET_KEY` | Stripe secret key for server-side API calls |
+| `STRIPE_PUBLISHABLE_KEY` | Stripe publishable key for client-side |
+| `STRIPE_CURRENCY` | Currency code for Stripe (e.g. `mxn`, `usd`) |
+| `PERSONAL_GITHUB_TOKEN` | GitHub token for API calls (e.g. search queries) |
+
+## Development Commands
+
+### Getting Started
+- `pnpm dev` - Start development server (default port 3000)
+- `pnpm build` - Build for production
+- `pnpm start` - Start production server
+
+### Testing
+- `pnpm test` - Run unit tests with Vitest
+- `pnpm test:ui` - Run tests with interactive UI
+- `pnpm test:coverage` - Generate coverage report
+- `pnpm test:e2e` - Run Playwright E2E tests (automatically starts dev server)
+- `pnpm test:e2e:ui` - Run E2E tests with interactive UI
+- `pnpm test:e2e:report` - View HTML report of last E2E test run
+
+### Code Quality
+- `pnpm lint` - Check code with Biome
+- `pnpm lint:fix` - Fix linting issues with Biome
+- `pnpm format` - Format code with Biome
+
+### Database & Authentication
+- `pnpm better-auth:generate` - Regenerate auth schema from better-auth config
+- `pnpm drizzle:generate` - Generate migration files from schema changes
+- `pnpm drizzle:push` - Push schema directly to DB without migration files (use in development only)
+- `pnpm drizzle:migrate` - Run pending migration files (use in production / CI)
+
+## Project Architecture
+
+### Technology Stack
+- **Framework**: Next.js 16 with React 19 using `/app` directory
+- **Database**: Drizzle ORM with PostgreSQL adapter
+- **Authentication**: better-auth with GitHub OAuth
+- **State Management**: TanStack Query v5 (async), optional Zustand (client)
+- **Forms**: react-hook-form with Zod validation
+- **Server Actions**: next-safe-action for type-safe mutations
+- **Styling**: Tailwind CSS 4 + Radix UI components (unstyled)
+- **Email**: Resend + @react-email for transactional emails
+- **Payments**: Stripe integration
+- **Testing**: Vitest (unit), Playwright (E2E with Desktop Chrome & Mobile Chrome)
+- **Code Quality**: Biome (linting/formatting), Husky (git hooks), commitlint
+
+### Directory Structure
+
+```
+src/
+├── app/              # Next.js app router
+│  ├── (marketing)    # Public pages
+│  ├── (features)     # Feature demo pages
+│  ├── (public)       # Public auth pages
+│  ├── @auth/         # Parallel route for auth modal
+│  └── api/auth/      # better-auth API route
+├── components/       # React components
+│  ├── ui/            # Base UI components
+│  ├── com/           # Composed reusable components
+│  ├── auth/          # Auth-related components
+│  ├── layout/        # Layout components
+│  ├── resend/        # Email template components
+│  └── query-v5/      # TanStack Query demos
+├── lib/              # Core utilities & configurations
+│  ├── auth/          # better-auth setup & client
+│  ├── drizzle/       # Database client
+│  ├── safe-action/   # Server action clients
+│  ├── react-query/   # Query client provider
+│  ├── payments/      # Stripe integration
+│  ├── resend/        # Email service
+│  ├── axios/         # HTTP client config
+│  ├── logger.ts      # Logging utility
+│  └── utils/         # Helper functions
+├── state/            # Global state management
+│  ├── queries/       # React Query hooks
+│  │  └── github/     # GitHub search query with key factory
+│  └── actions/       # Server actions (resend, stripe)
+├── db/               # Database schema (Drizzle)
+└── i18n/             # next-intl configuration
+```
+
+### Path Aliases
+- `#/*` → `./src/*` (primary alias for all source code)
+- `~/pkg` → `./package.json`
+
+## Key Patterns & Implementation Details
+
+### Server Actions with Middleware
+The `src/lib/safe-action/index.ts` exports three action clients with progressive capability:
+
+1. **`actionClient`**: Base client for public actions
+2. **`authUserActionClient`**: Optional auth context with logging
+   - Retrieves session via `auth.api.getSession({ headers })`
+   - Provides `ctx.user` to action (null if not authenticated)
+3. **`authRequiredActionClient`**: Enforces authentication
+   - Throws `ActionError("Unauthorized")` if no session
+   - Provides authenticated `ctx.user`
+
+All clients log metadata, client input, and execution time in development.
+
+### Query Management
+- Uses `@lukemorales/query-key-factory` for type-safe, structured query keys
+- Example: `src/state/queries/github/index.ts` demonstrates the pattern
+- Query keys are defined in `const.ts`, schemas in `schema.ts`
+
+### React Query Setup
+The `ReactQueryClientProvider` in `src/app/provider.tsx` wraps the entire application. This is the root provider for TanStack Query.
+
+### Authentication Flow
+- better-auth handles OAuth flow with GitHub
+- Session retrieved server-side via `auth.api.getSession({ headers })`
+- Database adapter uses Drizzle with PostgreSQL provider
+- Cookie prefix: `x-boilerplate`
+
+### Database Integration
+- Drizzle ORM with PostgreSQL
+- Schema auto-generated by better-auth (in `src/db/schema.ts`)
+- Regenerate schema after auth config changes with `pnpm better-auth:generate`
+
+### Forms
+Forms use `react-hook-form` with `zodResolver` for validation, and submit via a server action using `useAction` from `next-safe-action/hooks`.
+
+Pattern:
+1. Define schema with Zod in `schema.ts` (co-located with the action)
+2. Use `useForm<SchemaType>({ resolver: zodResolver(zSchema()) })` in the component
+3. Submit via `useAction(action, { onSuccess, onError })`
+4. Reset the form on success with `reset()`
+
+See `src/components/resend/form-send-email.tsx` for a reference implementation.
+
+## Code Quality Standards
+
+### Biome Configuration
+Strict rules are enforced:
+- **Formatting**: 120 character line width, 2-space indent
+- **Linting**: 
+  - No unused imports/variables
+  - No console except error/warn/info/assert
+  - No explicit `any` types (warn)
+  - No nested ternaries
+  - Exhaustive dependency arrays (warn)
+  - Import type syntax enforced
+  - No for-each loops (use map/filter)
+
+### TypeScript
+- Strict mode enabled
+- Target: ES2017
+- Incremental builds enabled
+
+## Testing Notes
+
+### Playwright E2E
+- Configured for Desktop Chrome and Mobile Chrome
+- Automatically starts `pnpm dev` when running tests
+- Tests located in `e2e/` directory
+- Results output to `e2e/results/`
+- Uses baseURL from environment (default: `http://localhost:3000`)
+- Retries enabled on CI (2 retries), disabled locally
+- Parallel execution enabled locally, serial on CI
+
+### Vitest Unit Tests
+- Runs with jsdom environment
+- Coverage enabled with @vitest/coverage-v8
+
+## Internationalization & Translation
+
+### Translation Workflow (`.po` files)
+The project uses `next-intl` with `.po` files for managing translations across languages.
+
+**File Structure:**
+- Source language: `messages/en.po` (English)
+- Spanish (Mexico): `messages/es-mx.po`
+- Each string is identified by a unique `msgid` (message ID)
+
+**Translation Best Practices:**
+1. **Always use `msgid` as source of truth** - The `msgid` field is the unique identifier for each translatable string
+2. **Respect technical terms** - Technical terminology must remain unchanged and intact in translations:
+   - Technology names (Next.js, Stripe, React, TypeScript, better-auth, Resend, TanStack Query, Drizzle ORM, etc.)
+   - Library and package names (react-email, Zod, Husky, Biome, etc.)
+   - Service names (GitHub, PostgreSQL, AWS, etc.)
+   - Technical concepts (API, server state, schema validation, type inference, async/await, caching, etc.)
+   - The surrounding words can be translated, but technical terms themselves must remain exactly as they appear
+3. **Maintain context** - Review the `#:` comment to understand where the string appears in the application
+4. **Natural language** - Adapt translations to the target locale (e.g., Mexican Spanish uses specific expressions and vocabulary)
+5. **Consistency** - Keep the same terminology throughout the file for repeated concepts
+6. **Format preservation** - Maintain the exact structure: `msgid "ID"` followed by `msgstr "translated text"`
+7. **No automatic modifications** - Existing correct translations are never modified. Only new/untranslated entries are added
+
+**Translation Command:**
+Use `/translate-i18n` to translate `.po` files with proper validation and typo detection.
+
+**How to use `/translate-i18n`:**
+This prompt is a Claude Code slash command that automates the translation workflow:
+
+1. **Analyzes both files** - Compares source language (en.po) with target language to identify:
+   - ✅ Already translated entries (skipped)
+   - ⚠️ Entries with potential typos (reported for review)
+   - ❌ Missing translations (translated automatically)
+
+2. **Validates technical terms** - Ensures technical terminology (Next.js, TypeScript, better-auth, React, Stripe, etc.) remains unchanged in translations
+
+3. **Conservative approach** - Never modifies existing correct translations automatically; only reports issues for your review
+
+4. **Provides summary** - Shows statistics of what was done (correct translations, typos found, translations added)
+
+**Example workflow:**
+```bash
+# Run the translate-i18n prompt when you have new messages to translate
+# The prompt will analyze messages/en.po and messages/es-mx.po
+# Review any reported typos
+# Accept the translations made by the prompt
+
+# After translation, verify with tests
+pnpm test
+```
+
+**Key Features:**
+- Type-safe message IDs (msgid values)
+- Respects `.po` file structure
+- Detects grammar/spelling issues
+- Preserves all technical terminology
+- Maintains consistency across translations
