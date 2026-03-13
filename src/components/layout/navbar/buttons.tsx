@@ -32,7 +32,7 @@ export function SignOutButton() {
         });
       }}
     >
-      Log Out v2
+      Log Out
     </button>
   );
 }
