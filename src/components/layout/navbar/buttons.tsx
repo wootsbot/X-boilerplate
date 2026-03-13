@@ -26,13 +26,13 @@ export function SignOutButton() {
         signOut({
           fetchOptions: {
             onSuccess: () => {
-              router.push("/"); // redirect to login page
+              router.refresh(); // redirect to login page
             },
           },
         });
       }}
     >
-      Log Out
+      Log Out v2
     </button>
   );
 }
