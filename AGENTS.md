@@ -182,6 +182,7 @@ Strict rules are enforced:
   - No for-each loops (use map/filter)
 
 ### TypeScript
+- Never typecast. Never use `as`
 - Strict mode enabled
 - Target: ES2017
 - Incremental builds enabled
