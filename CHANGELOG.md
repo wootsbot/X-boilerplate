@@ -1,5 +1,33 @@
 # x-boilerplate
 
+## 1.0.0-beta.28
+
+### Minor Changes
+
+- [`1bfb196`](https://github.com/wootsbot/X-boilerplate/commit/1bfb1966deea5d41860bd01597f71cee5b903ad8) Thanks [@wootsbot](https://github.com/wootsbot)! - git-hooks: change default package to pkgs.prek
+
+### Patch Changes
+
+- [`d67bc5e`](https://github.com/wootsbot/X-boilerplate/commit/d67bc5eed2d5a761c884cc1a413a28b2f72b142b) Thanks [@wootsbot](https://github.com/wootsbot)! - chore(deps): bump better-auth, drizzle-orm, drizzle-kit, postgres, and @better-fetch/fetch
+
+  - Add indexes on userId for session and account tables
+  - Add Drizzle relations for user, session, and account
+  - Add index on identifier for verification table
+
+- [`ce408ef`](https://github.com/wootsbot/X-boilerplate/commit/ce408efd041abbbef20f5bf462375c34b46689af) Thanks [@wootsbot](https://github.com/wootsbot)! - Bump next-intl
+
+- [`74a5501`](https://github.com/wootsbot/X-boilerplate/commit/74a5501c68d5e2eb669c8287e6efc9c9fb5a4c0b) Thanks [@wootsbot](https://github.com/wootsbot)! - Bupm nuqs
+
+- [`353c45f`](https://github.com/wootsbot/X-boilerplate/commit/353c45f4b98f08606795f10013f6cb3cbd24d052) Thanks [@wootsbot](https://github.com/wootsbot)! - docs(agents): add project overview and improve AGENTS.md structure
+
+  - Add Project Overview section describing X-Boilerplate purpose and patterns
+  - Move Requirements section before Development Commands
+  - Add Environment Variables section with table from .env.template
+  - Clarify drizzle:push (dev only) vs drizzle:migrate (production/CI)
+  - Add Forms pattern documenting react-hook-form + zodResolver + useAction flow
+
+- [`4ea5bed`](https://github.com/wootsbot/X-boilerplate/commit/4ea5bed8ac690327d0a6a82b2085bf3355507735) Thanks [@wootsbot](https://github.com/wootsbot)! - Fixed version node 24.x
+
 ## 1.0.0-beta.27
 
 ### Minor Changes
